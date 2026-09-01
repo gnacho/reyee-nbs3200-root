@@ -86,6 +86,25 @@ and booting an initramfs via kexec before ever touching the flash. See
 
 ## Disclaimer
 
-For research on your own hardware only. The password algorithm and firmware
-keys are per-family secrets; publishing them publicly may affect other owners
-of these devices. Keep this repo private unless you are comfortable with that.
+This repository is provided for **research, education, and interoperability**
+purposes only. Use it exclusively on hardware you own or on hardware you have
+explicit written authorization to test.
+
+The firmware decryption keys and the developer-mode root-password algorithm
+are per-family secrets recovered from the manufacturer's own firmware and
+binaries. Publishing them may have legal consequences in your jurisdiction,
+including possible claims under copyright law, anti-circumvention rules, or
+terms of service. By using, copying, or redistributing this material you
+accept full responsibility for your actions. The authors provide no warranty
+and assume no liability for any damage, loss of warranty, bricking, legal
+trouble, or other harm resulting from the use of this information.
+
+## License
+
+This project is licensed under the **GNU Affero General Public License v3.0
+or later** (AGPL-3.0). See the [LICENSE](LICENSE) file for the full text.
+
+In short: you are free to use, study, modify, and redistribute this work,
+including over a network, provided that any modified version distributed or
+made accessible to others is also shared under the same license and that the
+full source code is made available to users.
