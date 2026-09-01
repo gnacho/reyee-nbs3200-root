@@ -27,8 +27,8 @@ point for a port.
 ## RTL9310 vs RTL9311
 
 The NBS3200 uses **RTL9310**, not RTL9311. At the time of writing there is
-no RTL9310 device in the OpenWrt tree, only RTL9311/9312/9313 models. This is
-a warning, not a blocker:
+**no RTL9310 device in the OpenWrt tree**; all supported RTL931x devices use
+RTL9311, RTL9312 or RTL9313. This is a warning, not a blocker:
 
 - OpenWrt PR #18871 ("Identify RTL9311 properly") shows that the driver
   historically failed to distinguish the two chips, which affected hardware
