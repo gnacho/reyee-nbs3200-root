@@ -1,7 +1,7 @@
 # Chronology: how this unit was researched, bricked and brought back
 
-Honest, session-by-session log of the work on one RG-NBS3200-48GT4XS
-(SN `G1RH1EQ000845`, MAC `9c:2b:a6:cb:80:f9`, mgmt `...:fa`).
+Honest, session-by-session log of the work on one RG-NBS3200-48GT4XS.
+Serial numbers, MAC addresses and management addresses are omitted.
 Dates are 2026. Times are local (Europe/Madrid).
 
 The point of this document is that it records the **failures** with the same
@@ -297,6 +297,76 @@ zero permanent damage.
 
 ---
 
+## 2026-09-13 (evening) - Root cause of the failed boot, three more attempts, and the `rtk network on` lead
+
+Continued the same day, after the handoff above. Root was regained with the
+developer-mode gesture (the recovery had wiped the SSH persistence hook).
+
+### Root cause of the `run linux` failure (found, not guessed)
+
+The u-boot (linked at `0x8bf00000`) was disassembled. The command table sits at
+file offset `0x13c800`; `set_boot_envs` is at `0x8bf20314`, and its first action
+is to run the string at `0x8bfe6760`:
+
+```
+mtdparts default;ubi part kernel;ubifsmount ubi:kernel;
+```
+
+That is the **dual-image** layout. This unit is single-image: the UBI partition
+holds only `rootfs` (squashfs) and `rootfs_data` (ubifs), with **no `kernel`
+volume**. So the mount fails and the following `ubifsload` has nothing mounted.
+Hypothesis (a) from the handoff was correct; (b) and (c) are discarded.
+
+### Attempt 1 - corrected route, with `mtdparts default`
+
+```
+bootcmd = mtdparts default;ubi part ubi;ubifsmount ubi:rootfs_data;ubifsload 0x81000000 vmlinux.gz;bootm 0x81000000;run linux_openwrt
+```
+
+Result: fell back to stock. The `mtdparts default;` prefix breaks the mount (it
+resets the partition table to a layout where `ubi` points elsewhere).
+
+### Attempt 2 - the exact 2026-09-03 route
+
+```
+bootcmd = ubi part ubi; ubifsmount ubi:rootfs_data; ubifsload ${loadaddr} /root/owrt-initramfs.bin; bootm ${loadaddr}; run linux_openwrt
+```
+
+Result: after the reboot the link never came up (no port LEDs, no traffic). The
+most likely reading is that the image **did** boot but without a working
+management path (headless), matching the 2026-09-03 symptom. Without a console
+there is no way to confirm.
+
+### Attempt 3 - TFTP boot
+
+```
+bootcmd = tftpboot 0x81000000 192.168.64.1:owrt-v0.bin; bootm 0x81000000; run linux_openwrt
+```
+
+Result: the u-boot hung, no link, and the TFTP server logged no request. The
+OpenWrt port of a sibling RTL93xx switch (commit `74c0efc`, Sirivision
+SR-ST3808F) documents exactly this: newer loaders do **not** run
+`rtk network on` automatically, so `tftpboot` has no network. That is the
+leading explanation, not yet verified on this loader.
+
+### Recovery, third time
+
+Button + TFTP `rgos.bin` restored the stock firmware again (verified 3/3). The
+recovery wipes the overlay and turns developer mode off, so the SSH persistence
+hook is lost and the 5-click gesture is needed again.
+
+### What the community actually does
+
+The OpenWrt commit above and the LGS352C device page both describe the install
+with a **serial console** (Cisco-style RJ45, 115200 8n1) to interrupt u-boot.
+There is no documented no-console path. Without the pads located, every boot is
+blind and a bad boot costs a physical recovery.
+
+**Cost**: same day, three boot attempts, three recoveries, zero permanent
+damage. The unit ends stock and healthy.
+
+---
+
 ## Time spent, in summary
 
 | Date | Session | Outcome |
@@ -307,6 +377,7 @@ zero permanent damage.
 | 2026-09-12 | Bench, soldering, serial hunt | 50 Hz false positive, NAND identified, lesson learned |
 | 2026-09-13 (am) | J7 ruled out, pinout, env analysis | Console hunt exhausted, cure found in the backup |
 | 2026-09-13 (pm) | Network recovery + port work | **Unit recovered**, SDK/ImageBuilder ready, second boot attempt failed safely |
+| 2026-09-13 (evening) | Root cause of the boot failure + 3 boot attempts | Cause found (dual-image volume); attempts failed safely; recovery 3/3 |
 
 Roughly **six working sessions over 17 days**, one of them spent entirely
 recovering from the mistake of the previous one. The single most expensive

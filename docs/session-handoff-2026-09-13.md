@@ -106,6 +106,36 @@ Result:
 
 ---
 
+## 10. Addendum - late 2026-09-13 session
+
+The session continued after this handoff was written. Current state:
+
+- **Root cause of the failed boot (verified)**: the `run linux` path runs
+  `set_boot_envs`, which first mounts `ubi:kernel` (the dual-image layout).
+  This unit has no `kernel` volume, so the mount fails and the `ubifsload`
+  finds nothing. See [`boot-and-recovery.md`](boot-and-recovery.md).
+- **Three further attempts, all failed safely**:
+  1. `mtdparts default; ubi part ubi; ...` -> fell back to stock. The prefix
+     breaks the mount.
+  2. The exact 2026-09-03 `rootfs_data` route -> no link after reboot
+     (headless, most likely).
+  3. `tftpboot ...; bootm` -> u-boot hung. Leading cause: missing
+     `rtk network on` (documented in OpenWrt commit `74c0efc`).
+- **Recovery verified 3/3.** The unit ends the session stock and healthy.
+  SSH 54133 is closed because the recovery turned developer mode off.
+- **The community method for RTL93xx needs a serial console.** No documented
+  no-console install path exists.
+
+### Updated next steps
+
+1. Verify the `rtk network on` requirement on this loader (one boot attempt;
+   needs developer mode re-enabled and the recovery net ready).
+2. Locate the u-boot console pads (the strongest unblocker). Photos and the
+   full hunt are in [`uart-console-hunt.md`](uart-console-hunt.md).
+3. DTS v1 as before (i2c-gpio buses, LEDs, SFP GPIOs, PHY layout).
+
+---
+
 *Sanitisation note:* this published copy has no serial numbers, MAC addresses,
 credentials or management addresses. The full local handoff (which contains
 them) stays on the author's machine and is not committed.
