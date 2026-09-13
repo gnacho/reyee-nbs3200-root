@@ -1,0 +1,67 @@
+#!/bin/sh
+# NBS3200 bring-up debug logger (v3).
+#
+# Sink: the raw MTD partition "factory_test0" (mtd5 in the OpenWrt DTS,
+# physical offset 0x800000). The stock firmware does not use it at runtime, and
+# it survives a power cycle. Read it back from the stock shell with:
+#
+#   dd if=/dev/mtd4 bs=2048 count=1024 2>/dev/null | strings | less
+#
+# (stock numbering: mtd4 = factory_test0 @ 8192k; same physical flash).
+#
+# IMPORTANT: this must NOT attach or write the stock UBI. Doing that made the
+# stock firmware reformat its overlay (and lose the previous diag). So the
+# kernel cmdline deliberately has no ubi.mtd=.
+#
+# The system self-recovers: the bootcmd one-shot already reset bootcmd to stock
+# before bootm, so the reboot at the end brings the stock firmware back.
+
+# Resolve the sink by NAME (the runtime MTD numbering may differ from the DTS
+# order if the bootloader supplies an mtdparts=). Fall back to mtd5.
+NBS_MTD="/dev/$(awk -F: '/"factory_test0"/ {print $1; exit}' /proc/mtd 2>/dev/null)"
+[ "$NBS_MTD" = "/dev/" ] && NBS_MTD=/dev/mtd5
+NBS_TMP=/tmp/nbsdiag.txt
+
+nbs_dump_once() {
+	{
+		echo "=== NBS3200 OpenWrt diag (uptime $(cut -d. -f1 /proc/uptime)s) ==="
+		echo "US_RAN sink=$NBS_MTD"
+		echo "--- cmdline ---"
+		cat /proc/cmdline
+		echo "--- mtd ---"
+		cat /proc/mtd
+		echo "--- dmesg ---"
+		dmesg
+		echo "--- ip link ---"
+		ip link 2>&1
+		echo "--- /sys/class/net ---"
+		ls /sys/class/net 2>&1
+		for _n in /sys/class/net/*; do
+			echo "--- ethtool $(basename "$_n") ---"
+			ethtool "$(basename "$_n")" 2>&1
+		done
+	} > "$NBS_TMP" 2>&1
+	sync
+
+	# NAND cannot be overwritten: erase first, then write page-aligned.
+	mtd erase "$NBS_MTD" >/dev/null 2>&1
+	dd if="$NBS_TMP" of="$NBS_MTD" bs=2048 conv=sync,notrunc 2>/dev/null
+	sync
+}
+
+do_nbs3200_debug() {
+	(
+		nbs_dump_once
+		_i=0
+		while [ "$_i" -lt 12 ]; do
+			sleep 20
+			nbs_dump_once
+			_i=$((_i + 1))
+		done
+		sync
+		# Self-recover to stock (bootcmd was already reset by the one-shot).
+		reboot -f 2>/dev/null || reboot 2>/dev/null
+	) &
+}
+
+boot_hook_add preinit_main do_nbs3200_debug
