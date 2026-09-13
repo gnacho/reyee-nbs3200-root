@@ -334,8 +334,8 @@
 [   96.330000] br-wan: port 1(eth0.1) entered forwarding state
 [   96.330000] br-wan: port 1(eth0.1) entered forwarding state
 [   98.330000] br-wan: port 1(eth0.1) entered forwarding state
-[   99.860000] [DHCP]br-wan server (192.168.10.1, 02:00:00:00:00:00), vlan 1, port 33
-[  103.180000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[   99.860000] [DHCP]br-wan server (10.0.0.1, 02:00:00:00:00:00), vlan 1, port 33
+[  103.180000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
 [ 2326.910000] %Port-2: Gi3 link down
 [ 2328.810000] %Port-2: Gi3 link up
 [ 2782.900000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
@@ -763,45 +763,45 @@
 [178680.200000] %Port-2: Gi13 link up
 [178694.250000] %Port-2: Gi13 link down
 [178697.810000] %Port-2: Gi13 link up
-[179815.310000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[179989.900000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[180230.240000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[179815.310000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[179989.900000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[180230.240000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
 [180270.800000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
 [180275.710000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
 [180276.740000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
 [180277.760000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
-[180469.870000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[180469.970000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[180710.070000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[180710.200000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[180950.280000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[180950.310000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[181189.940000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[181190.170000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[181430.000000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[181430.160000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[181669.760000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[181670.240000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[181910.090000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[181910.290000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[182150.000000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[182150.410000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[182390.120000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[182390.420000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[182630.040000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[182630.360000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[180469.870000] ARP UPDATE: IP 10.0.0.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[180469.970000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[180710.070000] ARP UPDATE: IP 10.0.0.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[180710.200000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[180950.280000] ARP UPDATE: IP 10.0.0.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[180950.310000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[181189.940000] ARP UPDATE: IP 10.0.0.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[181190.170000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[181430.000000] ARP UPDATE: IP 10.0.0.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[181430.160000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[181669.760000] ARP UPDATE: IP 10.0.0.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[181670.240000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[181910.090000] ARP UPDATE: IP 10.0.0.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[181910.290000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[182150.000000] ARP UPDATE: IP 10.0.0.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[182150.410000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[182390.120000] ARP UPDATE: IP 10.0.0.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[182390.420000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[182630.040000] ARP UPDATE: IP 10.0.0.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[182630.360000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
 [182781.390000] %Port-2: Gi11 link down
 [182788.970000] %Port-2: Gi11 link up
-[182869.920000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[182870.060000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[183110.280000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[183110.770000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[183349.980000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[183590.640000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[183709.350000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[183829.640000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[182869.920000] ARP UPDATE: IP 10.0.0.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[182870.060000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[183110.280000] ARP UPDATE: IP 10.0.0.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[183110.770000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[183349.980000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[183590.640000] ARP UPDATE: IP 10.0.0.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[183709.350000] ARP UPDATE: IP 10.0.0.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[183829.640000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
 [184049.140000] %Port-2: Gi13 link down
-[184070.050000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[184070.050000] IP CONFLICT: duplicate ip address 10.0.0.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
 [184298.970000] %Port-2: Gi3 link down
 [184300.860000] %Port-2: Gi3 link up
 [184473.880000] %Port-2: Gi34 link down
@@ -1773,7 +1773,7 @@
 [910415.460000] %Port-2: Gi34 link down
 [1118092.700000] %Port-2: Gi3 link up
 [1120453.140000] %Port-2: Gi42 link up
-[1120454.420000] [DHCP]br-wan server (192.168.10.1, 02:00:00:00:00:00), vlan 1, port 41
+[1120454.420000] [DHCP]br-wan server (10.0.0.1, 02:00:00:00:00:00), vlan 1, port 41
 [1126680.130000] %Port-2: Gi26 link up
 [1126681.170000] %Port-2: Gi26 link down
 [1126683.940000] %Port-2: Gi26 link up
@@ -1930,34 +1930,34 @@
 [2508929.990000] %Port-2: Gi3 link up
 [2508943.200000] %Port-2: Gi3 link down
 [2508947.010000] %Port-2: Gi3 link up
-[2510190.060000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[2510416.270000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[2510656.290000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[2510656.490000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[2510896.010000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[2510896.210000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[2511136.330000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[2511136.560000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[2511376.050000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[2511376.250000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[2511616.570000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[2511616.770000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[2511856.090000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[2511856.290000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[2512096.410000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[2512096.610000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[2512336.030000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[2512336.230000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[2512576.550000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[2512576.800000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[2512816.300000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[2512816.470000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[2513056.290000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[2513056.560000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[2513296.210000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[2513296.310000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[2513536.330000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[2513536.530000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2510190.060000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2510416.270000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2510656.290000] ARP UPDATE: IP 10.0.0.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2510656.490000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2510896.010000] ARP UPDATE: IP 10.0.0.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2510896.210000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2511136.330000] ARP UPDATE: IP 10.0.0.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2511136.560000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2511376.050000] ARP UPDATE: IP 10.0.0.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2511376.250000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2511616.570000] ARP UPDATE: IP 10.0.0.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2511616.770000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2511856.090000] ARP UPDATE: IP 10.0.0.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2511856.290000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2512096.410000] ARP UPDATE: IP 10.0.0.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2512096.610000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2512336.030000] ARP UPDATE: IP 10.0.0.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2512336.230000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2512576.550000] ARP UPDATE: IP 10.0.0.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2512576.800000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2512816.300000] ARP UPDATE: IP 10.0.0.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2512816.470000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2513056.290000] ARP UPDATE: IP 10.0.0.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2513056.560000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2513296.210000] ARP UPDATE: IP 10.0.0.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2513296.310000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2513536.330000] ARP UPDATE: IP 10.0.0.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2513536.530000] IP CONFLICT: duplicate ip address 10.0.0.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
 [2513641.730000] %Port-2: Gi3 link down
 [2513643.590000] %Port-2: Gi3 link up
 [2583731.220000] %Port-2: Gi11 link down
@@ -2023,9 +2023,9 @@
 [2934123.810000] %Port-2: Gi13 link down
 [2934133.080000] %Port-2: Gi13 link up
 [2934174.120000] %Port-2: Gi47 link down
-[2935655.380000] ARP UPDATE: IP 192.168.10.222 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
-[2935655.380000] IP CONFLICT: duplicate ip address 192.168.10.222 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
-[2935700.390000] ARP UPDATE: IP 192.168.10.222 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2935655.380000] ARP UPDATE: IP 10.0.0.222 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2935655.380000] IP CONFLICT: duplicate ip address 10.0.0.222 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2935700.390000] ARP UPDATE: IP 10.0.0.222 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
 [2949086.020000] %Port-2: Gi23 link down
 [2949087.860000] %Port-2: Gi23 link up
 [2949091.150000] %Port-2: Gi23 link down

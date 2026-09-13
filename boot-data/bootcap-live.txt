@@ -373,7 +373,7 @@ br-manager Link encap:Ethernet  HWaddr 02:00:00:00:00:00
           RX bytes:876 (876.0 B)  TX bytes:363864700 (347.0 MiB)
 
 br-wan    Link encap:Ethernet  HWaddr 02:00:00:00:00:00  
-          inet addr:192.168.10.4  Bcast:192.168.10.255  Mask:255.255.255.0
+          inet addr:10.0.0.4  Bcast:10.0.0.255  Mask:255.255.255.0
           inet6 addr: fe80::9e2b:a6ff:fecb:80fa/64 Scope:Link
           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
           RX packets:10305656 errors:0 dropped:0 overruns:0 frame:0
