@@ -1,3 +1,6 @@
-firmware-*.tar
-*.tar
+# Large vendor packages are not committed (see firmware/README.md for links)
 *.zip
+
+# Tarballs are excluded by default, except the decrypted stock firmwares
+*.tar
+!firmware/descifrados/*.tar
