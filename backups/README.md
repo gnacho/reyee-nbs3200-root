@@ -8,7 +8,11 @@ modified. This is the reason the unit was recoverable.
 | File | Size | Why |
 |---|---|---|
 | `mtd0-u-boot.bin` | 2 MB | The factory u-boot (Realtek header + LZMA). Useful to reverse the recovery mode, the console baud and the boot commands |
+| `mtd3-kdump.bin` | 1 MB | Crash/dump partition (no device identifiers) |
 | `mtd5-kernel.bin` | 2 MB | The stock kernel uImage (raw, LZMA inside). Useful as a reference and for the `run linux` diagnostic |
+| `mtd8-u-boot-slave.bin` | 2 MB | The backup (slave) u-boot |
+| `uboot-dump-dec.bin` | 1.3 MB | The decompressed u-boot (LZMA at offset 0x40040 of mtd0) |
+| `u-boot-24gt4xs-DESCIFRADO.bin` | 1 MB | Decompressed u-boot of the 24-port sibling, for comparison |
 | `MANIFEST.md5` | - | MD5 of every partition dumped, plus the partition map |
 
 ## What is NOT committed, and why
