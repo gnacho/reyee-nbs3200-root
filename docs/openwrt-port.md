@@ -4,6 +4,10 @@
 > RTL9310 with no OpenWrt support; it is actually an **RTL9311**, and OpenWrt
 > supports it. Everything below is verified.
 
+> Boot paths (why `run linux` cannot load a custom image, the working
+> `rootfs_data` route and the TFTP `rtk network on` caveat) are documented in
+> [`boot-and-recovery.md`](boot-and-recovery.md).
+
 ---
 
 ## Where the port stands (2026-09-13)

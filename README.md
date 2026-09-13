@@ -78,6 +78,7 @@ positive: [`docs/uart-console-hunt.md`](docs/uart-console-hunt.md).
 | [`docs/recovery-from-brick.md`](docs/recovery-from-brick.md) | Step-by-step network recovery (button + TFTP, port 1) and alternatives |
 | [`docs/uart-console-hunt.md`](docs/uart-console-hunt.md) | The serial console hunt: pads, J7, FT232, bauds, what did NOT work |
 | [`docs/openwrt-port.md`](docs/openwrt-port.md) | OpenWrt port state: DTS, build environment, the DTB patch trick, failed boot |
+| [`docs/boot-and-recovery.md`](docs/boot-and-recovery.md) | U-Boot boot routes, why `run linux` rejects a custom image, TFTP and `rtk network on`, recovery |
 | [`docs/hardware.md`](docs/hardware.md) | SoC, RAM, NAND, MTD map, GPIOs, I2C buses, SFP+, LEDs, fans/MCU |
 | [`docs/firmware.md`](docs/firmware.md) | Encryption schemes, keys, recovery API, hashes and download links |
 | [`docs/postmortem-first-live-boot.md`](docs/postmortem-first-live-boot.md) | Honest post-mortem of the day the unit got stranded |
