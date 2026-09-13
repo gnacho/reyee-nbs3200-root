@@ -383,3 +383,28 @@ Roughly **six working sessions over 17 days**, one of them spent entirely
 recovering from the mistake of the previous one. The single most expensive
 lesson: on a headless switch, "the kernel boots" is not a success criterion;
 "the kernel boots **and management comes up**" is.
+
+### 2026-09-13 (night) - second bring-up evening: LAN-IP fix, switch/peripheral-disable tests, dev-mode persistence
+
+Full detail in [`postmortem-headless-bringup-2026-09-13.md`](postmortem-headless-bringup-2026-09-13.md).
+
+- Fixed the OpenWrt default LAN IP (`192.168.1.1` -> `.149`) via
+  `CONFIG_TARGET_PREINIT_IP` + `CONFIG_TARGET_DEFAULT_LAN_IP_FROM_PREINIT`, the
+  root cause of the conflict with the home router seen on the previous attempt.
+- Tried three more initramfs variants (v4/v5/v6). All ended headless with no
+  dump and no auto-reboot: **the kernel still does not reach userspace**.
+  Disabling the switch ASIC (v5) and the flash/ECC/I2C/SPI peripherals (v6) did
+  **not** fix it, which rules the DSA probe out as the cause.
+- **LAN storm, twice**: booting OpenWrt with the DSA bridge up and the unit
+  connected to the production LAN flooded the whole home network until the unit
+  was powered off. Rule added: never boot OpenWrt while connected to the LAN.
+- **Developer Mode persistence solved**: it is driven by `develop-mode` in the
+  `product_info` partition (`/lib/preinit/05_detect_factory_mode`); writing
+  `develop-mode=1` there (offset `0xe5`) makes it survive reboots. Backed up.
+- Identified the likely cause of the config/overlay loss after a flashed boot:
+  mounting `ubi:rootfs_data` from u-boot to load the image (a UBIFS rw mount can
+  write). The image must live outside the stock overlay.
+- Unresolved: an earlier attempt appeared to bring the OpenWrt network up at
+  `192.168.1.1` (i.e. userspace ran), which contradicts every later attempt.
+  This is the best lead for the next session.
+- Unit ends stock and healthy; nothing permanent was written.
