@@ -1,0 +1,16 @@
+2f08543ac44c8a15fbb7295d13aa6908  mtd0-u-boot.bin
+27d16226ccaf5bf22ff1e0b5e230f799  mtd1-u-boot-env.bin
+c21e41ded6510543f7b11079f2d4711e  mtd2-product_info.bin
+2fdd6851b32ae931637d4845c037b550  mtd3-kdump.bin
+cd5f789f1c518141746004a128b83ca4  mtd4-factory_test0.bin
+d9d01ccc963f353db890b6994378c079  mtd5-kernel.bin
+8bc365d9919d863d7f82cf97d31a553c  mtd6-ubi.bin
+bcf2715e0a92c0de0da83e75de3c08b5  mtd7-firmware.bin
+2e6c274f51f8abc42297c7a5e6dd81a2  mtd8-u-boot-slave.bin
+# Backup MTD completo Ruijie Reyee RG-NBS3200-48GT4XS (SN G1RH1EQ000845)
+# Fecha: 2026-09-03T08:52:22+02:00  Origen: 192.168.10.4:54133 (root SSH, developer mode)
+# Mapa /proc/mtd:
+# mtd0 u-boot 2M | mtd1 u-boot-env 1M | mtd2 product_info 2M | mtd3 kdump 1M
+# mtd4 factory_test0 2M | mtd5 kernel 2M | mtd6 ubi 244M | mtd7 firmware 246M
+# mtd8 u-boot-slave 2M  (erasesize 128K, flash SPI NAND rtk_spinand)
+# MD5 verificados remoto==local en cada particion en el momento del volcado.
