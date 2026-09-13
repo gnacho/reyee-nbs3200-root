@@ -1,0 +1,432 @@
+11973 /tmp/bootcap.txt
+===== /proc/cmdline =====
+ker_name=vmlinux.gz boot_ver=1.0.2.995246c boot_build_time=1970/01/01-00:00:00 product_id=60050030 machtype=NBS3200-48GT4XS hardware_version=1.20 rtk_dma_size=8M ubi.mtd=6 root=/dev/ubiblock0_0 rootfstype=squashfs,jffs2 r rootwait console=ttyMTD10 console=ttyS0,9600 mtdparts=rtk_spinand:2048k@2048K(u-boot),1024k@4096K(u-boot-env),2048k@5120k(product_info),1024k@7168k(kdump),2048k@8192k(factory_test0),2048k@10240k(kernel),249856k@12288k(ubi),251904k@10240k(firmware),2048k@0(u-boot-slave) quiet env_size=0x20000  rootfstype=squashfs,yaffs,jffs2 noinitrd
+===== /proc/version =====
+Linux version 3.3.8 (ngcf@openwrt-88) (gcc version 4.6.3 20120201 (prerelease) (Linaro GCC 4.6-2012.02) ) #1 Tue Jun 23 10:25:40 CST 2026
+===== /proc/cpuinfo =====
+system type		: RTL9310
+machine			: NBS3200-48GT4XS
+processor		: 0
+cpu model		: MIPS interAptiv (multi) V2.0
+BogoMIPS		: 663.55
+wait instruction	: yes
+microsecond timers	: yes
+tlb_entries		: 64
+extra interrupt vector	: yes
+hardware watchpoint	: yes, count: 4, address/irw mask: [0x0000, 0x0ff8, 0x0ff8, 0x0ff8]
+ASEs implemented	: mips16 dsp mt
+shadow register sets	: 1
+kscratch registers	: 0
+core			: 0
+VCED exceptions		: not available
+VCEI exceptions		: not available
+
+===== /proc/devices =====
+Character devices:
+  1 mem
+  4 ttyS
+  5 /dev/tty
+  5 /dev/console
+  5 /dev/ptmx
+ 10 misc
+ 13 input
+ 89 i2c
+ 90 mtd
+128 ptm
+136 pts
+200 rtcore
+201 ski
+253 ubi0
+254 rtc
+
+Block devices:
+259 blkext
+ 31 mtdblock
+254 ubiblock
+===== /proc/partitions =====
+major minor  #blocks  name
+
+  31        0       2048 mtdblock0
+  31        1       1024 mtdblock1
+  31        2       2048 mtdblock2
+  31        3       1024 mtdblock3
+  31        4       2048 mtdblock4
+  31        5       2048 mtdblock5
+  31        6     249856 mtdblock6
+  31        7     251904 mtdblock7
+  31        8       2048 mtdblock8
+ 254        0      14136 ubiblock0_0
+===== /proc/iomem =====
+00000000-0f7fffff : System RAM
+  00000000-0034c88f : Kernel code
+  0034c890-00403f17 : Kernel data
+===== /proc/mtd =====
+dev:    size   erasesize  name
+mtd0: 00200000 00020000 "u-boot"
+mtd1: 00100000 00020000 "u-boot-env"
+mtd2: 00200000 00020000 "product_info"
+mtd3: 00100000 00020000 "kdump"
+mtd4: 00200000 00020000 "factory_test0"
+mtd5: 00200000 00020000 "kernel"
+mtd6: 0f400000 00020000 "ubi"
+mtd7: 0f600000 00020000 "firmware"
+mtd8: 00200000 00020000 "u-boot-slave"
+===== /proc/meminfo =====
+MemTotal:        1011156 kB
+MemFree:          864288 kB
+Buffers:            2736 kB
+Cached:            26748 kB
+SwapCached:            0 kB
+Active:            53784 kB
+Inactive:          19704 kB
+Active(anon):      47024 kB
+Inactive(anon):     9416 kB
+Active(file):       6760 kB
+Inactive(file):    10288 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+HighTotal:        786432 kB
+HighFree:         673096 kB
+LowTotal:         224724 kB
+LowFree:          191192 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:         44028 kB
+Mapped:            13336 kB
+Shmem:             12436 kB
+Slab:               9596 kB
+SReclaimable:       2292 kB
+SUnreclaim:         7304 kB
+KernelStack:        2464 kB
+PageTables:         1328 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:      505576 kB
+Committed_AS:     402492 kB
+VmallocTotal:    1015800 kB
+VmallocUsed:       42568 kB
+VmallocChunk:     937548 kB
+===== /proc/net/dev =====
+Inter-|   Receive                                                |  Transmit
+ face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed
+br-wan: 577884932 10305656    0    0    0     0          0         0 1096725188 3781115    0    0    0     0       0          0
+  gre0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+eth0.1: 688035879 11890348    0    0    0     0          0     22362 1096725188 3781115    0    0    0     0       0          0
+    lo: 252323945 1152157    0    0    0     0          0         0 252323945 1152157    0    0    0     0       0          0
+ tunl0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+br-manager:     876      19    0    0    0     0          0         0 363864700 3273064    0    0    0     0       0          0
+  sit0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  eth0: 902063539 11890370    0    0    0     0          0         0 1505399990 7414880    0    0    0     0       0          0
+===== /proc raiz =====
+1
+1040
+1041
+1042
+1043
+1044
+1045
+1046
+1047
+1050
+1051
+1052
+1053
+1054
+1056
+1057
+1059
+1061
+1064
+1065
+1067
+1068
+1069
+1072
+1073
+1075
+1076
+1078
+1079
+1080
+1081
+1083
+1084
+1086
+1087
+1088
+1089
+116
+1434
+1436
+1438
+14669
+1528
+1539
+1590
+162
+16456
+16475
+16510
+16551
+16572
+16611
+167
+16773
+16813
+16834
+16835
+16876
+16904
+16926
+16950
+1697
+16977
+17023
+17104
+17118
+17189
+17275
+17311
+17339
+17384
+17391
+17392
+17393
+17394
+17404
+1819
+1875
+1882
+1904
+191
+1911
+196
+2
+201
+2037
+2044
+206
+2076
+2104
+211
+2126
+216
+2178
+221
+226
+231
+239
+2538
+2628
+280
+2803
+2841
+3
+3614
+3735
+3781
+3839
+4039
+4058
+4081
+4092
+4194
+4247
+4272
+4274
+4495
+4534
+4640
+4796
+498
+5
+5075
+5084
+511
+512
+513
+514
+515
+5439
+560
+561
+563
+6
+67
+69
+6969
+7
+71
+8
+buddyinfo
+bus
+cmdline
+consoles
+cpuinfo
+crypto
+devices
+diskstats
+driver
+execdomains
+filesystems
+fs
+interrupts
+iomem
+ioports
+irq
+kallsyms
+kmsg
+loadavg
+locks
+meminfo
+misc
+modules
+mounts
+mtd
+net
+overlay
+pagetypeinfo
+partitions
+rg_stack
+rg_sys
+rj_tolocal
+self
+softirqs
+stat
+sys
+sysrq-trigger
+sysvipc
+timer_list
+tty
+uptime
+version
+vmallocinfo
+vmstat
+zoneinfo
+===== /proc entradas rtl/switch/esw =====
+===== /sys/class/leds =====
+green-system
+===== /sys/bus/i2c/devices =====
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 0-0051 -> ../../../devices/platform/i2c-gpio.0/i2c-0/0-0051
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 1-004a -> ../../../devices/platform/i2c-gpio.1/i2c-1/1-004a
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 2-0050 -> ../../../devices/platform/i2c-gpio.2/i2c-2/2-0050
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 2-0051 -> ../../../devices/platform/i2c-gpio.2/i2c-2/2-0051
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 3-0050 -> ../../../devices/platform/i2c-gpio.3/i2c-3/3-0050
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 3-0051 -> ../../../devices/platform/i2c-gpio.3/i2c-3/3-0051
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 4-0050 -> ../../../devices/platform/i2c-gpio.4/i2c-4/4-0050
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 4-0051 -> ../../../devices/platform/i2c-gpio.4/i2c-4/4-0051
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 5-0050 -> ../../../devices/platform/i2c-gpio.5/i2c-5/5-0050
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 5-0051 -> ../../../devices/platform/i2c-gpio.5/i2c-5/5-0051
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 i2c-0 -> ../../../devices/platform/i2c-gpio.0/i2c-0
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 i2c-1 -> ../../../devices/platform/i2c-gpio.1/i2c-1
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 i2c-2 -> ../../../devices/platform/i2c-gpio.2/i2c-2
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 i2c-3 -> ../../../devices/platform/i2c-gpio.3/i2c-3
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 i2c-4 -> ../../../devices/platform/i2c-gpio.4/i2c-4
+lrwxrwxrwx    1 root     root             0 Jul 29 09:29 i2c-5 -> ../../../devices/platform/i2c-gpio.5/i2c-5
+===== /sys/bus/mdio_bus/devices =====
+===== /sys/bus/platform/devices =====
+alarmtimer
+gpio-keys-polled
+i2c-gpio.0
+i2c-gpio.1
+i2c-gpio.2
+i2c-gpio.3
+i2c-gpio.4
+i2c-gpio.5
+leds-color
+rtk_gpio_931x.0
+serial8250
+===== debugfs =====
+bdi
+gpio
+mips
+===== debugfs gpio =====
+GPIOs 0-31, platform/rtk_gpio_931x.0, rtk_gpio_931x:
+ gpio-0   (green-system        ) out lo
+ gpio-2   (Reset button        ) in  hi
+ gpio-3   (green-system        ) out hi
+ gpio-4   (rtk_gpio_931x       ) out lo
+ gpio-7   (scl                 ) in  hi
+ gpio-13  (scl                 ) in  hi
+ gpio-14  (scl                 ) in  hi
+ gpio-15  (sda                 ) out hi
+ gpio-16  (sda                 ) out hi
+ gpio-17  (sda                 ) out hi
+ gpio-18  (scl                 ) in  hi
+ gpio-19  (sda                 ) out hi
+ gpio-20  (scl                 ) in  hi
+ gpio-21  (sda                 ) out hi
+ gpio-22  (scl                 ) in  hi
+ gpio-23  (sda                 ) out hi
+ gpio-27  (rtk_gpio_931x       ) out hi
+===== ifconfig -a =====
+br-manager Link encap:Ethernet  HWaddr 02:00:00:00:00:00  
+          inet addr:10.44.77.200  Bcast:10.44.77.255  Mask:255.255.255.0
+          inet6 addr: fe80::9e2b:a6ff:fecb:80fa/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:19 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:3273064 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:876 (876.0 B)  TX bytes:363864700 (347.0 MiB)
+
+br-wan    Link encap:Ethernet  HWaddr 02:00:00:00:00:00  
+          inet addr:192.168.10.4  Bcast:192.168.10.255  Mask:255.255.255.0
+          inet6 addr: fe80::9e2b:a6ff:fecb:80fa/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:10305656 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:3781115 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:577884932 (551.1 MiB)  TX bytes:1096725188 (1.0 GiB)
+
+eth0      Link encap:Ethernet  HWaddr 02:00:00:00:00:00  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:11890370 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:7414880 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:902063539 (860.2 MiB)  TX bytes:1505399990 (1.4 GiB)
+          Interrupt:40 
+
+eth0.1    Link encap:Ethernet  HWaddr 02:00:00:00:00:00  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:11890348 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:3781115 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:688035879 (656.1 MiB)  TX bytes:1096725188 (1.0 GiB)
+
+gre0      Link encap:UNSPEC  HWaddr 00-00-00-00-02-B0-00-48-00-00-00-00-00-00-00-00  
+          NOARP  MTU:1476  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:1152157 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:1152157 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:252323945 (240.6 MiB)  TX bytes:252323945 (240.6 MiB)
+
+sit0      Link encap:IPv6-in-IPv4  
+          NOARP  MTU:1480  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+tunl0     Link encap:UNSPEC  HWaddr 00-00-00-00-07-30-00-48-00-00-00-00-00-00-00-00  
+          NOARP  MTU:1480  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+===== brctl show =====
+bridge name	bridge id		STP enabled	interfaces
+br-manager		7fff.9c2ba6cb80fa	no		eth0
+br-wan		7fff.9c2ba6cb80fa	no		eth0.1

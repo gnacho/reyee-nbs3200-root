@@ -1,0 +1,17 @@
+iProductID=60050030
+HardwareVersion=1.20
+ethaddr=02:00:00:00:00:00
+SerialNO=G1EXAMPLE000123
+MainFile=rgos.bin
+fdtname=fdtname
+serial0=6
+serial1=0
+serial2=0
+serial3=0
+projectid=nbs3200
+setmac_ver=11.0
+factory-mode=0
+develop-mode=0
+setmac_time=2021-06-28 21:14:07
+ProductModel=NBS3200-48GT4XS
+ProductInfo=0B0EFACE

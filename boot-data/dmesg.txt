@@ -1,0 +1,2045 @@
+[    0.000000] Linux version 3.3.8 (ngcf@openwrt-88) (gcc version 4.6.3 20120201 (prerelease) (Linaro GCC 4.6-2012.02) ) #1 Tue Jun 23 10:25:40 CST 2026
+[    0.000000] 
+[    0.000000] Execute init_l2_cache()
+[    0.000000] CPU revision is: 0001a120 (MIPS interAptiv (multi))
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 0f800000 @ 00000000 (usable)
+[    0.000000]  memory: 30000000 @ 90000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone PFN ranges:
+[    0.000000]   Normal   0x00000000 -> 0x0000f800
+[    0.000000]   HighMem  0x0000f800 -> 0x000c0000
+[    0.000000] Movable zone start PFN for each node
+[    0.000000] Early memory PFN ranges
+[    0.000000]     0: 0x00000000 -> 0x0000f800
+[    0.000000]     0: 0x00090000 -> 0x000c0000
+[    0.000000] On node 0 totalpages: 260096
+[    0.000000] free_area_init_node: node 0, pgdat 80403560, node_mem_map 81000000
+[    0.000000]   Normal zone: 496 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 62992 pages, LIFO batch:15
+[    0.000000]   HighMem zone: 5648 pages used for memmap
+[    0.000000]   HighMem zone: 190960 pages, LIFO batch:31
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 253952
+[    0.000000] Kernel command line: ker_name=vmlinux.gz boot_ver=1.0.2.995246c boot_build_time=1970/01/01-00:00:00 product_id=60050030 machtype=NBS3200-48GT4XS hardware_version=1.20 rtk_dma_size=8M ubi.mtd=6 root=/dev/ubiblock0_0 rootfstype=squashfs,jffs2 r rootwait console=ttyMTD10 console=ttyS0,9600 mtdparts=rtk_spinand:2048k@2048K(u-boot),1024k@4096K(u-boot-env),2048k@5120k(product_info),1024k@7168k(kdump),2048k@8192k(factory_test0),2048k@10240k(kernel),249856k@12288k(ubi),251904k@10240k(firmware),2048k@0(u-boot-slave) quiet env_size=0x20000  rootfstype=squashfs,yaffs,jffs2 noinitrd
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.000000] MIPS secondary cache 256kB, 8-way, linesize 32 bytes.
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] Memory: 1010892k/253952k available (3378k kernel code, 29492k reserved, 733k data, 264k init, 786432k highmem)
+[    0.000000] SLUB: Genslabs=9, HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:128
+[    0.000000] console [ttyS0] enabled
+[    0.000000] Calibrating delay loop... 663.55 BogoMIPS (lpj=3317760)
+[    0.050000] pid_max: default: 32768 minimum: 301
+[    0.050000] Mount-cache hash table entries: 512
+[    0.050000] NET: Registered protocol family 16
+[    0.050000] MIPS: machine is NBS3200-48GT4XS
+[    0.050000] gpiochip_add: registered GPIOs 0 to 31 on device: rtk_gpio_931x
+[    0.050000] rtk_gpio_931x rtk_gpio_931x.0: probed
+[    0.050000] bio: create slab <bio-0> at 0
+[    0.050000] i2c-gpio i2c-gpio.0: using pins 15 (SDA) and 7 (SCL)
+[    0.050000] i2c-gpio i2c-gpio.1: using pins 16 (SDA) and 13 (SCL)
+[    0.050000] i2c-gpio i2c-gpio.2: using pins 17 (SDA) and 14 (SCL)
+[    0.060000] i2c-gpio i2c-gpio.3: using pins 19 (SDA) and 18 (SCL)
+[    0.060000] i2c-gpio i2c-gpio.4: using pins 21 (SDA) and 20 (SCL)
+[    0.060000] i2c-gpio i2c-gpio.5: using pins 23 (SDA) and 22 (SCL)
+[    0.060000] NET: Registered protocol family 2
+[    0.060000] IP route cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.060000] TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+[    0.060000] TCP bind hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.060000] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.060000] TCP reno registered
+[    0.060000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.060000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.060000] NET: Registered protocol family 1
+[    0.060000] highmem bounce pool size: 64 pages
+[    0.070000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.070000] JFFS2 version 2.2 (NAND) (SUMMARY) (LZMA) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.070000] msgmni has been set to 438
+[    0.070000] io scheduler noop registered
+[    0.070000] io scheduler deadline registered (default)
+[    0.070000] Serial: 8250/16550 driver, 1 ports, IRQ sharing enabled
+[    0.070000] serial8250: ttyS0 at MMIO 0x0 (irq = 47) is a 16550A
+[    0.070000] at24 2-0050: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] at24 2-0051: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] at24 3-0050: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] at24 3-0051: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] at24 4-0050: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] at24 4-0051: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] at24 5-0050: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] at24 5-0051: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] RTK_SPI_FLASH_MIO driver is bypassed
+[    0.070000] RTK_NORSFG3 driver is used
+[    0.070000] =================================================================
+[    0.070000] init_luna_nor_spi_map: flash map at 0xb4000000
+[    0.070000] SPI NOR driver probe...
+[    0.070000] FFFFFF/MMIO16-1/ModeC 
+[    0.080000] MTD Table FIll null
+[    0.080000] RTK_SPI_NAND driver is used
+[    0.080000] [rtk_spi_nand_detect] Start to probe SPI NAND Flash ......
+[    0.080000] [rtk_spi_nand_detect] Probe SPI NAND Flash Successed.
+[    0.090000] [rtk_spi_nand_detect] 2nd SPI NAND Flash is NULL !!!
+[    0.090000] NAND device: Manufacturer ID: 0x98, Chip ID: 0xcb (Toshiba )
+[    0.090000] Scanning device for bad blocks
+[    0.090000] Bad eraseblock 3 at 0x000000060000
+[    3.940000] Bad eraseblock 1536 at 0x00000c000000
+[    3.940000] Bad eraseblock 1537 at 0x00000c020000
+[    5.220000] 9 cmdlinepart partitions found on MTD device rtk_spinand
+[    5.220000] RTK: using dynamic nand partition
+[    5.220000] Creating 9 MTD partitions on "rtk_spinand":
+[    5.220000] 0x000000200000-0x000000400000 : "u-boot"
+[    5.220000] sched: RT throttling activated
+[    5.220000] 0x000000400000-0x000000500000 : "u-boot-env"
+[    5.220000] 0x000000500000-0x000000700000 : "product_info"
+[    5.220000] 0x000000700000-0x000000800000 : "kdump"
+[    5.220000] 0x000000800000-0x000000a00000 : "factory_test0"
+[    5.230000] 0x000000a00000-0x000000c00000 : "kernel"
+[    5.230000] 0x000000c00000-0x000010000000 : "ubi"
+[    5.230000] 0x000000a00000-0x000010000000 : "firmware"
+[   12.890000] 0x000000000000-0x000000200000 : "u-boot-slave"
+[   12.890000] UBI: attaching mtd6 to ubi0
+[   12.890000] UBI: physical eraseblock size:   131072 bytes (128 KiB)
+[   12.890000] UBI: logical eraseblock size:    126976 bytes
+[   12.890000] UBI: smallest flash I/O unit:    2048
+[   12.890000] UBI: VID header offset:          2048 (aligned 2048)
+[   12.890000] UBI: data offset:                4096
+[   15.590000] UBI: max. sequence number:       0
+[   15.660000] UBI: volume 1 ("rootfs_data") re-sized from 991 to 1813 LEBs
+[   15.660000] UBI: attached mtd6 to ubi0
+[   15.660000] UBI: MTD device name:            "ubi"
+[   15.660000] UBI: MTD device size:            244 MiB
+[   15.660000] UBI: number of good PEBs:        1950
+[   15.660000] UBI: number of bad PEBs:         2
+[   15.660000] UBI: number of corrupted PEBs:   0
+[   15.660000] UBI: max. allowed volumes:       128
+[   15.660000] UBI: wear-leveling threshold:    4096
+[   15.660000] UBI: number of internal volumes: 1
+[   15.660000] UBI: number of user volumes:     2
+[   15.660000] UBI: available PEBs:             0
+[   15.660000] UBI: total number of reserved PEBs: 1950
+[   15.660000] UBI: number of PEBs reserved for bad PEB handling: 19
+[   15.660000] UBI: max/mean erase counter: 1/0
+[   15.660000] UBI: image sequence number:  1289227132
+[   15.660000] get env_size=0x20000 from cmdline
+[   15.660000] final used env_size: 0x20000
+[   15.740000] u-boot-env crc check OK
+[   15.740000] get env_size=0x20000 from cmdline
+[   15.740000] final used env_size: 0x20000
+[   15.820000] u-boot-env crc check OK
+[   15.830000] Reading from volume 'rootfs' to 0xc009f000, size 0xdce000 ...
+[   24.610000] ***OK***
+[   24.770000] Hash check: rootfs_crc32 real crc32 is [e50538bc], recorded real_crc is [e50538bc]
+[   24.770000] get env_size=0x20000 from cmdline
+[   24.770000] final used env_size: 0x20000
+[   24.850000] u-boot-env crc check OK
+[   24.960000] UBI: background thread "ubi_bgt0d" started, PID 239
+[   27.360000] UBI: ubiblock0_0 created from ubi0:0(rootfs)
+[   27.360000] ubiblock: device ubiblock0_0 (rootfs) set to be root filesystem
+[   27.360000] rtc-pcf8563 0-0051: chip found, driver version 0.4.3
+[   27.360000] rtc-pcf8563 0-0051: rtc core: registered rtc-pcf8563 as rtc0
+[   27.360000] i2c /dev entries driver
+[   27.360000] lm75 1-004a: hwmon0: sensor 'lm75'
+[   27.440000] Registered led device: green-system
+[   27.440000] nf_conntrack version 0.5.0 (15795 buckets, 63180 max)
+[   27.440000] IPv4 over IPv4 tunneling driver
+[   27.440000] GRE over IPv4 demultiplexor driver
+[   27.440000] GRE over IPv4 tunneling driver
+[   27.440000] TCP cubic registered
+[   27.440000] Initializing XFRM netlink socket
+[   27.440000] NET: Registered protocol family 10
+[   27.440000] IPv6 over IPv4 tunneling driver
+[   27.440000] NET: Registered protocol family 17
+[   27.440000] NET: Registered protocol family 15
+[   27.440000] Bridge firewalling registered
+[   27.440000] NF register ebt rj to local module sucess!
+[   27.440000] 8021q: 802.1Q VLAN Support v1.8
+[   27.440000] rg_tipc: Activated (version 2.0.0)
+[   27.440000] NET: Registered protocol family 40
+[   27.440000] rg_tipc: Started in single node mode
+[   27.440000] rtc-pcf8563 0-0051: setting system clock to 2026-07-29 08:29:36 UTC (1785313776)
+[   27.460000] VFS: Mounted root (squashfs filesystem) readonly on device 254:0.
+[   27.460000] Freeing unused kernel memory: 264k freed
+[   34.280000] UBI: scrubbed PEB 65 (LEB 0:63), data moved to PEB 1951
+[   35.660000] UBIFS: start fixing up free space
+[   35.740000] UBIFS: free space fixup complete
+[   35.750000] UBIFS: mounted UBI device 0, volume 1, name "rootfs_data"
+[   35.750000] UBIFS: file system size:   120500224 bytes (117676 KiB, 114 MiB, 949 LEBs)
+[   35.750000] UBIFS: journal size:       9023488 bytes (8812 KiB, 8 MiB, 72 LEBs)
+[   35.750000] UBIFS: media format:       w4/r0 (latest is w4/r0)
+[   35.750000] UBIFS: default compressor: lzo
+[   35.750000] UBIFS: reserved for root:  0 bytes (0 KiB)
+[   35.770000] UBIFS: un-mount UBI device 0, volume 1
+[   36.150000] UBIFS: mounted UBI device 0, volume 1, name "rootfs_data"
+[   36.150000] UBIFS: file system size:   120500224 bytes (117676 KiB, 114 MiB, 949 LEBs)
+[   36.150000] UBIFS: journal size:       9023488 bytes (8812 KiB, 8 MiB, 72 LEBs)
+[   36.150000] UBIFS: media format:       w4/r0 (latest is w4/r0)
+[   36.150000] UBIFS: default compressor: lzo
+[   36.150000] UBIFS: reserved for root:  0 bytes (0 KiB)
+[   37.200000] 
+[   37.200000] rg_sys_info_sz:15
+[   37.200000] 0,creat name:manufacturer
+[   37.200000] 1,creat name:oui
+[   37.200000] 2,creat name:product_class
+[   37.200000] 3,creat name:model
+[   37.200000] 4,creat name:sys_mac
+[   37.200000] 5,creat name:wan_ip
+[   37.200000] 6,creat name:serial_num
+[   37.200000] 7,creat name:hardware_version
+[   37.200000] 8,creat name:software_version
+[   37.200000] 9,creat name:product_id
+[   37.200000] 10,creat name:net_access_license
+[   37.200000] 11,creat name:model_full_name
+[   37.200000] 12,creat name:devkey
+[   37.200000] 13,creat name:devkey_hash
+[   37.200000] 14,creat name:psti
+[   37.370000] RTCORE LKM Insert...
+[   37.370000] 
+[   37.370000] allocate mem to rtcore_devices[0].rt_data=0x8e810000
+[   37.370000] RTCORE Driver Module Initialize
+[   37.370000]   IOAL init
+[   37.370000]   Log init
+[   37.380000]   content = 60050030   ProductID=0x201402f0
+[   37.380000] Probe name=NBS5720_48GT4XS_S
+[   37.380000]   Hardware-profile probe
+[   37.380000]    rtcore_init hwp_probe ok 
+[   37.380000]   Hardware-profile init
+[   37.380000]    rtcore_init hwp_init ok 
+[   37.380000]    rtcore_init ioal_init_unitID_change ok 
+[   37.380000]    rtcore_init hwp_chipInfo_update ok 
+[   37.380000]   GPIO probe (unit 0): (found)
+[   37.380000]   GPIO Init
+[   37.380000]   SPI init (unit 0) 
+[   37.380000]   Intr Probe (unit 0)
+[   37.380000]   TC probe (unit 0): (found)
+[   37.380000]   TC init (unit 0)
+[   37.380000]     TC util init (unit 0)
+[   37.380000]     TC util init (isr)
+[   37.380000]   Watchdog probe (unit 0): (found)
+[   37.380000]   Watchdog init (unit 0)
+[   37.380000]   I2C probe (unit 0)
+[   37.380000]   NIC probe (unit 0)
+[   37.380000]   IOAL init
+[   37.380000]   L2Ntfy probe (unit 0): (found)
+[   39.720000] RTK Driver Module Initialize
+[   39.720000] [4][init] rtk_init Start!!
+[   39.720000] 
+[   39.720000] [4][init] dal_mgmt_init Completed!!
+[   39.720000] 
+[   39.720000]   MAC probe (unit 0)
+[   39.720000]     Chip 9311 (found)
+[   39.720000]   MAC init (unit 0)
+[   39.770000]   SMI protocol probe (unit 0)
+[   39.770000]   PHY probe (unit 0)
+[   39.790000] [4][hal] _phy_identify_9310_serdes(unit 0, port 48) function!!
+[   39.790000] [4][hal] _phy_identify_9310_serdes(unit 0, port 50) function!!
+[   39.790000] [4][hal] _phy_identify_9310_serdes(unit 0, port 52) function!!
+[   39.790000] [4][hal] _phy_identify_9310_serdes(unit 0, port 53) function!!
+[   39.790000]   Chip Construct (unit 0)
+[   39.790000]     Chip Construct
+[   39.800000]     Turn Off Serdes
+[   39.800000]     Disable PHY Polling
+[   39.800000]     PHY Reset
+[   40.300000]     PHY Construct
+[   42.220000]     Serdes Construct
+[   48.700000]     MAC-Polling-PHY Config
+[   48.700000]     Enable PHY Polling
+[   48.700000]   PHY init (unit 0)
+[   51.370000] [4][init] hal_init Completed!!
+[   51.370000] 
+[   51.370000]   Mgmt_dev init (unit 0) 
+[   51.370000] [4][init] dal_mgmt_mapper_init Completed!!
+[   53.670000] [4][init] RT_MAPPER(unit)->_init Completed!!
+[   53.670000] [4][init] dal_linkMon_devInit Completed!!
+[   53.670000] [4][init] dal_mgmt_initDevice Completed!!
+[   53.670000] 
+[   53.670000] [4][init] dal_waMon_enable Success!!
+[   53.670000] [4][init] dal_mgmt_misc_init Completed!!
+[   53.670000] 
+[   53.670000] Sys_mac Init  02:00:00:00:00:00
+[   54.010000] RTDRV Driver Module Initialize
+[   54.970000] Sysmac is[02:00:00:00:00:00]
+[   54.970000] Sys_mac Init  02:00:00:00:00:00
+[   59.430000] init std_syslog_kern.ko
+[   59.990000] Init Board Configuration Module....OK
+[   60.060000] Init krn2usr Module....OK
+[   60.070000] Init KSI Core Driver Module....OK
+[   60.850000] Init SKI Core Driver Module.... dal_mango_trunk_init had already been initialized!
+[   60.880000] [rsd_fiber_adapt_init:1157]g_familyId: 8, g_boardId: 51, localLportStart-End:(0-67)
+[   60.890000] [rsd_fiber_adapt_init:1253]lport_sfp_start:48 lport_sfp_end:51 
+[   61.070000] OK
+[   61.070000] Init Board Module....OK
+[   61.110000] Init VLAN Aware Module....OK
+[   61.200000] Init Switch STP Module....OK
+[   61.290000] Init Switch LACP Module....OK
+[   61.530000] Init Switch Multicast Module....OK
+[   62.950000] Init Switch IPSG Module....OK
+[   63.050000] Init Switch DHCP Module....OK
+[   63.060000] Init Switch Voice VLAN Module....OK
+[   63.080000] Init Switch LLDP Module....OK
+[   63.090000] Init Switch MAC VLAN Module....OK
+[   63.160000] Init Switch RLDP Module....OK
+[   63.170000] Init Switch RDLA Module....OK
+[   63.220000] Init Switch AUTHMGR Module....OK
+[   63.230000] Init Switch ERPS Module....OK
+[   63.250000] Init Switch PVSTP Module....OK
+[   63.280000] Button Hotplug driver version 0.4.1
+[   63.330000] tun: Universal TUN/TAP device driver, 1.6
+[   63.330000] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[   63.410000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   63.790000] xt_time: kernel timezone is -0000
+[   64.030000] nf_conntrack_rtsp v0.6.21 loading
+[   64.040000] nf_nat_rtsp v0.6.21 loading
+[   64.040000] Netfilter messages via NETLINK v0.30.
+[   64.070000] Ebtables v2.0 registered
+[   64.240000] ip_set: protocol 6
+[   64.420000] u32 classifier
+[   64.420000]     Performance counters on
+[   64.420000]     input device check on
+[   64.420000]     Actions configured
+[   71.030000] mtdoops: Attached to MTD device 3
+[   75.110000] <kernel>dont remove
+[   75.490000] %System-2: Device Ready!
+[   76.120000] [TEST] Recv ksid l3intf state check cmd
+[   78.670000] device eth0 entered promiscuous mode
+[   78.670000] br-manager: port 1(eth0) entered forwarding state
+[   78.670000] br-manager: port 1(eth0) entered forwarding state
+[   78.680000] device eth0.1 entered promiscuous mode
+[   79.720000] br-wan: port 1(eth0.1) entered forwarding state
+[   79.720000] br-wan: port 1(eth0.1) entered forwarding state
+[   80.670000] br-manager: port 1(eth0) entered forwarding state
+[   81.720000] br-wan: port 1(eth0.1) entered forwarding state
+[   86.920000] Started in network mode
+[   86.920000] Own node identity 9c2ba6cb80fa, cluster identity 1127
+[   86.920000] Enabled bearer <rgeth:br-manager>, priority 10
+[   87.000000] Enabling of bearer <rgeth:br-manager> rejected, already enabled
+[   87.080000] rsd_sys_br_wan_addr_mode_set: mode=2
+[   87.960000] 32-bit node address hash set to 1cd1a6cb
+[   93.170000] %Port-2: Gi3 link up
+[   93.190000] [TEST] L3INTF 0x04000000 change to UP.
+[   93.230000] br-wan: port 1(eth0.1) entered disabled state
+[   93.230000] device eth0.1 left promiscuous mode
+[   93.230000] br-wan: port 1(eth0.1) entered disabled state
+[   93.230000] ADDRCONF(NETDEV_UP): eth0.1: link is not ready
+[   93.320000] %Port-2: Gi11 link up
+[   93.750000] %Port-2: Gi34 link up
+[   93.930000] Enabling of bearer <rgeth:br-manager> rejected, already enabled
+[   95.280000] device eth0.1 entered promiscuous mode
+[   96.330000] br-wan: port 1(eth0.1) entered forwarding state
+[   96.330000] br-wan: port 1(eth0.1) entered forwarding state
+[   98.330000] br-wan: port 1(eth0.1) entered forwarding state
+[   99.860000] [DHCP]br-wan server (192.168.10.1, 02:00:00:00:00:00), vlan 1, port 33
+[  103.180000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[ 2326.910000] %Port-2: Gi3 link down
+[ 2328.810000] %Port-2: Gi3 link up
+[ 2782.900000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[ 2787.820000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[ 2788.840000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[ 2789.870000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[ 3105.930000] %Port-2: Gi34 link down
+[ 3211.580000] %Port-2: Gi34 link up
+[ 3302.110000] %Port-2: Gi34 link down
+[ 3807.030000] %Port-2: Gi34 link up
+[ 4162.720000] %Port-2: Gi34 link down
+[ 4165.230000] %Port-2: Gi34 link up
+[ 4264.220000] %Port-2: Gi34 link down
+[ 4275.940000] %Port-2: Gi34 link up
+[ 4320.730000] %Port-2: Gi34 link down
+[ 4350.940000] %Port-2: Gi34 link up
+[ 4693.200000] %Port-2: Gi34 link down
+[ 4695.750000] %Port-2: Gi34 link up
+[ 4735.300000] %Port-2: Gi34 link down
+[ 4737.810000] %Port-2: Gi34 link up
+[ 4745.110000] %Port-2: Gi34 link down
+[ 4750.730000] %Port-2: Gi34 link up
+[ 4767.400000] %Port-2: Gi34 link down
+[ 4770.080000] %Port-2: Gi34 link up
+[ 4771.040000] %Port-2: Gi34 link down
+[ 4773.550000] %Port-2: Gi34 link up
+[ 5007.540000] %Port-2: Gi34 link down
+[ 5010.130000] %Port-2: Gi34 link up
+[ 5011.170000] %Port-2: Gi34 link down
+[ 5013.690000] %Port-2: Gi34 link up
+[ 5024.180000] %Port-2: Gi34 link down
+[ 5026.720000] %Port-2: Gi34 link up
+[ 5027.780000] %Port-2: Gi34 link down
+[ 5030.300000] %Port-2: Gi34 link up
+[ 5045.480000] %Port-2: Gi34 link down
+[ 5047.990000] %Port-2: Gi34 link up
+[ 5066.400000] %Port-2: Gi34 link down
+[ 5070.900000] %Port-2: Gi34 link up
+[ 5153.110000] %Port-2: Gi34 link down
+[ 5155.710000] %Port-2: Gi34 link up
+[ 5163.040000] %Port-2: Gi34 link down
+[ 5165.630000] %Port-2: Gi34 link up
+[ 5177.090000] %Port-2: Gi34 link down
+[ 5179.610000] %Port-2: Gi34 link up
+[ 5204.840000] %Port-2: Gi34 link down
+[ 5207.410000] %Port-2: Gi34 link up
+[ 5226.630000] %Port-2: Gi34 link down
+[ 5229.250000] %Port-2: Gi34 link up
+[ 5247.760000] %Port-2: Gi34 link down
+[ 5250.350000] %Port-2: Gi34 link up
+[ 5271.890000] %Port-2: Gi34 link down
+[ 5274.480000] %Port-2: Gi34 link up
+[ 5296.880000] %Port-2: Gi34 link down
+[ 5299.500000] %Port-2: Gi34 link up
+[ 5328.480000] %Port-2: Gi34 link down
+[ 5331.000000] %Port-2: Gi34 link up
+[ 5332.040000] %Port-2: Gi34 link down
+[ 5334.660000] %Port-2: Gi34 link up
+[ 5336.740000] %Port-2: Gi34 link down
+[ 5339.570000] %Port-2: Gi34 link up
+[ 6540.790000] %Port-2: Gi34 link down
+[ 6543.670000] %Port-2: Gi34 link up
+[ 6630.210000] %Port-2: Gi34 link down
+[ 6632.750000] %Port-2: Gi34 link up
+[ 7079.330000] %Port-2: Gi34 link down
+[ 7082.180000] %Port-2: Gi34 link up
+[ 7170.780000] %Port-2: Gi34 link down
+[ 7173.270000] %Port-2: Gi34 link up
+[ 7174.330000] %Port-2: Gi34 link down
+[ 7176.870000] %Port-2: Gi34 link up
+[ 7211.180000] %Port-2: Gi34 link down
+[ 7213.820000] %Port-2: Gi34 link up
+[ 7342.970000] %Port-2: Gi34 link down
+[ 7345.670000] %Port-2: Gi34 link up
+[ 7358.700000] %Port-2: Gi34 link down
+[ 7361.550000] %Port-2: Gi34 link up
+[ 7478.320000] %Port-2: Gi34 link down
+[ 7483.950000] %Port-2: Gi34 link up
+[ 7532.670000] %Port-2: Gi34 link down
+[ 7535.190000] %Port-2: Gi34 link up
+[ 7536.940000] %Port-2: Gi34 link down
+[ 7539.480000] %Port-2: Gi34 link up
+[ 7552.470000] %Port-2: Gi34 link down
+[ 7555.010000] %Port-2: Gi34 link up
+[ 7556.050000] %Port-2: Gi34 link down
+[ 7558.570000] %Port-2: Gi34 link up
+[ 7560.220000] %Port-2: Gi34 link down
+[ 7562.810000] %Port-2: Gi34 link up
+[ 7568.620000] %Port-2: Gi34 link down
+[ 7571.290000] %Port-2: Gi34 link up
+[ 7572.730000] %Port-2: Gi34 link down
+[ 7575.300000] %Port-2: Gi34 link up
+[ 7576.110000] %Port-2: Gi34 link down
+[ 7578.710000] %Port-2: Gi34 link up
+[ 7589.530000] %Port-2: Gi34 link down
+[ 7592.090000] %Port-2: Gi34 link up
+[ 7598.140000] %Port-2: Gi34 link down
+[ 7600.710000] %Port-2: Gi34 link up
+[ 7631.090000] %Port-2: Gi34 link down
+[ 7633.840000] %Port-2: Gi34 link up
+[ 7636.710000] %Port-2: Gi34 link down
+[ 7639.480000] %Port-2: Gi34 link up
+[ 7645.810000] %Port-2: Gi34 link down
+[ 7648.410000] %Port-2: Gi34 link up
+[ 7773.920000] %Port-2: Gi34 link down
+[ 7776.490000] %Port-2: Gi34 link up
+[ 7777.350000] %Port-2: Gi34 link down
+[ 7779.840000] %Port-2: Gi34 link up
+[ 7809.690000] %Port-2: Gi34 link down
+[ 7815.340000] %Port-2: Gi34 link up
+[ 7821.240000] %Port-2: Gi34 link down
+[ 7823.910000] %Port-2: Gi34 link up
+[ 7833.170000] %Port-2: Gi34 link down
+[ 7835.910000] %Port-2: Gi34 link up
+[ 7867.050000] %Port-2: Gi34 link down
+[ 7869.640000] %Port-2: Gi34 link up
+[ 7914.050000] %Port-2: Gi34 link down
+[ 7916.820000] %Port-2: Gi34 link up
+[ 7994.290000] %Port-2: Gi34 link down
+[ 7996.910000] %Port-2: Gi34 link up
+[ 8118.290000] %Port-2: Gi34 link down
+[ 8124.090000] %Port-2: Gi34 link up
+[ 8143.100000] %Port-2: Gi34 link down
+[ 8145.950000] %Port-2: Gi34 link up
+[ 8152.190000] %Port-2: Gi34 link down
+[ 8155.010000] %Port-2: Gi34 link up
+[ 8163.210000] %Port-2: Gi34 link down
+[ 8165.720000] %Port-2: Gi34 link up
+[ 8173.630000] %Port-2: Gi34 link down
+[ 8176.120000] %Port-2: Gi34 link up
+[ 8180.920000] %Port-2: Gi34 link down
+[ 8190.700000] %Port-2: Gi34 link up
+[ 8262.140000] %Port-2: Gi34 link down
+[ 8265.090000] %Port-2: Gi34 link up
+[ 8265.120000] %Port-2: Gi34 link down
+[ 8267.630000] %Port-2: Gi34 link up
+[ 8271.090000] %Port-2: Gi34 link down
+[ 8280.890000] %Port-2: Gi34 link up
+[ 8285.270000] %Port-2: Gi34 link down
+[ 8287.780000] %Port-2: Gi34 link up
+[ 8288.900000] %Port-2: Gi34 link down
+[ 8291.490000] %Port-2: Gi34 link up
+[ 8299.170000] %Port-2: Gi34 link down
+[ 8301.690000] %Port-2: Gi34 link up
+[ 8318.500000] %Port-2: Gi34 link down
+[ 8321.210000] %Port-2: Gi34 link up
+[ 8322.930000] %Port-2: Gi34 link down
+[ 8325.530000] %Port-2: Gi34 link up
+[ 8326.900000] %Port-2: Gi34 link down
+[ 8329.490000] %Port-2: Gi34 link up
+[ 8330.280000] %Port-2: Gi34 link down
+[ 8341.070000] %Port-2: Gi34 link up
+[ 8577.200000] %Port-2: Gi34 link down
+[ 8581.170000] %Port-2: Gi34 link up
+[ 8723.810000] %Port-2: Gi34 link down
+[ 8726.560000] %Port-2: Gi34 link up
+[ 8727.390000] %Port-2: Gi34 link down
+[ 8729.930000] %Port-2: Gi34 link up
+[ 8740.040000] %Port-2: Gi34 link down
+[ 8742.610000] %Port-2: Gi34 link up
+[ 8743.440000] %Port-2: Gi34 link down
+[ 8746.040000] %Port-2: Gi34 link up
+[ 9440.890000] %Port-2: Gi34 link down
+[ 9443.920000] %Port-2: Gi34 link up
+[ 9480.970000] %Port-2: Gi34 link down
+[ 9483.750000] %Port-2: Gi34 link up
+[ 9554.850000] %Port-2: Gi34 link down
+[ 9560.480000] %Port-2: Gi34 link up
+[ 9574.130000] %Port-2: Gi34 link down
+[ 9576.820000] %Port-2: Gi34 link up
+[ 9591.110000] %Port-2: Gi34 link down
+[ 9593.670000] %Port-2: Gi34 link up
+[ 9598.930000] %Port-2: Gi34 link down
+[ 9601.500000] %Port-2: Gi34 link up
+[ 9657.060000] %Port-2: Gi34 link down
+[ 9662.640000] %Port-2: Gi34 link up
+[ 9677.070000] %Port-2: Gi34 link down
+[ 9679.670000] %Port-2: Gi34 link up
+[ 9681.400000] %Port-2: Gi34 link down
+[ 9686.970000] %Port-2: Gi34 link up
+[ 9747.330000] %Port-2: Gi34 link down
+[ 9749.900000] %Port-2: Gi34 link up
+[ 9764.330000] %Port-2: Gi34 link down
+[ 9767.110000] %Port-2: Gi34 link up
+[ 9790.330000] %Port-2: Gi34 link down
+[ 9792.900000] %Port-2: Gi34 link up
+[ 9798.700000] %Port-2: Gi34 link down
+[ 9801.270000] %Port-2: Gi34 link up
+[ 9822.050000] %Port-2: Gi34 link down
+[ 9824.570000] %Port-2: Gi34 link up
+[ 9837.680000] %Port-2: Gi34 link down
+[ 9847.460000] %Port-2: Gi34 link up
+[ 9857.870000] %Port-2: Gi34 link down
+[ 9863.420000] %Port-2: Gi34 link up
+[ 9872.810000] %Port-2: Gi34 link down
+[ 9881.540000] %Port-2: Gi34 link up
+[ 9884.070000] %Port-2: Gi34 link down
+[ 9886.590000] %Port-2: Gi34 link up
+[ 9887.670000] %Port-2: Gi34 link down
+[ 9890.320000] %Port-2: Gi34 link up
+[ 9966.450000] %Port-2: Gi34 link down
+[ 9969.320000] %Port-2: Gi34 link up
+[ 9981.290000] %Port-2: Gi34 link down
+[ 9984.110000] %Port-2: Gi34 link up
+[10070.550000] %Port-2: Gi34 link down
+[10076.200000] %Port-2: Gi34 link up
+[10080.530000] %Port-2: Gi34 link down
+[10102.500000] %Port-2: Gi34 link up
+[10371.450000] %Port-2: Gi34 link down
+[10373.980000] %Port-2: Gi34 link up
+[10384.410000] %Port-2: Gi34 link down
+[10403.720000] %Port-2: Gi34 link up
+[13811.420000] %Port-2: Gi34 link down
+[13818.190000] %Port-2: Gi34 link up
+[13819.020000] %Port-2: Gi34 link down
+[13821.570000] %Port-2: Gi34 link up
+[13822.430000] %Port-2: Gi34 link down
+[13828.180000] %Port-2: Gi34 link up
+[13830.160000] %Port-2: Gi34 link down
+[13832.830000] %Port-2: Gi34 link up
+[13839.770000] %Port-2: Gi34 link down
+[13843.080000] %Port-2: Gi34 link up
+[13881.380000] %Port-2: Gi34 link down
+[13883.900000] %Port-2: Gi34 link up
+[13923.090000] %Port-2: Gi34 link down
+[13925.640000] %Port-2: Gi34 link up
+[13970.100000] %Port-2: Gi34 link down
+[13976.060000] %Port-2: Gi34 link up
+[13979.950000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[13980.970000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[13981.990000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[13990.140000] %Port-2: Gi34 link down
+[14027.780000] %Port-2: Gi34 link up
+[22075.670000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[22080.590000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[22081.610000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[22082.640000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[23916.910000] %Port-2: Gi34 link down
+[23929.410000] %Port-2: Gi34 link up
+[24919.920000] %Port-2: Gi34 link down
+[25007.330000] %Port-2: Gi34 link up
+[25210.320000] %Port-2: Gi34 link down
+[25211.940000] %Port-2: Gi34 link up
+[28259.930000] %Port-2: Gi34 link down
+[28261.780000] %Port-2: Gi34 link up
+[31581.820000] %Port-2: Gi34 link down
+[31584.870000] %Port-2: Gi34 link up
+[33006.520000] %Port-2: Gi34 link down
+[33014.570000] %Port-2: Gi34 link up
+[33388.010000] %Port-2: Gi34 link down
+[33389.610000] %Port-2: Gi34 link up
+[33442.860000] %Port-2: Gi34 link down
+[33444.510000] %Port-2: Gi34 link up
+[33447.610000] %Port-2: Gi34 link down
+[33450.580000] %Port-2: Gi34 link up
+[35833.990000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[35839.110000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[35840.130000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[35840.950000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[44178.340000] %Port-2: Gi34 link down
+[44179.940000] %Port-2: Gi34 link up
+[44180.470000] %Port-2: Gi34 link down
+[44182.070000] %Port-2: Gi34 link up
+[44881.450000] %Port-2: Gi34 link down
+[45459.310000] %Port-2: Gi34 link up
+[47467.240000] %Port-2: Gi34 link down
+[47469.780000] %Port-2: Gi34 link up
+[47479.250000] %Port-2: Gi34 link down
+[47481.870000] %Port-2: Gi34 link up
+[47482.730000] %Port-2: Gi34 link down
+[47485.350000] %Port-2: Gi34 link up
+[47617.890000] %Port-2: Gi34 link down
+[47635.570000] %Port-2: Gi34 link up
+[47635.890000] %Port-2: Gi34 link down
+[47638.770000] %Port-2: Gi34 link up
+[47693.070000] %Port-2: Gi34 link down
+[47697.060000] %Port-2: Gi34 link up
+[47896.970000] %Port-2: Gi34 link down
+[47899.900000] %Port-2: Gi34 link up
+[48973.700000] %Port-2: Gi34 link down
+[48978.130000] %Port-2: Gi34 link up
+[49197.350000] %Port-2: Gi34 link down
+[49272.200000] %Port-2: Gi34 link up
+[72476.890000] %Port-2: Gi34 link down
+[72481.090000] %Port-2: Gi34 link up
+[72657.800000] %Port-2: Gi34 link down
+[72660.490000] %Port-2: Gi34 link up
+[72661.450000] %Port-2: Gi34 link down
+[72667.130000] %Port-2: Gi34 link up
+[72855.090000] %Port-2: Gi34 link down
+[73026.880000] %Port-2: Gi34 link up
+[73027.810000] %Port-2: Gi34 link down
+[73030.400000] %Port-2: Gi34 link up
+[73656.810000] %Port-2: Gi34 link down
+[73754.480000] %Port-2: Gi34 link up
+[73760.690000] %Port-2: Gi34 link down
+[74024.970000] %Port-2: Gi34 link up
+[74025.750000] %Port-2: Gi34 link down
+[74036.170000] %Port-2: Gi34 link up
+[74051.590000] %Port-2: Gi34 link down
+[74057.040000] %Port-2: Gi34 link up
+[74779.430000] %Port-2: Gi34 link down
+[74781.280000] %Port-2: Gi34 link up
+[75599.100000] %Port-2: Gi34 link down
+[75600.720000] %Port-2: Gi34 link up
+[76398.670000] %Port-2: Gi34 link down
+[76401.650000] %Port-2: Gi34 link up
+[77305.180000] %Port-2: Gi34 link down
+[77306.830000] %Port-2: Gi34 link up
+[130301.240000] %Port-2: Gi34 link down
+[130805.570000] %Port-2: Gi34 link up
+[131109.960000] %Port-2: Gi34 link down
+[131113.730000] %Port-2: Gi34 link up
+[131117.620000] %Port-2: Gi34 link down
+[131129.610000] %Port-2: Gi34 link up
+[132131.140000] %Port-2: Gi34 link down
+[132142.980000] %Port-2: Gi34 link up
+[132641.880000] %Port-2: Gi34 link down
+[132654.000000] %Port-2: Gi34 link up
+[133139.910000] %Port-2: Gi34 link down
+[133142.560000] %Port-2: Gi34 link up
+[133191.400000] %Port-2: Gi34 link down
+[133212.160000] %Port-2: Gi34 link up
+[133295.210000] %Port-2: Gi34 link down
+[133309.040000] %Port-2: Gi34 link up
+[133736.580000] %Port-2: Gi34 link down
+[133748.620000] %Port-2: Gi34 link up
+[133772.420000] %Port-2: Gi34 link down
+[134152.970000] %Port-2: Gi34 link up
+[134153.830000] %Port-2: Gi34 link down
+[134632.690000] %Port-2: Gi34 link up
+[136498.590000] %Port-2: Gi34 link down
+[136500.190000] %Port-2: Gi34 link up
+[136577.020000] %Port-2: Gi34 link down
+[137629.240000] %Port-2: Gi34 link up
+[140076.380000] %Port-2: Gi34 link down
+[140079.180000] %Port-2: Gi34 link up
+[140243.280000] %Port-2: Gi34 link down
+[140245.920000] %Port-2: Gi34 link up
+[140497.200000] %Port-2: Gi34 link down
+[140503.080000] %Port-2: Gi34 link up
+[140504.060000] %Port-2: Gi34 link down
+[140509.740000] %Port-2: Gi34 link up
+[140512.220000] %Port-2: Gi34 link down
+[140514.740000] %Port-2: Gi34 link up
+[140570.180000] %Port-2: Gi34 link down
+[140572.730000] %Port-2: Gi34 link up
+[140775.850000] %Port-2: Gi34 link down
+[140796.830000] %Port-2: Gi34 link up
+[142667.130000] %Port-2: Gi34 link down
+[142700.190000] %Port-2: Gi34 link up
+[142896.730000] %Port-2: Gi34 link down
+[142898.330000] %Port-2: Gi34 link up
+[142964.750000] %Port-2: Gi34 link down
+[142967.620000] %Port-2: Gi34 link up
+[144272.920000] %Port-2: Gi34 link down
+[144377.600000] %Port-2: Gi34 link up
+[144378.660000] %Port-2: Gi34 link down
+[144381.210000] %Port-2: Gi34 link up
+[144383.290000] %Port-2: Gi34 link down
+[144393.190000] %Port-2: Gi34 link up
+[144410.860000] %Port-2: Gi34 link down
+[144413.430000] %Port-2: Gi34 link up
+[144450.200000] %Port-2: Gi34 link down
+[144452.970000] %Port-2: Gi34 link up
+[144464.420000] %Port-2: Gi34 link down
+[144476.590000] %Port-2: Gi34 link up
+[144713.350000] %Port-2: Gi34 link down
+[144731.760000] %Port-2: Gi34 link up
+[146002.300000] %Port-2: Gi34 link down
+[146013.340000] %Port-2: Gi34 link up
+[146442.170000] %Port-2: Gi34 link down
+[146443.780000] %Port-2: Gi34 link up
+[146443.800000] %Port-2: Gi34 link down
+[146443.830000] %Port-2: Gi34 link up
+[146451.580000] %Port-2: Gi34 link down
+[146453.180000] %Port-2: Gi34 link up
+[146522.600000] %Port-2: Gi34 link down
+[146565.670000] %Port-2: Gi34 link up
+[146669.560000] %Port-2: Gi34 link down
+[146672.070000] %Port-2: Gi34 link up
+[146689.560000] %Port-2: Gi34 link down
+[146708.960000] %Port-2: Gi34 link up
+[147419.680000] %Port-2: Gi34 link down
+[147434.930000] %Port-2: Gi34 link up
+[154666.340000] %Port-2: Gi34 link down
+[157026.400000] %Port-2: Gi34 link up
+[161022.450000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[161027.570000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[161028.600000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[161029.620000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[162149.940000] %Port-2: Gi34 link down
+[163405.480000] %Port-2: Gi34 link up
+[165521.520000] %Port-2: Gi7 link up
+[165537.510000] %Port-2: Gi7 link down
+[165542.370000] %Port-2: Gi7 link up
+[166827.640000] %Port-2: Gi3 link down
+[166829.530000] %Port-2: Gi3 link up
+[166829.770000] %Port-2: Gi3 link down
+[166831.810000] %Port-2: Gi3 link up
+[166834.730000] %Port-2: Gi3 link down
+[166837.450000] %Port-2: Gi3 link up
+[166852.500000] %Port-2: Gi3 link down
+[166856.210000] %Port-2: Gi3 link up
+[167345.300000] %Port-2: Gi34 link down
+[167359.890000] %Port-2: Gi34 link up
+[168964.980000] %Port-2: Gi3 link down
+[168966.840000] %Port-2: Gi3 link up
+[173555.810000] %Port-2: Gi34 link down
+[173557.410000] %Port-2: Gi34 link up
+[173565.420000] %Port-2: Gi34 link down
+[173568.340000] %Port-2: Gi34 link up
+[174135.410000] %Port-2: Gi34 link down
+[174137.010000] %Port-2: Gi34 link up
+[177921.510000] %Port-2: Gi34 link down
+[177923.110000] %Port-2: Gi34 link up
+[177925.020000] %Port-2: Gi34 link down
+[177928.020000] %Port-2: Gi34 link up
+[178654.080000] %Port-2: Gi13 link up
+[178673.750000] %Port-2: Gi13 link down
+[178674.980000] %Port-2: Gi3 link down
+[178675.550000] %Port-2: Gi13 link up
+[178675.580000] %Port-2: Gi13 link down
+[178678.140000] %Port-2: Gi3 link up
+[178680.200000] %Port-2: Gi13 link up
+[178694.250000] %Port-2: Gi13 link down
+[178697.810000] %Port-2: Gi13 link up
+[179815.310000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[179989.900000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[180230.240000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[180270.800000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[180275.710000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[180276.740000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[180277.760000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[180469.870000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[180469.970000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[180710.070000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[180710.200000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[180950.280000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[180950.310000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[181189.940000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[181190.170000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[181430.000000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[181430.160000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[181669.760000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[181670.240000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[181910.090000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[181910.290000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[182150.000000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[182150.410000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[182390.120000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[182390.420000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[182630.040000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[182630.360000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[182781.390000] %Port-2: Gi11 link down
+[182788.970000] %Port-2: Gi11 link up
+[182869.920000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[182870.060000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[183110.280000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[183110.770000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[183349.980000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[183590.640000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[183709.350000] ARP UPDATE: IP 192.168.10.58 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[183829.640000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[184049.140000] %Port-2: Gi13 link down
+[184070.050000] IP CONFLICT: duplicate ip address 192.168.10.58 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[184298.970000] %Port-2: Gi3 link down
+[184300.860000] %Port-2: Gi3 link up
+[184473.880000] %Port-2: Gi34 link down
+[184475.530000] %Port-2: Gi34 link up
+[185251.970000] %Port-2: Gi34 link down
+[185253.640000] %Port-2: Gi34 link up
+[187769.450000] %Port-2: Gi34 link down
+[187772.430000] %Port-2: Gi34 link up
+[189768.240000] %Port-2: Gi7 link down
+[190393.830000] %Port-2: Gi34 link down
+[190395.460000] %Port-2: Gi34 link up
+[190395.480000] %Port-2: Gi34 link down
+[190397.030000] %Port-2: Gi34 link up
+[191696.650000] %Port-2: Gi34 link down
+[191699.500000] %Port-2: Gi34 link up
+[214575.340000] %Port-2: Gi34 link down
+[214579.540000] %Port-2: Gi34 link up
+[214765.590000] %Port-2: Gi34 link down
+[214768.590000] %Port-2: Gi34 link up
+[220085.680000] %Port-2: Gi34 link down
+[220087.330000] %Port-2: Gi34 link up
+[220151.870000] %Port-2: Gi34 link down
+[220153.490000] %Port-2: Gi34 link up
+[220188.500000] %Port-2: Gi34 link down
+[220191.500000] %Port-2: Gi34 link up
+[222414.640000] %Port-2: Gi34 link down
+[222416.270000] %Port-2: Gi34 link up
+[222533.750000] %Port-2: Gi34 link down
+[222535.350000] %Port-2: Gi34 link up
+[223088.170000] %Port-2: Gi34 link down
+[223091.100000] %Port-2: Gi34 link up
+[223232.380000] %Port-2: Gi34 link down
+[223236.760000] %Port-2: Gi34 link up
+[223578.440000] %Port-2: Gi34 link down
+[223581.340000] %Port-2: Gi34 link up
+[223609.660000] %Port-2: Gi34 link down
+[223628.090000] %Port-2: Gi34 link up
+[223737.480000] %Port-2: Gi34 link down
+[223758.080000] %Port-2: Gi34 link up
+[223971.150000] %Port-2: Gi34 link down
+[224061.750000] %Port-2: Gi34 link up
+[224196.530000] %Port-2: Gi34 link down
+[224226.480000] %Port-2: Gi34 link up
+[224543.250000] %Port-2: Gi34 link down
+[224545.770000] %Port-2: Gi34 link up
+[227082.050000] %Port-2: Gi34 link down
+[227093.740000] %Port-2: Gi34 link up
+[228348.200000] %Port-2: Gi34 link down
+[228360.240000] %Port-2: Gi34 link up
+[228807.870000] %Port-2: Gi34 link down
+[228809.530000] %Port-2: Gi34 link up
+[229099.480000] %Port-2: Gi34 link down
+[229101.540000] %Port-2: Gi34 link up
+[230085.960000] %Port-2: Gi34 link down
+[230088.910000] %Port-2: Gi34 link up
+[230198.010000] %Port-2: Gi34 link down
+[230199.760000] %Port-2: Gi34 link up
+[230199.780000] %Port-2: Gi34 link down
+[230205.140000] %Port-2: Gi34 link up
+[230439.000000] %Port-2: Gi34 link down
+[230440.630000] %Port-2: Gi34 link up
+[230476.640000] %Port-2: Gi34 link down
+[230484.580000] %Port-2: Gi34 link up
+[231217.150000] %Port-2: Gi34 link down
+[233448.730000] %Port-2: Gi34 link up
+[233661.420000] %Port-2: Gi34 link down
+[233664.070000] %Port-2: Gi34 link up
+[233775.290000] %Port-2: Gi34 link down
+[233777.810000] %Port-2: Gi34 link up
+[233805.670000] %Port-2: Gi34 link down
+[233808.190000] %Port-2: Gi34 link up
+[233812.430000] %Port-2: Gi34 link down
+[233815.010000] %Port-2: Gi34 link up
+[233820.070000] %Port-2: Gi34 link down
+[233822.590000] %Port-2: Gi34 link up
+[234623.910000] %Port-2: Gi34 link down
+[234731.230000] %Port-2: Gi34 link up
+[235239.550000] %Port-2: Gi34 link down
+[239754.300000] %Port-2: Gi34 link up
+[239755.230000] %Port-2: Gi34 link down
+[239766.380000] %Port-2: Gi34 link up
+[240084.620000] %Port-2: Gi34 link down
+[240086.220000] %Port-2: Gi34 link up
+[243650.540000] %Port-2: Gi34 link down
+[244663.710000] %Port-2: Gi34 link up
+[247714.750000] %Port-2: Gi34 link down
+[247752.670000] %Port-2: Gi34 link up
+[248848.160000] %Port-2: Gi34 link down
+[248849.740000] %Port-2: Gi34 link up
+[249033.530000] %Port-2: Gi34 link down
+[249039.020000] %Port-2: Gi34 link up
+[249239.360000] %Port-2: Gi34 link down
+[249247.250000] %Port-2: Gi34 link up
+[250243.380000] %Port-2: Gi34 link down
+[250245.060000] %Port-2: Gi34 link up
+[253982.490000] %Port-2: Gi34 link down
+[253985.420000] %Port-2: Gi34 link up
+[253990.460000] %Port-2: Gi34 link down
+[253992.060000] %Port-2: Gi34 link up
+[254094.950000] %Port-2: Gi34 link down
+[254096.530000] %Port-2: Gi34 link up
+[254096.730000] %Port-2: Gi34 link down
+[254099.580000] %Port-2: Gi34 link up
+[254100.610000] %Port-2: Gi34 link down
+[254102.390000] %Port-2: Gi34 link up
+[255168.400000] %Port-2: Gi34 link down
+[255170.000000] %Port-2: Gi34 link up
+[255170.030000] %Port-2: Gi34 link down
+[255173.030000] %Port-2: Gi34 link up
+[256077.170000] %Port-2: Gi34 link down
+[256078.920000] %Port-2: Gi34 link up
+[256266.610000] %Port-2: Gi34 link down
+[256268.190000] %Port-2: Gi34 link up
+[256270.780000] %Port-2: Gi34 link down
+[256273.780000] %Port-2: Gi34 link up
+[258508.750000] %Port-2: Gi34 link down
+[258510.350000] %Port-2: Gi34 link up
+[258614.360000] %Port-2: Gi34 link down
+[258615.960000] %Port-2: Gi34 link up
+[259546.790000] %Port-2: Gi34 link down
+[259549.670000] %Port-2: Gi34 link up
+[259551.320000] %Port-2: Gi34 link down
+[259552.890000] %Port-2: Gi34 link up
+[260964.070000] %Port-2: Gi34 link down
+[260965.740000] %Port-2: Gi34 link up
+[262478.670000] %Port-2: Gi34 link down
+[262481.620000] %Port-2: Gi34 link up
+[263960.360000] %Port-2: Gi34 link down
+[263961.970000] %Port-2: Gi34 link up
+[263965.150000] %Port-2: Gi34 link down
+[263966.950000] %Port-2: Gi34 link up
+[264078.890000] %Port-2: Gi34 link down
+[264081.970000] %Port-2: Gi34 link up
+[264215.880000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[264220.800000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[264221.820000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[264223.050000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[264225.690000] %Port-2: Gi34 link down
+[264236.130000] %Port-2: Gi34 link up
+[265510.780000] %Port-2: Gi34 link down
+[265512.590000] %Port-2: Gi34 link up
+[265513.010000] %Port-2: Gi34 link down
+[265515.910000] %Port-2: Gi34 link up
+[266737.670000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[266742.790000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[266743.810000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[266744.630000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[268281.500000] %Port-2: Gi34 link down
+[268283.100000] %Port-2: Gi34 link up
+[268298.430000] %Port-2: Gi34 link down
+[268304.070000] %Port-2: Gi34 link up
+[270184.890000] %Port-2: Gi34 link down
+[270186.600000] %Port-2: Gi34 link up
+[270212.680000] %Port-2: Gi34 link down
+[270217.100000] %Port-2: Gi34 link up
+[270749.190000] %Port-2: Gi34 link down
+[270751.810000] %Port-2: Gi34 link up
+[270779.140000] %Port-2: Gi34 link down
+[270781.650000] %Port-2: Gi34 link up
+[270830.040000] %Port-2: Gi34 link down
+[270869.770000] %Port-2: Gi34 link up
+[272172.040000] %Port-2: Gi34 link down
+[272186.560000] %Port-2: Gi34 link up
+[273647.990000] %Port-2: Gi34 link down
+[273654.000000] %Port-2: Gi34 link up
+[276461.930000] %Port-2: Gi34 link down
+[276531.200000] %Port-2: Gi34 link up
+[276869.240000] %Port-2: Gi34 link down
+[276902.140000] %Port-2: Gi34 link up
+[277851.330000] %Port-2: Gi34 link down
+[277853.110000] %Port-2: Gi34 link up
+[277976.590000] %Port-2: Gi34 link down
+[277982.110000] %Port-2: Gi34 link up
+[278272.240000] %Port-2: Gi34 link down
+[278273.910000] %Port-2: Gi34 link up
+[278360.650000] %Port-2: Gi34 link down
+[278362.360000] %Port-2: Gi34 link up
+[278363.030000] %Port-2: Gi34 link down
+[278365.990000] %Port-2: Gi34 link up
+[278914.440000] %Port-2: Gi34 link down
+[278916.010000] %Port-2: Gi34 link up
+[278918.520000] %Port-2: Gi34 link down
+[278920.170000] %Port-2: Gi34 link up
+[278920.190000] %Port-2: Gi34 link down
+[278923.060000] %Port-2: Gi34 link up
+[278978.800000] %Port-2: Gi34 link down
+[278980.410000] %Port-2: Gi34 link up
+[278980.570000] %Port-2: Gi34 link down
+[278982.250000] %Port-2: Gi34 link up
+[283438.060000] %Port-2: Gi34 link down
+[283441.050000] %Port-2: Gi34 link up
+[285491.080000] %Port-2: Gi34 link down
+[285492.880000] %Port-2: Gi34 link up
+[285504.130000] %Port-2: Gi34 link down
+[285505.840000] %Port-2: Gi34 link up
+[285574.450000] %Port-2: Gi34 link down
+[285577.380000] %Port-2: Gi34 link up
+[285588.890000] %Port-2: Gi34 link down
+[285588.920000] [_rsd_linkevent_handler 433]Port link down
+[285588.920000] %Port-2: Gi34 link down
+[285590.450000] %Port-2: Gi34 link up
+[285606.260000] %Port-2: Gi34 link down
+[285607.860000] %Port-2: Gi34 link up
+[285776.930000] %Port-2: Gi34 link down
+[285779.880000] %Port-2: Gi34 link up
+[285970.060000] %Port-2: Gi34 link down
+[285971.630000] %Port-2: Gi34 link up
+[286273.440000] %Port-2: Gi34 link down
+[286275.070000] %Port-2: Gi34 link up
+[286275.190000] %Port-2: Gi34 link down
+[286278.120000] %Port-2: Gi34 link up
+[291989.240000] %Port-2: Gi34 link down
+[292005.530000] %Port-2: Gi34 link up
+[292707.310000] %Port-2: Gi34 link down
+[292708.910000] %Port-2: Gi34 link up
+[296946.510000] %Port-2: Gi34 link down
+[296948.160000] %Port-2: Gi34 link up
+[297365.330000] %Port-2: Gi34 link down
+[297368.280000] %Port-2: Gi34 link up
+[297661.230000] %Port-2: Gi34 link down
+[297669.250000] %Port-2: Gi34 link up
+[298043.530000] %Port-2: Gi34 link down
+[298047.630000] %Port-2: Gi34 link up
+[298123.270000] %Port-2: Gi34 link down
+[298126.270000] %Port-2: Gi34 link up
+[298365.990000] %Port-2: Gi34 link down
+[298367.590000] %Port-2: Gi34 link up
+[298392.930000] %Port-2: Gi34 link down
+[298394.650000] %Port-2: Gi34 link up
+[298658.870000] %Port-2: Gi34 link down
+[298661.870000] %Port-2: Gi34 link up
+[302631.010000] %Port-2: Gi34 link down
+[302632.680000] %Port-2: Gi34 link up
+[303155.760000] %Port-2: Gi34 link down
+[305568.600000] %Port-2: Gi34 link up
+[306515.840000] %Port-2: Gi34 link down
+[306518.560000] %Port-2: Gi34 link up
+[306519.620000] %Port-2: Gi34 link down
+[306522.190000] %Port-2: Gi34 link up
+[306893.600000] %Port-2: Gi34 link down
+[306896.160000] %Port-2: Gi34 link up
+[307628.400000] %Port-2: Gi34 link down
+[307630.940000] %Port-2: Gi34 link up
+[307640.900000] %Port-2: Gi34 link down
+[307643.440000] %Port-2: Gi34 link up
+[307655.610000] %Port-2: Gi34 link down
+[307658.170000] %Port-2: Gi34 link up
+[307659.180000] %Port-2: Gi34 link down
+[307661.700000] %Port-2: Gi34 link up
+[307672.590000] %Port-2: Gi34 link down
+[307678.320000] %Port-2: Gi34 link up
+[307683.050000] %Port-2: Gi34 link down
+[307690.160000] %Port-2: Gi34 link up
+[307692.060000] %Port-2: Gi34 link down
+[307694.580000] %Port-2: Gi34 link up
+[307699.340000] %Port-2: Gi34 link down
+[307704.990000] %Port-2: Gi34 link up
+[307705.950000] %Port-2: Gi34 link down
+[307708.520000] %Port-2: Gi34 link up
+[307711.980000] %Port-2: Gi34 link down
+[307723.410000] %Port-2: Gi34 link up
+[308385.380000] %Port-2: Gi34 link down
+[308387.900000] %Port-2: Gi34 link up
+[308414.300000] %Port-2: Gi34 link down
+[308428.400000] %Port-2: Gi34 link up
+[308482.000000] %Port-2: Gi34 link down
+[308924.030000] %Port-2: Gi34 link up
+[314464.770000] %Port-2: Gi34 link down
+[314467.290000] %Port-2: Gi34 link up
+[315224.750000] %Port-2: Gi34 link down
+[315227.240000] %Port-2: Gi34 link up
+[315259.680000] %Port-2: Gi34 link down
+[315275.010000] %Port-2: Gi34 link up
+[319226.400000] %Port-2: Gi34 link down
+[319228.990000] %Port-2: Gi34 link up
+[319235.070000] %Port-2: Gi34 link down
+[319298.850000] %Port-2: Gi34 link up
+[322573.880000] %Port-2: Gi34 link down
+[322575.500000] %Port-2: Gi34 link up
+[322922.010000] %Port-2: Gi34 link down
+[322924.890000] %Port-2: Gi34 link up
+[322983.460000] %Port-2: Gi34 link down
+[322985.140000] %Port-2: Gi34 link up
+[322985.920000] %Port-2: Gi34 link down
+[322987.550000] %Port-2: Gi34 link up
+[324943.710000] %Port-2: Gi34 link down
+[325397.430000] %Port-2: Gi34 link up
+[330307.070000] %Port-2: Gi34 link down
+[330308.930000] %Port-2: Gi34 link up
+[333989.370000] %Port-2: Gi34 link down
+[333990.970000] %Port-2: Gi34 link up
+[334018.570000] %Port-2: Gi34 link down
+[334021.470000] %Port-2: Gi34 link up
+[334060.510000] %Port-2: Gi34 link down
+[334068.420000] %Port-2: Gi34 link up
+[335245.700000] %Port-2: Gi34 link down
+[335247.280000] %Port-2: Gi34 link up
+[335254.480000] %Port-2: Gi34 link down
+[335256.080000] %Port-2: Gi34 link up
+[335256.100000] %Port-2: Gi34 link down
+[335392.840000] %Port-2: Gi34 link up
+[336139.110000] %Port-2: Gi34 link down
+[336155.770000] %Port-2: Gi34 link up
+[336156.780000] %Port-2: Gi34 link down
+[336160.950000] %Port-2: Gi34 link up
+[336260.830000] %Port-2: Gi34 link down
+[336263.380000] %Port-2: Gi34 link up
+[336341.240000] %Port-2: Gi34 link down
+[336343.930000] %Port-2: Gi34 link up
+[336351.470000] %Port-2: Gi34 link down
+[336357.320000] %Port-2: Gi34 link up
+[336358.130000] %Port-2: Gi34 link down
+[336369.230000] %Port-2: Gi34 link up
+[336378.920000] %Port-2: Gi34 link down
+[336381.540000] %Port-2: Gi34 link up
+[336382.330000] %Port-2: Gi34 link down
+[336400.050000] %Port-2: Gi34 link up
+[336515.400000] %Port-2: Gi34 link down
+[336536.490000] %Port-2: Gi34 link up
+[336711.640000] %Port-2: Gi34 link down
+[336723.580000] %Port-2: Gi34 link up
+[339764.530000] %Port-2: Gi34 link down
+[339776.490000] %Port-2: Gi34 link up
+[339818.890000] %Port-2: Gi34 link down
+[339831.060000] %Port-2: Gi34 link up
+[342520.470000] %Port-2: Gi34 link down
+[342526.050000] %Port-2: Gi34 link up
+[342528.390000] %Port-2: Gi34 link down
+[342531.050000] %Port-2: Gi34 link up
+[342531.830000] %Port-2: Gi34 link down
+[342534.600000] %Port-2: Gi34 link up
+[342541.060000] %Port-2: Gi34 link down
+[342543.850000] %Port-2: Gi34 link up
+[342544.740000] %Port-2: Gi34 link down
+[342558.730000] %Port-2: Gi34 link up
+[343980.100000] %Port-2: Gi34 link down
+[343982.710000] %Port-2: Gi34 link up
+[344013.620000] %Port-2: Gi34 link down
+[344024.820000] %Port-2: Gi34 link up
+[344794.170000] %Port-2: Gi34 link down
+[344804.170000] %Port-2: Gi34 link up
+[344811.570000] %Port-2: Gi34 link down
+[344817.550000] %Port-2: Gi34 link up
+[354181.140000] %Port-2: Gi34 link down
+[354183.660000] %Port-2: Gi34 link up
+[354187.240000] %Port-2: Gi34 link down
+[354189.770000] %Port-2: Gi34 link up
+[354192.510000] %Port-2: Gi34 link down
+[354195.160000] %Port-2: Gi34 link up
+[359634.550000] %Port-2: Gi34 link down
+[359640.310000] %Port-2: Gi34 link up
+[359896.300000] %Port-2: Gi34 link down
+[360011.910000] %Port-2: Gi34 link up
+[360027.800000] %Port-2: Gi34 link down
+[360042.500000] %Port-2: Gi34 link up
+[360042.900000] %Port-2: Gi34 link down
+[360054.990000] %Port-2: Gi34 link up
+[360055.210000] %Port-2: Gi34 link down
+[360057.780000] %Port-2: Gi34 link up
+[366867.870000] %Port-2: Gi34 link down
+[366870.520000] %Port-2: Gi34 link up
+[366871.220000] %Port-2: Gi34 link down
+[366874.050000] %Port-2: Gi34 link up
+[366948.750000] %Port-2: Gi34 link down
+[366951.470000] %Port-2: Gi34 link up
+[366952.180000] %Port-2: Gi34 link down
+[366954.800000] %Port-2: Gi34 link up
+[366961.130000] %Port-2: Gi34 link down
+[366964.140000] %Port-2: Gi34 link up
+[366990.900000] %Port-2: Gi34 link down
+[366993.650000] %Port-2: Gi34 link up
+[367082.330000] %Port-2: Gi34 link down
+[367099.950000] %Port-2: Gi34 link up
+[367120.390000] %Port-2: Gi34 link down
+[367122.910000] %Port-2: Gi34 link up
+[367124.020000] %Port-2: Gi34 link down
+[367136.830000] %Port-2: Gi34 link up
+[368214.680000] %Port-2: Gi34 link down
+[368217.250000] %Port-2: Gi34 link up
+[368217.950000] %Port-2: Gi34 link down
+[368221.560000] %Port-2: Gi34 link up
+[368222.260000] %Port-2: Gi34 link down
+[368225.010000] %Port-2: Gi34 link up
+[390366.970000] %Port-2: Gi34 link down
+[390395.190000] %Port-2: Gi34 link up
+[390610.950000] %Port-2: Gi34 link down
+[391652.310000] %Port-2: Gi34 link up
+[392465.490000] %Port-2: Gi34 link down
+[392467.980000] %Port-2: Gi34 link up
+[393984.270000] %Port-2: Gi34 link down
+[394022.420000] %Port-2: Gi34 link up
+[396389.990000] %Port-2: Gi34 link down
+[396391.740000] %Port-2: Gi34 link up
+[398027.790000] %Port-2: Gi34 link down
+[398045.160000] %Port-2: Gi34 link up
+[398373.340000] %Port-2: Gi34 link down
+[398411.490000] %Port-2: Gi34 link up
+[399501.750000] %Port-2: Gi34 link down
+[400049.050000] %Port-2: Gi34 link up
+[400265.410000] %Port-2: Gi34 link down
+[400298.950000] %Port-2: Gi34 link up
+[401552.660000] %Port-2: Gi34 link down
+[401564.680000] %Port-2: Gi34 link up
+[401566.940000] %Port-2: Gi34 link down
+[401582.150000] %Port-2: Gi34 link up
+[406844.830000] %Port-2: Gi34 link down
+[406858.430000] %Port-2: Gi34 link up
+[407203.240000] %Port-2: Gi34 link down
+[407285.870000] %Port-2: Gi34 link up
+[409078.790000] %Port-2: Gi34 link down
+[409094.640000] %Port-2: Gi34 link up
+[410103.540000] %Port-2: Gi34 link down
+[410106.050000] %Port-2: Gi34 link up
+[410107.600000] %Port-2: Gi34 link down
+[410110.190000] %Port-2: Gi34 link up
+[410618.750000] %Port-2: Gi34 link down
+[410631.380000] %Port-2: Gi34 link up
+[413391.070000] %Port-2: Gi34 link down
+[413393.890000] %Port-2: Gi34 link up
+[413394.620000] %Port-2: Gi34 link down
+[413400.580000] %Port-2: Gi34 link up
+[413401.290000] %Port-2: Gi34 link down
+[413403.800000] %Port-2: Gi34 link up
+[413924.220000] %Port-2: Gi34 link down
+[413926.820000] %Port-2: Gi34 link up
+[413927.900000] %Port-2: Gi34 link down
+[413930.420000] %Port-2: Gi34 link up
+[413931.740000] %Port-2: Gi34 link down
+[413934.360000] %Port-2: Gi34 link up
+[414804.500000] %Port-2: Gi34 link down
+[414925.250000] %Port-2: Gi34 link up
+[414946.230000] %Port-2: Gi34 link down
+[416362.130000] %Port-2: Gi34 link up
+[416365.220000] %Port-2: Gi34 link down
+[416464.380000] %Port-2: Gi34 link up
+[416466.460000] %Port-2: Gi34 link down
+[416732.260000] %Port-2: Gi34 link up
+[416733.160000] %Port-2: Gi34 link down
+[416735.680000] %Port-2: Gi34 link up
+[418210.440000] %Port-2: Gi34 link down
+[426480.510000] %Port-2: Gi34 link up
+[428162.810000] %Port-2: Gi34 link down
+[428168.620000] %Port-2: Gi34 link up
+[428301.520000] %Port-2: Gi34 link down
+[428390.580000] %Port-2: Gi34 link up
+[428419.840000] %Port-2: Gi34 link down
+[428611.140000] %Port-2: Gi34 link up
+[428613.550000] %Port-2: Gi34 link down
+[428848.860000] %Port-2: Gi34 link up
+[428862.300000] %Port-2: Gi34 link down
+[429007.120000] %Port-2: Gi34 link up
+[429017.120000] %Port-2: Gi34 link down
+[429137.490000] %Port-2: Gi34 link up
+[439488.580000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[439493.700000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[439494.510000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[439495.540000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[440754.890000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[440760.010000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[440761.040000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[440762.060000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[457055.920000] %Port-2: Gi34 link down
+[457058.470000] %Port-2: Gi34 link up
+[464491.640000] %Port-2: Gi34 link down
+[464497.820000] %Port-2: Gi34 link up
+[467079.590000] %Port-2: Gi34 link down
+[467082.160000] %Port-2: Gi34 link up
+[467090.170000] %Port-2: Gi34 link down
+[467095.750000] %Port-2: Gi34 link up
+[467096.860000] %Port-2: Gi34 link down
+[467106.730000] %Port-2: Gi34 link up
+[467108.450000] %Port-2: Gi34 link down
+[467110.990000] %Port-2: Gi34 link up
+[467184.280000] %Port-2: Gi34 link down
+[467186.880000] %Port-2: Gi34 link up
+[467197.900000] %Port-2: Gi34 link down
+[467200.520000] %Port-2: Gi34 link up
+[467225.930000] %Port-2: Gi34 link down
+[467228.450000] %Port-2: Gi34 link up
+[467234.190000] %Port-2: Gi34 link down
+[467236.740000] %Port-2: Gi34 link up
+[467241.910000] %Port-2: Gi34 link down
+[467244.420000] %Port-2: Gi34 link up
+[467254.140000] %Port-2: Gi34 link down
+[467259.840000] %Port-2: Gi34 link up
+[467296.180000] %Port-2: Gi34 link down
+[467315.810000] %Port-2: Gi34 link up
+[471566.430000] %Port-2: Gi34 link down
+[471568.970000] %Port-2: Gi34 link up
+[472187.150000] %Port-2: Gi34 link down
+[472201.360000] %Port-2: Gi34 link up
+[472306.410000] %Port-2: Gi34 link down
+[472323.780000] %Port-2: Gi34 link up
+[472649.770000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[472654.680000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[472655.710000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[472656.730000] ICMPv6 checksum failed [fe80:0000:0000:0000:46a2:dfbb:7e3d:eca5 > fe80:0000:0000:0000:9e2b:a6ff:fecb:80fa]
+[476221.380000] %Port-2: Gi34 link down
+[476225.170000] %Port-2: Gi34 link up
+[476264.660000] %Port-2: Gi34 link down
+[476270.260000] %Port-2: Gi34 link up
+[476271.340000] %Port-2: Gi34 link down
+[476273.960000] %Port-2: Gi34 link up
+[476275.070000] %Port-2: Gi34 link down
+[476280.830000] %Port-2: Gi34 link up
+[476301.450000] %Port-2: Gi34 link down
+[476310.770000] %Port-2: Gi34 link up
+[476311.470000] %Port-2: Gi34 link down
+[476314.170000] %Port-2: Gi34 link up
+[476320.890000] %Port-2: Gi34 link down
+[476323.640000] %Port-2: Gi34 link up
+[476324.370000] %Port-2: Gi34 link down
+[476327.060000] %Port-2: Gi34 link up
+[476355.930000] %Port-2: Gi34 link down
+[476365.760000] %Port-2: Gi34 link up
+[476463.020000] %Port-2: Gi34 link down
+[476465.770000] %Port-2: Gi34 link up
+[476522.050000] %Port-2: Gi34 link down
+[476524.590000] %Port-2: Gi34 link up
+[477414.560000] %Port-2: Gi34 link down
+[477429.200000] %Port-2: Gi34 link up
+[480128.410000] %Port-2: Gi34 link down
+[480143.180000] %Port-2: Gi34 link up
+[480536.200000] %Port-2: Gi34 link down
+[480553.310000] %Port-2: Gi34 link up
+[481334.990000] %Port-2: Gi34 link down
+[481349.710000] %Port-2: Gi34 link up
+[482198.430000] %Port-2: Gi34 link down
+[482211.650000] %Port-2: Gi34 link up
+[482528.490000] %Port-2: Gi34 link down
+[482531.390000] %Port-2: Gi34 link up
+[484838.920000] %Port-2: Gi34 link down
+[484861.430000] %Port-2: Gi34 link up
+[484971.020000] %Port-2: Gi34 link down
+[486792.870000] %Port-2: Gi34 link up
+[487258.890000] %Port-2: Gi34 link down
+[487271.040000] %Port-2: Gi34 link up
+[499716.040000] %Port-2: Gi34 link down
+[500754.960000] %Port-2: Gi34 link up
+[504439.110000] %Port-2: Gi34 link down
+[504452.930000] %Port-2: Gi34 link up
+[506141.960000] %Port-2: Gi34 link down
+[507468.260000] %Port-2: Gi34 link up
+[511069.500000] %Port-2: Gi13 link up
+[511409.310000] %Port-2: Gi34 link down
+[511414.860000] %Port-2: Gi34 link up
+[511435.180000] %Port-2: Gi34 link down
+[511447.240000] %Port-2: Gi34 link up
+[511450.130000] %Port-2: Gi34 link down
+[511454.260000] %Port-2: Gi34 link up
+[511457.660000] %Port-2: Gi34 link down
+[511460.240000] %Port-2: Gi34 link up
+[511578.730000] %Port-2: Gi3 link down
+[511580.620000] %Port-2: Gi3 link up
+[511580.850000] %Port-2: Gi3 link down
+[511583.070000] %Port-2: Gi3 link up
+[511585.830000] %Port-2: Gi3 link down
+[511588.500000] %Port-2: Gi3 link up
+[511609.530000] %Port-2: Gi3 link down
+[511619.020000] %Port-2: Gi3 link up
+[511854.220000] %Port-2: Gi34 link down
+[511858.270000] %Port-2: Gi34 link up
+[511929.840000] %Port-2: Gi34 link down
+[512007.080000] %Port-2: Gi34 link up
+[512814.440000] %Port-2: Gi3 link down
+[512817.130000] %Port-2: Gi3 link up
+[512817.470000] %Port-2: Gi3 link down
+[512819.860000] %Port-2: Gi3 link up
+[512822.450000] %Port-2: Gi3 link down
+[512825.180000] %Port-2: Gi3 link up
+[512836.350000] %Port-2: Gi3 link down
+[512839.940000] %Port-2: Gi3 link up
+[512935.830000] %Port-2: Gi3 link down
+[513000.370000] %Port-2: Gi3 link up
+[513019.380000] %Port-2: Gi34 link down
+[513069.660000] %Port-2: Gi3 link down
+[513944.700000] %Port-2: Gi34 link up
+[516199.080000] %Port-2: Gi34 link down
+[516201.670000] %Port-2: Gi34 link up
+[522878.510000] %Port-2: Gi13 link down
+[522880.370000] %Port-2: Gi13 link up
+[522883.400000] %Port-2: Gi13 link down
+[522890.000000] %Port-2: Gi13 link up
+[522994.270000] %Port-2: Gi13 link down
+[522997.200000] %Port-2: Gi13 link up
+[522997.220000] %Port-2: Gi13 link down
+[523001.890000] %Port-2: Gi13 link up
+[523105.600000] %Port-2: Gi13 link down
+[523107.440000] %Port-2: Gi13 link up
+[523119.700000] %Port-2: Gi13 link down
+[523121.540000] %Port-2: Gi13 link up
+[523121.560000] %Port-2: Gi13 link down
+[523126.190000] %Port-2: Gi13 link up
+[523164.790000] %Port-2: Gi13 link down
+[523166.790000] %Port-2: Gi13 link up
+[523733.220000] %Port-2: Gi34 link down
+[523749.030000] %Port-2: Gi34 link up
+[527819.780000] %Port-2: Gi47 link up
+[528524.730000] %Port-2: Gi47 link down
+[528531.100000] %Port-2: Gi13 link down
+[528537.660000] %Port-2: Gi13 link up
+[528617.830000] %Port-2: Gi13 link down
+[528619.670000] %Port-2: Gi13 link up
+[528619.690000] %Port-2: Gi13 link down
+[528621.540000] %Port-2: Gi13 link up
+[528621.560000] %Port-2: Gi13 link down
+[528626.130000] %Port-2: Gi13 link up
+[528717.710000] %Port-2: Gi13 link down
+[528719.580000] %Port-2: Gi13 link up
+[528745.390000] %Port-2: Gi13 link down
+[530141.490000] %Port-2: Gi34 link down
+[530154.860000] %Port-2: Gi34 link up
+[532314.690000] %Port-2: Gi34 link down
+[532316.270000] %Port-2: Gi34 link up
+[532339.210000] %Port-2: Gi34 link down
+[532342.110000] %Port-2: Gi34 link up
+[532387.360000] %Port-2: Gi34 link down
+[532389.040000] %Port-2: Gi34 link up
+[532389.450000] %Port-2: Gi34 link down
+[532398.470000] %Port-2: Gi34 link up
+[561332.950000] %Port-2: Gi34 link down
+[561348.150000] %Port-2: Gi34 link up
+[562503.460000] %Port-2: Gi34 link down
+[562506.030000] %Port-2: Gi34 link up
+[562520.950000] %Port-2: Gi34 link down
+[562523.670000] %Port-2: Gi34 link up
+[565813.850000] %Port-2: Gi34 link down
+[565832.900000] %Port-2: Gi34 link up
+[568466.150000] %Port-2: Gi34 link down
+[568469.970000] %Port-2: Gi34 link up
+[569357.750000] %Port-2: Gi34 link down
+[586238.250000] %Port-2: Gi34 link up
+[586782.410000] %Port-2: Gi34 link down
+[586785.050000] %Port-2: Gi34 link up
+[588744.090000] %Port-2: Gi34 link down
+[588755.530000] %Port-2: Gi34 link up
+[588848.050000] %Port-2: Gi34 link down
+[588850.600000] %Port-2: Gi34 link up
+[588852.350000] %Port-2: Gi34 link down
+[588887.060000] %Port-2: Gi34 link up
+[589858.970000] %Port-2: Gi34 link down
+[590442.530000] %Port-2: Gi34 link up
+[590927.290000] %Port-2: Gi34 link down
+[590930.250000] %Port-2: Gi34 link up
+[590933.170000] %Port-2: Gi34 link down
+[590934.800000] %Port-2: Gi34 link up
+[590935.830000] %Port-2: Gi34 link down
+[590937.410000] %Port-2: Gi34 link up
+[592922.100000] %Port-2: Gi34 link down
+[592927.800000] %Port-2: Gi34 link up
+[593158.170000] %Port-2: Gi34 link down
+[593159.890000] %Port-2: Gi34 link up
+[594303.280000] %Port-2: Gi34 link down
+[594306.150000] %Port-2: Gi34 link up
+[595385.410000] %Port-2: Gi34 link down
+[595387.010000] %Port-2: Gi34 link up
+[595442.280000] %Port-2: Gi34 link down
+[595443.870000] %Port-2: Gi34 link up
+[595456.290000] %Port-2: Gi34 link down
+[595459.240000] %Port-2: Gi34 link up
+[595459.260000] %Port-2: Gi34 link down
+[595460.850000] %Port-2: Gi34 link up
+[595778.330000] %Port-2: Gi34 link down
+[595779.980000] %Port-2: Gi34 link up
+[596401.280000] %Port-2: Gi34 link down
+[596404.130000] %Port-2: Gi34 link up
+[596995.890000] %Port-2: Gi34 link down
+[596997.620000] %Port-2: Gi34 link up
+[597027.010000] %Port-2: Gi34 link down
+[597028.810000] %Port-2: Gi34 link up
+[603171.310000] %Port-2: Gi34 link down
+[603174.410000] %Port-2: Gi34 link up
+[603184.440000] %Port-2: Gi34 link down
+[603188.710000] %Port-2: Gi34 link up
+[603188.730000] %Port-2: Gi34 link down
+[603191.600000] %Port-2: Gi34 link up
+[603200.960000] %Port-2: Gi34 link down
+[603202.560000] %Port-2: Gi34 link up
+[615799.460000] %Port-2: Gi34 link down
+[615801.040000] %Port-2: Gi34 link up
+[618195.340000] %Port-2: Gi34 link down
+[618198.270000] %Port-2: Gi34 link up
+[618210.240000] %Port-2: Gi34 link down
+[618211.910000] %Port-2: Gi34 link up
+[618705.230000] %Port-2: Gi34 link down
+[618706.880000] %Port-2: Gi34 link up
+[618743.550000] %Port-2: Gi34 link down
+[618746.600000] %Port-2: Gi34 link up
+[618746.660000] %Port-2: Gi34 link down
+[618748.240000] %Port-2: Gi34 link up
+[618757.220000] %Port-2: Gi34 link down
+[618759.050000] %Port-2: Gi34 link up
+[619898.780000] %Port-2: Gi34 link down
+[619901.700000] %Port-2: Gi34 link up
+[621603.680000] %Port-2: Gi34 link down
+[621605.280000] %Port-2: Gi34 link up
+[622537.650000] %Port-2: Gi34 link down
+[622539.300000] %Port-2: Gi34 link up
+[629640.750000] %Port-2: Gi34 link down
+[629643.680000] %Port-2: Gi34 link up
+[648312.070000] %Port-2: Gi34 link down
+[648313.790000] %Port-2: Gi34 link up
+[650009.730000] %Port-2: Gi34 link down
+[650035.750000] %Port-2: Gi34 link up
+[650234.410000] %Port-2: Gi34 link down
+[650236.090000] %Port-2: Gi34 link up
+[650283.050000] %Port-2: Gi34 link down
+[650286.100000] %Port-2: Gi34 link up
+[650292.580000] %Port-2: Gi34 link down
+[650294.330000] %Port-2: Gi34 link up
+[650364.560000] %Port-2: Gi34 link down
+[650382.420000] %Port-2: Gi34 link up
+[650434.960000] %Port-2: Gi34 link down
+[650452.220000] %Port-2: Gi34 link up
+[650499.300000] %Port-2: Gi34 link down
+[650519.030000] %Port-2: Gi34 link up
+[650556.130000] %Port-2: Gi34 link down
+[650575.360000] %Port-2: Gi34 link up
+[650813.880000] %Port-2: Gi34 link down
+[650828.340000] %Port-2: Gi34 link up
+[651468.870000] %Port-2: Gi34 link down
+[651506.390000] %Port-2: Gi34 link up
+[654871.110000] %Port-2: Gi34 link down
+[654891.860000] %Port-2: Gi34 link up
+[655540.380000] %Port-2: Gi34 link down
+[655618.640000] %Port-2: Gi34 link up
+[655948.450000] %Port-2: Gi34 link down
+[655960.900000] %Port-2: Gi34 link up
+[656013.570000] %Port-2: Gi34 link down
+[656023.570000] %Port-2: Gi34 link up
+[656745.740000] %Port-2: Gi34 link down
+[656758.790000] %Port-2: Gi34 link up
+[659345.190000] %Port-2: Gi34 link down
+[660165.190000] %Port-2: Gi34 link up
+[663619.890000] %Port-2: Gi34 link down
+[664336.990000] %Port-2: Gi34 link up
+[665613.110000] %Port-2: Gi34 link down
+[665614.710000] %Port-2: Gi34 link up
+[665614.770000] %Port-2: Gi34 link down
+[665620.140000] %Port-2: Gi34 link up
+[667287.500000] %Port-2: Gi34 link down
+[667314.160000] %Port-2: Gi34 link up
+[667868.430000] %Port-2: Gi34 link down
+[667979.270000] %Port-2: Gi34 link up
+[668272.910000] %Port-2: Gi34 link down
+[668274.690000] %Port-2: Gi34 link up
+[668277.810000] %Port-2: Gi34 link down
+[668279.420000] %Port-2: Gi34 link up
+[668279.510000] %Port-2: Gi34 link down
+[668282.540000] %Port-2: Gi34 link up
+[668282.660000] %Port-2: Gi34 link down
+[668284.340000] %Port-2: Gi34 link up
+[668284.510000] %Port-2: Gi34 link down
+[668289.140000] %Port-2: Gi34 link up
+[668305.380000] %Port-2: Gi34 link down
+[668307.080000] %Port-2: Gi34 link up
+[668307.110000] %Port-2: Gi34 link down
+[668308.700000] %Port-2: Gi34 link up
+[668330.700000] %Port-2: Gi34 link down
+[668333.680000] %Port-2: Gi34 link up
+[668333.990000] %Port-2: Gi34 link down
+[668335.570000] %Port-2: Gi34 link up
+[668335.590000] %Port-2: Gi34 link down
+[668337.240000] %Port-2: Gi34 link up
+[668337.470000] %Port-2: Gi34 link down
+[668340.400000] %Port-2: Gi34 link up
+[668340.810000] %Port-2: Gi34 link down
+[668342.410000] %Port-2: Gi34 link up
+[668342.440000] %Port-2: Gi34 link down
+[668344.270000] %Port-2: Gi34 link up
+[668724.150000] %Port-2: Gi34 link down
+[668727.310000] %Port-2: Gi34 link up
+[668730.430000] %Port-2: Gi34 link down
+[668732.080000] %Port-2: Gi34 link up
+[668732.780000] %Port-2: Gi34 link down
+[668734.510000] %Port-2: Gi34 link up
+[668734.620000] %Port-2: Gi34 link down
+[668737.550000] %Port-2: Gi34 link up
+[668739.740000] %Port-2: Gi34 link down
+[668741.380000] %Port-2: Gi34 link up
+[668750.970000] %Port-2: Gi34 link down
+[668752.570000] %Port-2: Gi34 link up
+[668752.590000] %Port-2: Gi34 link down
+[668755.460000] %Port-2: Gi34 link up
+[668756.090000] %Port-2: Gi34 link down
+[668760.240000] %Port-2: Gi34 link up
+[668761.400000] %Port-2: Gi34 link down
+[668764.330000] %Port-2: Gi34 link up
+[668765.320000] %Port-2: Gi34 link down
+[668766.970000] %Port-2: Gi34 link up
+[668769.030000] %Port-2: Gi34 link down
+[668774.470000] %Port-2: Gi34 link up
+[668775.020000] %Port-2: Gi34 link down
+[668783.220000] %Port-2: Gi34 link up
+[668785.760000] %Port-2: Gi34 link down
+[668787.360000] %Port-2: Gi34 link up
+[668788.300000] %Port-2: Gi34 link down
+[668789.890000] %Port-2: Gi34 link up
+[668790.180000] %Port-2: Gi34 link down
+[668793.110000] %Port-2: Gi34 link up
+[668793.840000] %Port-2: Gi34 link down
+[668795.570000] %Port-2: Gi34 link up
+[668798.360000] %Port-2: Gi34 link down
+[668800.010000] %Port-2: Gi34 link up
+[668801.830000] %Port-2: Gi34 link down
+[668804.780000] %Port-2: Gi34 link up
+[668806.040000] %Port-2: Gi34 link down
+[668807.720000] %Port-2: Gi34 link up
+[668814.640000] %Port-2: Gi34 link down
+[668816.370000] %Port-2: Gi34 link up
+[668817.000000] %Port-2: Gi34 link down
+[668820.000000] %Port-2: Gi34 link up
+[668822.350000] %Port-2: Gi34 link down
+[668826.500000] %Port-2: Gi34 link up
+[668827.790000] %Port-2: Gi34 link down
+[668830.690000] %Port-2: Gi34 link up
+[668830.710000] %Port-2: Gi34 link down
+[668832.290000] %Port-2: Gi34 link up
+[668832.300000] %Port-2: Gi34 link down
+[668833.940000] %Port-2: Gi34 link up
+[668836.760000] %Port-2: Gi34 link down
+[668839.830000] %Port-2: Gi34 link up
+[668841.270000] %Port-2: Gi34 link down
+[668849.160000] %Port-2: Gi34 link up
+[668850.290000] %Port-2: Gi34 link down
+[668852.020000] %Port-2: Gi34 link up
+[668852.050000] %Port-2: Gi34 link down
+[668853.670000] %Port-2: Gi34 link up
+[668854.140000] %Port-2: Gi34 link down
+[668857.070000] %Port-2: Gi34 link up
+[668862.560000] %Port-2: Gi34 link down
+[668864.160000] %Port-2: Gi34 link up
+[668864.210000] %Port-2: Gi34 link down
+[668869.840000] %Port-2: Gi34 link up
+[668873.910000] %Port-2: Gi34 link down
+[668875.490000] %Port-2: Gi34 link up
+[668882.670000] %Port-2: Gi34 link down
+[668884.260000] %Port-2: Gi34 link up
+[668884.340000] %Port-2: Gi34 link down
+[668887.270000] %Port-2: Gi34 link up
+[668891.720000] %Port-2: Gi34 link down
+[668893.300000] %Port-2: Gi34 link up
+[668894.740000] %Port-2: Gi34 link down
+[668896.450000] %Port-2: Gi34 link up
+[668901.990000] %Port-2: Gi34 link down
+[668917.700000] %Port-2: Gi34 link up
+[668918.480000] %Port-2: Gi34 link down
+[668922.470000] %Port-2: Gi34 link up
+[668923.020000] %Port-2: Gi34 link down
+[668925.950000] %Port-2: Gi34 link up
+[668926.470000] %Port-2: Gi34 link down
+[668928.150000] %Port-2: Gi34 link up
+[668961.560000] %Port-2: Gi34 link down
+[668967.030000] %Port-2: Gi34 link up
+[669055.050000] %Port-2: Gi34 link down
+[669056.850000] %Port-2: Gi34 link up
+[669060.150000] %Port-2: Gi34 link down
+[669061.880000] %Port-2: Gi34 link up
+[669099.080000] %Port-2: Gi34 link down
+[669102.000000] %Port-2: Gi34 link up
+[669105.560000] %Port-2: Gi34 link down
+[669115.310000] %Port-2: Gi34 link up
+[669120.420000] %Port-2: Gi34 link down
+[669122.120000] %Port-2: Gi34 link up
+[669125.190000] %Port-2: Gi34 link down
+[669128.140000] %Port-2: Gi34 link up
+[669131.240000] %Port-2: Gi34 link down
+[669132.860000] %Port-2: Gi34 link up
+[669258.190000] %Port-2: Gi34 link down
+[669259.810000] %Port-2: Gi34 link up
+[669280.030000] %Port-2: Gi34 link down
+[669282.930000] %Port-2: Gi34 link up
+[669286.310000] %Port-2: Gi34 link down
+[669287.910000] %Port-2: Gi34 link up
+[669288.010000] %Port-2: Gi34 link down
+[669289.620000] %Port-2: Gi34 link up
+[669291.470000] %Port-2: Gi34 link down
+[669294.340000] %Port-2: Gi34 link up
+[669297.330000] %Port-2: Gi34 link down
+[669298.940000] %Port-2: Gi34 link up
+[669299.540000] %Port-2: Gi34 link down
+[669301.140000] %Port-2: Gi34 link up
+[669303.400000] %Port-2: Gi34 link down
+[669303.430000] [_rsd_linkevent_handler 433]Port link down
+[669303.430000] %Port-2: Gi34 link down
+[669306.270000] %Port-2: Gi34 link up
+[669307.220000] %Port-2: Gi34 link down
+[669308.930000] %Port-2: Gi34 link up
+[669308.960000] %Port-2: Gi34 link down
+[669310.580000] %Port-2: Gi34 link up
+[669313.550000] %Port-2: Gi34 link down
+[669316.480000] %Port-2: Gi34 link up
+[669318.430000] %Port-2: Gi34 link down
+[669320.040000] %Port-2: Gi34 link up
+[669321.330000] %Port-2: Gi34 link down
+[669323.030000] %Port-2: Gi34 link up
+[669327.480000] %Port-2: Gi34 link down
+[669330.410000] %Port-2: Gi34 link up
+[669331.170000] %Port-2: Gi34 link down
+[669332.900000] %Port-2: Gi34 link up
+[669333.730000] %Port-2: Gi34 link down
+[669335.460000] %Port-2: Gi34 link up
+[669337.210000] %Port-2: Gi34 link down
+[669340.090000] %Port-2: Gi34 link up
+[669340.840000] %Port-2: Gi34 link down
+[669342.420000] %Port-2: Gi34 link up
+[669344.580000] %Port-2: Gi34 link down
+[669346.180000] %Port-2: Gi34 link up
+[669347.090000] %Port-2: Gi34 link down
+[669350.120000] %Port-2: Gi34 link up
+[671004.220000] %Port-2: Gi34 link down
+[672124.350000] %Port-2: Gi34 link up
+[674103.880000] %Port-2: Gi34 link down
+[676022.460000] %Port-2: Gi34 link up
+[706166.930000] %Port-2: Gi34 link down
+[706188.850000] %Port-2: Gi34 link up
+[707668.480000] %Port-2: Gi34 link down
+[707680.980000] %Port-2: Gi34 link up
+[756250.930000] %Port-2: Gi34 link down
+[756255.080000] %Port-2: Gi34 link up
+[756799.700000] %Port-2: Gi34 link down
+[761365.480000] %Port-2: Gi34 link up
+[763422.870000] %Port-2: Gi34 link down
+[769271.420000] %Port-2: Gi7 link up
+[769292.750000] %Port-2: Gi7 link down
+[769297.510000] %Port-2: Gi7 link up
+[771767.620000] %Port-2: Gi47 link up
+[771789.690000] %Port-2: Gi47 link down
+[771803.190000] %Port-2: Gi47 link up
+[771906.940000] %Port-2: Gi34 link up
+[772920.900000] %Port-2: Gi47 link down
+[772976.810000] %Port-2: Gi13 link up
+[772979.140000] %Port-2: Gi13 link down
+[772982.040000] %Port-2: Gi13 link up
+[788249.890000] %Port-2: Gi13 link down
+[789753.840000] %Port-2: Gi34 link down
+[789755.440000] %Port-2: Gi34 link up
+[793575.350000] %Port-2: Gi34 link down
+[793594.440000] %Port-2: Gi34 link up
+[794060.390000] %Port-2: Gi34 link down
+[794113.580000] %Port-2: Gi7 link down
+[794362.420000] %Port-2: Gi34 link up
+[817630.520000] %Port-2: Gi34 link down
+[818400.310000] %Port-2: Gi34 link up
+[824039.070000] %Port-2: Gi34 link down
+[825694.680000] %Port-2: Gi34 link up
+[827857.970000] %Port-2: Gi34 link down
+[828900.340000] %Port-2: Gi34 link up
+[831853.620000] %Port-2: Gi34 link down
+[832992.130000] %Port-2: Gi34 link up
+[835337.150000] %Port-2: Gi34 link down
+[835938.330000] %Port-2: Gi34 link up
+[838775.820000] %Port-2: Gi34 link down
+[840289.160000] %Port-2: Gi34 link up
+[842335.390000] %Port-2: Gi34 link down
+[844686.700000] %Port-2: Gi34 link up
+[846725.170000] %Port-2: Gi34 link down
+[848625.460000] %Port-2: Gi34 link up
+[850505.370000] %Port-2: Gi34 link down
+[851355.440000] %Port-2: Gi34 link up
+[853456.790000] %Port-2: Gi34 link down
+[854665.070000] %Port-2: Gi34 link up
+[857277.320000] %Port-2: Gi34 link down
+[858101.340000] %Port-2: Gi34 link up
+[903135.220000] %Port-2: Gi34 link down
+[903152.080000] %Port-2: Gi34 link up
+[904637.920000] %Port-2: Gi34 link down
+[904897.840000] %Port-2: Gi34 link up
+[910415.460000] %Port-2: Gi34 link down
+[1118092.700000] %Port-2: Gi3 link up
+[1120453.140000] %Port-2: Gi42 link up
+[1120454.420000] [DHCP]br-wan server (192.168.10.1, 02:00:00:00:00:00), vlan 1, port 41
+[1126680.130000] %Port-2: Gi26 link up
+[1126681.170000] %Port-2: Gi26 link down
+[1126683.940000] %Port-2: Gi26 link up
+[1126692.310000] %Port-2: Gi26 link down
+[1126694.960000] %Port-2: Gi26 link up
+[1126846.630000] %Port-2: Gi26 link down
+[1126849.230000] %Port-2: Gi26 link up
+[1127033.500000] %Port-2: Gi26 link down
+[1127036.120000] %Port-2: Gi26 link up
+[1132616.590000] %Port-2: Gi26 link down
+[1132619.180000] %Port-2: Gi26 link up
+[1134153.930000] %Port-2: Gi11 link down
+[1134165.870000] %Port-2: Gi11 link up
+[1134874.260000] %Port-2: Gi26 link down
+[1134876.180000] %Port-2: Gi26 link up
+[1134993.920000] %Port-2: Gi26 link down
+[1135696.290000] %Port-2: Gi3 link down
+[1135698.310000] %Port-2: Gi3 link up
+[1375348.010000] %Port-2: Gi3 link down
+[1375349.900000] %Port-2: Gi3 link up
+[1375350.150000] %Port-2: Gi3 link down
+[1375352.240000] %Port-2: Gi3 link up
+[1375355.140000] %Port-2: Gi3 link down
+[1375357.830000] %Port-2: Gi3 link up
+[1375370.730000] %Port-2: Gi3 link down
+[1375374.500000] %Port-2: Gi3 link up
+[1387173.540000] %Port-2: Gi3 link down
+[1387175.410000] %Port-2: Gi3 link up
+[1388561.360000] %Port-2: Gi3 link down
+[1388567.410000] %Port-2: Gi3 link up
+[1394466.950000] %Port-2: Gi3 link down
+[1394468.820000] %Port-2: Gi3 link up
+[1720841.150000] %Port-2: Gi3 link down
+[1720842.990000] %Port-2: Gi3 link up
+[1720847.780000] %Port-2: Gi3 link down
+[1720849.870000] %Port-2: Gi3 link up
+[1720851.620000] %Port-2: Gi3 link down
+[1720854.260000] %Port-2: Gi3 link up
+[1720867.570000] %Port-2: Gi3 link down
+[1720871.460000] %Port-2: Gi3 link up
+[1722563.330000] %Port-2: Gi26 link up
+[1723165.950000] %Port-2: Gi23 link up
+[1723322.310000] %Port-2: Gi23 link down
+[1723324.880000] %Port-2: Gi23 link up
+[1723325.550000] %Port-2: Gi23 link down
+[1723327.630000] %Port-2: Gi23 link up
+[1723329.580000] %Port-2: Gi23 link down
+[1723332.330000] %Port-2: Gi23 link up
+[1723343.890000] %Port-2: Gi23 link down
+[1723346.780000] %Port-2: Gi23 link up
+[1734948.370000] %Port-2: Gi3 link down
+[1734951.080000] %Port-2: Gi3 link up
+[1734951.400000] %Port-2: Gi3 link down
+[1734953.580000] %Port-2: Gi3 link up
+[1734955.220000] %Port-2: Gi3 link down
+[1734957.890000] %Port-2: Gi3 link up
+[1734975.200000] %Port-2: Gi3 link down
+[1734984.390000] %Port-2: Gi3 link up
+[1737223.390000] %Port-2: Gi47 link up
+[1737239.660000] %Port-2: Gi47 link down
+[1737253.300000] %Port-2: Gi47 link up
+[1738221.990000] %Port-2: Gi47 link down
+[1739091.730000] %Port-2: Gi23 link down
+[1739093.570000] %Port-2: Gi23 link up
+[1739100.350000] %Port-2: Gi23 link down
+[1740694.440000] %Port-2: Gi3 link down
+[1740696.330000] %Port-2: Gi3 link up
+[1740735.110000] %Port-2: Gi26 link down
+[1740736.980000] %Port-2: Gi26 link up
+[1740764.010000] %Port-2: Gi26 link down
+[1997122.570000] %Port-2: Gi42 link down
+[1997126.420000] %Port-2: Gi42 link up
+[1997136.120000] %Port-2: Gi42 link down
+[1997138.660000] %Port-2: Gi42 link up
+[1997154.630000] %Port-2: Gi42 link down
+[1997157.120000] %Port-2: Gi42 link up
+[2323901.010000] %Port-2: Gi23 link up
+[2323906.590000] %Port-2: Gi23 link down
+[2323914.160000] %Port-2: Gi23 link up
+[2323918.290000] %Port-2: Gi23 link down
+[2323920.160000] %Port-2: Gi23 link up
+[2323920.780000] %Port-2: Gi23 link down
+[2323922.860000] %Port-2: Gi23 link up
+[2323924.860000] %Port-2: Gi23 link down
+[2323927.680000] %Port-2: Gi23 link up
+[2323940.400000] %Port-2: Gi23 link down
+[2323943.020000] %Port-2: Gi23 link up
+[2325884.980000] %Port-2: Gi3 link down
+[2325886.830000] %Port-2: Gi3 link up
+[2325887.100000] %Port-2: Gi3 link down
+[2325889.240000] %Port-2: Gi3 link up
+[2325890.920000] %Port-2: Gi3 link down
+[2325893.710000] %Port-2: Gi3 link up
+[2325907.220000] %Port-2: Gi3 link down
+[2325911.170000] %Port-2: Gi3 link up
+[2326522.630000] %Port-2: Gi26 link up
+[2326581.510000] %Port-2: Gi26 link down
+[2326584.210000] %Port-2: Gi26 link up
+[2326972.580000] %Port-2: Gi26 link down
+[2326980.330000] %Port-2: Gi26 link up
+[2327034.130000] %Port-2: Gi13 link up
+[2330120.550000] %Port-2: Gi42 link down
+[2330124.490000] %Port-2: Gi42 link up
+[2330135.260000] %Port-2: Gi42 link down
+[2330137.900000] %Port-2: Gi42 link up
+[2330153.810000] %Port-2: Gi42 link down
+[2330156.510000] %Port-2: Gi42 link up
+[2330668.260000] %Port-2: Gi26 link down
+[2330672.690000] %Port-2: Gi26 link up
+[2335922.950000] %Port-2: Gi23 link down
+[2335924.820000] %Port-2: Gi23 link up
+[2335933.310000] %Port-2: Gi23 link down
+[2336338.080000] %Port-2: Gi23 link up
+[2336360.040000] %Port-2: Gi23 link down
+[2336361.890000] %Port-2: Gi23 link up
+[2336363.960000] %Port-2: Gi23 link down
+[2336366.040000] %Port-2: Gi23 link up
+[2336368.070000] %Port-2: Gi23 link down
+[2336370.780000] %Port-2: Gi23 link up
+[2336382.360000] %Port-2: Gi23 link down
+[2336385.180000] %Port-2: Gi23 link up
+[2337325.450000] %Port-2: Gi42 link down
+[2337337.370000] %Port-2: Gi42 link up
+[2337348.040000] %Port-2: Gi42 link down
+[2337350.510000] %Port-2: Gi42 link up
+[2337361.550000] %Port-2: Gi42 link down
+[2337364.180000] %Port-2: Gi42 link up
+[2337732.360000] %Port-2: Gi47 link up
+[2337745.650000] %Port-2: Gi47 link down
+[2337759.330000] %Port-2: Gi47 link up
+[2342702.100000] %Port-2: Gi3 link down
+[2342704.090000] %Port-2: Gi3 link up
+[2342735.300000] %Port-2: Gi3 link down
+[2342738.510000] %Port-2: Gi3 link up
+[2343921.290000] %Port-2: Gi23 link down
+[2343923.260000] %Port-2: Gi23 link up
+[2343923.780000] %Port-2: Gi23 link down
+[2344018.310000] %Port-2: Gi47 link down
+[2344190.010000] %Port-2: Gi13 link down
+[2344192.920000] %Port-2: Gi13 link up
+[2344192.940000] %Port-2: Gi13 link down
+[2344196.870000] %Port-2: Gi13 link up
+[2344200.450000] %Port-2: Gi13 link down
+[2344526.120000] %Port-2: Gi26 link down
+[2344528.090000] %Port-2: Gi26 link up
+[2344544.030000] %Port-2: Gi26 link down
+[2345130.190000] %Port-2: Gi3 link down
+[2345132.060000] %Port-2: Gi3 link up
+[2508921.330000] %Port-2: Gi3 link down
+[2508923.170000] %Port-2: Gi3 link up
+[2508923.460000] %Port-2: Gi3 link down
+[2508925.550000] %Port-2: Gi3 link up
+[2508927.270000] %Port-2: Gi3 link down
+[2508929.990000] %Port-2: Gi3 link up
+[2508943.200000] %Port-2: Gi3 link down
+[2508947.010000] %Port-2: Gi3 link up
+[2510190.060000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2510416.270000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2510656.290000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2510656.490000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2510896.010000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2510896.210000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2511136.330000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2511136.560000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2511376.050000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2511376.250000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2511616.570000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2511616.770000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2511856.090000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2511856.290000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2512096.410000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2512096.610000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2512336.030000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2512336.230000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2512576.550000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2512576.800000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2512816.300000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2512816.470000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2513056.290000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2513056.560000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2513296.210000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2513296.310000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2513536.330000] ARP UPDATE: IP 192.168.10.39 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2513536.530000] IP CONFLICT: duplicate ip address 192.168.10.39 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2513641.730000] %Port-2: Gi3 link down
+[2513643.590000] %Port-2: Gi3 link up
+[2583731.220000] %Port-2: Gi11 link down
+[2583935.820000] %Port-2: Gi23 link up
+[2583938.640000] %Port-2: Gi26 link up
+[2584204.010000] %Port-2: Gi26 link down
+[2584206.600000] %Port-2: Gi26 link up
+[2585631.760000] %Port-2: Gi3 link down
+[2585633.600000] %Port-2: Gi3 link up
+[2585633.880000] %Port-2: Gi3 link down
+[2585635.970000] %Port-2: Gi3 link up
+[2585638.870000] %Port-2: Gi3 link down
+[2585641.590000] %Port-2: Gi3 link up
+[2585658.910000] %Port-2: Gi3 link down
+[2585672.240000] %Port-2: Gi3 link up
+[2585877.450000] %Port-2: Gi13 link up
+[2585880.830000] %Port-2: Gi13 link down
+[2585883.670000] %Port-2: Gi13 link up
+[2586143.390000] %Port-2: Gi13 link down
+[2586160.040000] %Port-2: Gi13 link up
+[2590515.600000] %Port-2: Gi11 link up
+[2590517.320000] %Port-2: Gi11 link down
+[2590535.990000] %Port-2: Gi11 link up
+[2594526.570000] %Port-2: Gi3 link down
+[2594528.470000] %Port-2: Gi3 link up
+[2597518.500000] %Port-2: Gi3 link down
+[2597521.710000] %Port-2: Gi3 link up
+[2603786.300000] %Port-2: Gi3 link down
+[2603788.170000] %Port-2: Gi3 link up
+[2603788.430000] %Port-2: Gi23 link down
+[2603790.400000] %Port-2: Gi23 link up
+[2603804.050000] %Port-2: Gi23 link down
+[2604373.980000] %Port-2: Gi13 link down
+[2604722.730000] %Port-2: Gi26 link down
+[2604724.640000] %Port-2: Gi26 link up
+[2604756.840000] %Port-2: Gi26 link down
+[2928943.370000] %Port-2: Gi23 link up
+[2928963.160000] %Port-2: Gi23 link down
+[2928965.010000] %Port-2: Gi23 link up
+[2928967.080000] %Port-2: Gi23 link down
+[2928969.140000] %Port-2: Gi23 link up
+[2928971.170000] %Port-2: Gi23 link down
+[2928973.870000] %Port-2: Gi23 link up
+[2928985.960000] %Port-2: Gi23 link down
+[2928988.810000] %Port-2: Gi23 link up
+[2929324.830000] %Port-2: Gi26 link up
+[2929328.990000] %Port-2: Gi26 link down
+[2929335.000000] %Port-2: Gi26 link up
+[2929339.170000] %Port-2: Gi26 link down
+[2929345.940000] %Port-2: Gi26 link up
+[2930380.480000] %Port-2: Gi47 link up
+[2930396.440000] %Port-2: Gi47 link down
+[2930410.220000] %Port-2: Gi47 link up
+[2931130.450000] %Port-2: Gi3 link down
+[2931132.440000] %Port-2: Gi3 link up
+[2931132.570000] %Port-2: Gi3 link down
+[2931134.660000] %Port-2: Gi3 link up
+[2931136.400000] %Port-2: Gi3 link down
+[2931145.620000] %Port-2: Gi3 link up
+[2931152.110000] %Port-2: Gi3 link down
+[2931155.900000] %Port-2: Gi3 link up
+[2931909.120000] %Port-2: Gi13 link up
+[2934123.810000] %Port-2: Gi13 link down
+[2934133.080000] %Port-2: Gi13 link up
+[2934174.120000] %Port-2: Gi47 link down
+[2935655.380000] ARP UPDATE: IP 192.168.10.222 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2935655.380000] IP CONFLICT: duplicate ip address 192.168.10.222 for mac 02:00:00:00:00:00 and 02:00:00:00:00:00
+[2935700.390000] ARP UPDATE: IP 192.168.10.222 mac address change from 02:00:00:00:00:00 to 02:00:00:00:00:00
+[2949086.020000] %Port-2: Gi23 link down
+[2949087.860000] %Port-2: Gi23 link up
+[2949091.150000] %Port-2: Gi23 link down
+[2949117.960000] %Port-2: Gi13 link down
+[2949304.200000] %Port-2: Gi26 link down
+[2949306.070000] %Port-2: Gi26 link up
+[2949669.750000] %Port-2: Gi26 link down
+[2949796.730000] %Port-2: Gi3 link down
+[2949798.570000] %Port-2: Gi3 link up
+[3102936.180000] %Port-2: Gi3 link down
+[3102938.040000] %Port-2: Gi3 link up
+[3102938.300000] %Port-2: Gi3 link down
+[3102940.410000] %Port-2: Gi3 link up
+[3102942.110000] %Port-2: Gi3 link down
+[3102944.810000] %Port-2: Gi3 link up
+[3102958.760000] %Port-2: Gi3 link down
+[3102962.700000] %Port-2: Gi3 link up
