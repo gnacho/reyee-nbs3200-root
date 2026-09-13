@@ -1,0 +1,141 @@
+Warning: Permanently added '[<lan-ip>]:54133' (RSA) to the list of known hosts.
+===== /proc/cmdline =====
+ker_name=vmlinux.gz boot_ver=1.0.2.995246c boot_build_time=1970/01/01-00:00:00 product_id=60050030 machtype=NBS3200-48GT4XS hardware_version=1.20 rtk_dma_size=8M ubi.mtd=6 root=/dev/ubiblock0_0 rootfstype=squashfs,jffs2 r rootwait console=ttyMTD10 console=ttyS0,9600 mtdparts=rtk_spinand:2048k@2048K(u-boot),1024k@4096K(u-boot-env),2048k@5120k(product_info),1024k@7168k(kdump),2048k@8192k(factory_test0),2048k@10240k(kernel),249856k@12288k(ubi),251904k@10240k(firmware),2048k@0(u-boot-slave) quiet env_size=0x20000  rootfstype=squashfs,yaffs,jffs2 noinitrd
+===== /proc/mtd =====
+dev:    size   erasesize  name
+mtd0: 00200000 00020000 "u-boot"
+mtd1: 00100000 00020000 "u-boot-env"
+mtd2: 00200000 00020000 "product_info"
+mtd3: 00100000 00020000 "kdump"
+mtd4: 00200000 00020000 "factory_test0"
+mtd5: 00200000 00020000 "kernel"
+mtd6: 0f400000 00020000 "ubi"
+mtd7: 0f600000 00020000 "firmware"
+mtd8: 00200000 00020000 "u-boot-slave"
+===== /proc/partitions =====
+major minor  #blocks  name
+
+  31        0       2048 mtdblock0
+  31        1       1024 mtdblock1
+  31        2       2048 mtdblock2
+  31        3       1024 mtdblock3
+  31        4       2048 mtdblock4
+  31        5       2048 mtdblock5
+  31        6     249856 mtdblock6
+  31        7     251904 mtdblock7
+  31        8       2048 mtdblock8
+ 254        0      14012 ubiblock0_0
+===== /sys/class/ubi =====
+drwxr-xr-x    2 root     root             0 Sep 13 13:20 .
+drwxr-xr-x   20 root     root             0 Sep 13 13:20 ..
+lrwxrwxrwx    1 root     root             0 Sep 13 13:20 ubi0 -> ../../devices/virtual/ubi/ubi0
+lrwxrwxrwx    1 root     root             0 Sep 13 13:20 ubi0_0 -> ../../devices/virtual/ubi/ubi0/ubi0_0
+lrwxrwxrwx    1 root     root             0 Sep 13 13:20 ubi0_1 -> ../../devices/virtual/ubi/ubi0/ubi0_1
+-r--r--r--    1 root     root          4096 Sep 13 13:20 version
+===== ubi vol names =====
+/sys/class/ubi/ubi0_0/name: rootfs
+/sys/class/ubi/ubi0_1/name: rootfs_data
+===== /dev/ubi* =====
+crw-r--r--    1 root     root       90,   0 Sep 13 13:20 /dev/mtd0
+crw-r--r--    1 root     root       90,   1 Sep 13 13:20 /dev/mtd0ro
+crw-r--r--    1 root     root       90,   2 Sep 13 13:20 /dev/mtd1
+crw-r--r--    1 root     root       90,   3 Sep 13 13:20 /dev/mtd1ro
+crw-r--r--    1 root     root       90,   4 Sep 13 13:20 /dev/mtd2
+crw-r--r--    1 root     root       90,   5 Sep 13 13:20 /dev/mtd2ro
+crw-r--r--    1 root     root       90,   6 Sep 13 13:20 /dev/mtd3
+crw-r--r--    1 root     root       90,   7 Sep 13 13:20 /dev/mtd3ro
+crw-r--r--    1 root     root       90,   8 Sep 13 13:20 /dev/mtd4
+crw-r--r--    1 root     root       90,   9 Sep 13 13:20 /dev/mtd4ro
+crw-r--r--    1 root     root       90,  10 Sep 13 13:20 /dev/mtd5
+crw-r--r--    1 root     root       90,  11 Sep 13 13:20 /dev/mtd5ro
+crw-r--r--    1 root     root       90,  12 Sep 13 13:20 /dev/mtd6
+crw-r--r--    1 root     root       90,  13 Sep 13 13:20 /dev/mtd6ro
+crw-r--r--    1 root     root       90,  14 Sep 13 13:20 /dev/mtd7
+crw-r--r--    1 root     root       90,  15 Sep 13 13:20 /dev/mtd7ro
+crw-r--r--    1 root     root       90,  16 Sep 13 13:20 /dev/mtd8
+crw-r--r--    1 root     root       90,  17 Sep 13 13:20 /dev/mtd8ro
+brw-r--r--    1 root     root       31,   0 Sep 13 13:20 /dev/mtdblock0
+brw-r--r--    1 root     root       31,   1 Sep 13 13:20 /dev/mtdblock1
+brw-r--r--    1 root     root       31,   2 Sep 13 13:20 /dev/mtdblock2
+brw-r--r--    1 root     root       31,   3 Sep 13 13:20 /dev/mtdblock3
+brw-r--r--    1 root     root       31,   4 Sep 13 13:20 /dev/mtdblock4
+brw-r--r--    1 root     root       31,   5 Sep 13 13:20 /dev/mtdblock5
+brw-r--r--    1 root     root       31,   6 Sep 13 13:20 /dev/mtdblock6
+brw-r--r--    1 root     root       31,   7 Sep 13 13:20 /dev/mtdblock7
+brw-r--r--    1 root     root       31,   8 Sep 13 13:20 /dev/mtdblock8
+crw-r--r--    1 root     root      253,   0 Sep 13 13:20 /dev/ubi0
+crw-r--r--    1 root     root      253,   1 Sep 13 13:20 /dev/ubi0_0
+crw-r--r--    1 root     root      253,   2 Sep 13 13:20 /dev/ubi0_1
+crw-r--r--    1 root     root       10,  63 Sep 13 13:20 /dev/ubi_ctrl
+brw-r--r--    1 root     root      254,   0 Sep 13 13:20 /dev/ubiblock0_0
+===== /overlay =====
+drwxr-xr-x    7 root     root           760 Sep 13 13:18 .
+drwxr-xr-x    1 root     root           760 Sep 13 13:18 ..
+lrwxrwxrwx    1 root     root             1 Sep 13 11:36 .fs_state -> 2
+-rwxr-xr-x    1 root     root            70 Sep 13 13:19 .reboot_reason
+-rw-r--r--    1 root     root             0 Sep 13 13:21 1
+drwxr-xr-x   14 root     root          1656 Sep 13 12:38 etc
+drwxr-xr-x    3 root     root           224 Sep 13 11:36 mnt
+drwxr-xr-x    2 root     root           232 Sep 13 13:19 root
+drwxr-xr-x    3 root     root           224 Jun 23 04:13 usr
+-rw-r--r--    1 root     root       5813265 Sep 13 13:18 vmlinux.gz
+drwxr-xr-x    2 root     root           232 Sep 13 11:36 www
+===== mounts =====
+/dev/ubi0_1 on /overlay type ubifs (rw,noatime)
+overlayfs:/overlay on / type overlayfs (rw,noatime,lowerdir=/,upperdir=/overlay)
+===== fw_env.config =====
+/dev/mtd1 0x00000000 0x00020000 0x00020000 8
+===== fw_printenv =====
+ac_ip=192.168.64.1
+ap_upgrade_max=10
+autoload=n
+baudrate=9600
+boardmodel=RTL9301_3x8218D_4XGE
+boot_mode=fast
+bootarg=setenv bootargs ker_name=$(targetfile) boot_ver=$(boot_ver) boot_build_time=$(boot_build_time) product_id=${ProductID} machtype=${ProductModel} hardware_version=${HardwareVersion} rtk_dma_size=8M  ubi.mtd=6 root=/dev/ubiblock0_0 rootfstype=squashfs,jffs2 r rootwait console=ttyMTD10 console=ttyS0,$(baudrate) $(mtdparts) $(quiet)  env_size=0x20000
+bootcmd=run linux; run linux_openwrt
+bootdelay=3
+bootfile=192.168.64.1:rgos.bin
+check_cmd=check_update
+consoledev=ttyS1
+dnsip=192.168.64.1
+env_ddr_disable=true
+envflash_flag=1
+ethact=rtl9310#0
+ethaddr=02:00:00:00:00:00
+fileaddr=81000000
+filesize=FB74D8
+gatewayip=192.168.64.1
+httpserverip=192.168.64.1
+ipaddr=192.168.64.78
+is_recoveryed=0
+kernel_crc32=961c2c52
+kernel_size=1574b8
+ledModeInitSkip=0
+linux=upgrade_from_flash;set_boot_envs;ubifsload $(targetaddr) $(targetfile);run bootarg;bootm $(targetaddr) 
+linux_openwrt=set_owt_boot_envs;run bootarg;boot_openwrt;
+loadaddr=0x81000000 
+menucmd=simpleui -menu
+netdev=eth0
+netmask=255.255.255.0
+netretry=no
+quiet=quiet
+recovery_verison=2.0
+release_mode=release
+rj_uboot_master_version=1.0.5
+rootfs_crc32=effe1de2
+rootfs_part=1
+rootfs_size=daf000
+runlevel=3
+serverip=192.168.64.1
+stderr=serial
+stdin=serial
+stdout=serial
+targetaddr=0x81000000
+targetfile=vmlinux.gz
+uboot_date=13162111
+uboot_version=1.0.2-995246c
+update_mark=0
+upgrade_state_for_uboot=time:2026-07-29 08:28:28;cur_rj_version:1.0.5;upgraded:YES
+rootfs1_check=pass
+ap_upgrade=0

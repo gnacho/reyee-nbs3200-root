@@ -1,0 +1,66 @@
+# Resumen de la sesion de recuperacion (13-Sep-2026)
+# Fuente: /tmp/opencode/recovery4.pcap (captura del puerto del switch)
+
+== Peticiones de fichero (RRQ) ==
+11:29:40.984786 40, RRQ "rgos.bin"
+11:29:49.704788 40, RRQ "rgos.bin"
+11:29:58.425738 40, RRQ "rgos.bin"
+11:30:07.144799 40, RRQ "rgos.bin"
+11:31:19.089829 40, RRQ "rgos.bin"
+11:31:28.720818 40, RRQ "rgos.bin"
+11:31:37.440775 40, RRQ "rgos.bin"
+11:31:51.233820 40, RRQ "rgos.bin"
+11:31:59.960818 40, RRQ "rgos.bin"
+11:32:08.680789 40, RRQ "rgos.bin"
+11:32:17.400803 40, RRQ "rgos.bin"
+11:32:26.120776 40, RRQ "rgos.bin"
+11:32:34.840789 40, RRQ "rgos.bin"
+11:32:43.560782 40, RRQ "rgos.bin"
+11:32:52.280778 40, RRQ "rgos.bin"
+11:36:10.600768 40, RRQ "rgos.bin"
+
+== Consultas a la nube de Ruijie (DNS) ==
+Sep 13 11:39:05 dnsmasq[1703176]: query[A] south-america.pool.ntp.org from <switch-ip>
+Sep 13 11:39:05 dnsmasq[1703176]: query[AAAA] north-america.pool.ntp.org from <switch-ip>
+Sep 13 11:39:05 dnsmasq[1703176]: query[A] north-america.pool.ntp.org from <switch-ip>
+Sep 13 11:39:11 dnsmasq[1703176]: query[AAAA] deviceapi.ruijienetworks.com from <switch-ip>
+Sep 13 11:39:11 dnsmasq[1703176]: query[A] deviceapi.ruijienetworks.com from <switch-ip>
+Sep 13 11:39:11 dnsmasq[1703176]: config deviceapi.ruijienetworks.com is 192.168.64.1
+
+== Peticiones HTTP del switch (v2 nube) ==
+10:59:42 GET /service/api/upgrade/recommend/recovery_version?productClass=NBS3200-48GT4XS&hardware=1.20&sn=<hashed-sn>&productId=<hashed-pid> 192.168.64.78
+11:29:39 GET /service/api/upgrade/recommend/recovery_version?productClass=NBS3200-48GT4XS&hardware=1.20&sn=<hashed-sn>&productId=<hashed-pid> 192.168.64.78
+11:29:48 GET /service/api/upgrade/recommend/recovery_version?productClass=NBS3200-48GT4XS&hardware=1.20&sn=<hashed-sn>&productId=<hashed-pid> 192.168.64.78
+11:29:57 GET /service/api/upgrade/recommend/recovery_version?productClass=NBS3200-48GT4XS&hardware=1.20&sn=<hashed-sn>&productId=<hashed-pid> 192.168.64.78
+
+== Concesiones DHCP ==
+Sep 13 10:59:42 dnsmasq-dhcp[1703176]: 2798388117 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:29:39 dnsmasq-dhcp[1703176]: 2798385008 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:29:48 dnsmasq-dhcp[1703176]: 2798393730 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:29:56 dnsmasq-dhcp[1703176]: 2798402451 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:30:05 dnsmasq-dhcp[1703176]: 2798411171 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:31:17 dnsmasq-dhcp[1703176]: 2798483113 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:31:27 dnsmasq-dhcp[1703176]: 2798492745 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:31:35 dnsmasq-dhcp[1703176]: 2798501467 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:31:44 dnsmasq-dhcp[1703176]: 2798510188 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:31:49 dnsmasq-dhcp[1703176]: 2798515255 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:31:58 dnsmasq-dhcp[1703176]: 2798523982 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:32:07 dnsmasq-dhcp[1703176]: 2798532708 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:32:15 dnsmasq-dhcp[1703176]: 2798541429 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:32:24 dnsmasq-dhcp[1703176]: 2798550148 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:32:33 dnsmasq-dhcp[1703176]: 2798558869 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:32:42 dnsmasq-dhcp[1703176]: 2798567590 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:32:50 dnsmasq-dhcp[1703176]: 2798576309 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:36:09 dnsmasq-dhcp[1703176]: 2798384980 DHCPACK(enp195s0) 192.168.64.78 02:00:00:00:00:00 
+Sep 13 11:38:22 dnsmasq-dhcp[1703176]: 637484267 DHCPACK(enp195s0) <switch-ip> 02:00:00:00:00:00 NBS3200-48GT4XS-XXXXXX
+
+== Descargas TFTP completadas ==
+total: 15
+Sep 13 11:32:45 dnsmasq-tftp[1703176]: sent /home/nacho/temp/opencode-work/tftpboot/rgos.bin to 192.168.64.64
+Sep 13 11:32:53 dnsmasq-tftp[1703176]: sent /home/nacho/temp/opencode-work/tftpboot/rgos.bin to 192.168.64.64
+Sep 13 11:36:11 dnsmasq-tftp[1703176]: sent /home/nacho/temp/opencode-work/tftpboot/rgos.bin to 192.168.64.64
+
+== STP/LLDP tras el reinicio final (firmware stock vivo) ==
+11:38:12.460127 STP 802.1w, Rapid STP, Flags [none], bridge-id a000.02:00:00:00:00:00.8001, length 36
+11:38:12.503991 LLDP, length 171: Ruijie
+11:38:12.672535 STP 802.1w, Rapid STP, Flags [Proposal], bridge-id a000.02:00:00:00:00:00.8001, length 36

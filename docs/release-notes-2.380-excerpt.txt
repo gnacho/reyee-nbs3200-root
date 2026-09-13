@@ -1,0 +1,1426 @@
+Ruijie Reyee RG-NBS, NIS3100 Series
+Switches
+ReyeeOS 2.380 Release Notes
+
+Document Version: V1.1
+Date: Nov 12, 2025
+Copyright © 2025 Ruijie Networks
+
+Copyright
+Copyright © 2025 Ruijie Networks
+All rights are reserved in this document and this statement.
+Without the prior written consent of Ruijie Networks, any organization or individual shall not reproduce, extract,
+back up, modify, or propagate the content of this document in any manner or in any form, or translate it into other
+languages or use some or all parts of the document for commercial purposes.
+
+,
+
+and other Ruijie networks logos are trademarks of Ruijie Networks.
+
+All other trademarks or registered trademarks mentioned in this document are owned by their respective owners.
+
+Disclaimer
+The products, services, or features you purchase are subject to commercial contracts and terms. Some or all of
+the products, services or features described in this document may not be within the scope of your purchase or
+use. Unless otherwise agreed in the contract, Ruijie Networks does not make any express or implied statement
+or guarantee for the content of this document.
+The names, links, descriptions, screenshots, and any other information regarding third-party software mentioned
+in this document are provided for your reference only. Ruijie Networks does not explicitly or implicitly endorse or
+recommend the use of any third-party software and does not make any assurances or guarantees concerning
+the applicability, security, or legality of such software. You should choose and use third-party software based on
+your business requirements and obtain proper authorization. Ruijie Networks assumes no liability for any risks
+or damages arising from your use of third-party software.
+Due to product version upgrades or other reasons, the content of this document will be updated from time to
+time. Ruijie Networks reserves the right to modify the content of the document without any notice or prompt.
+This manual is for reference only. Ruijie Networks endeavors to ensure content accuracy and will not shoulder
+any responsibility for losses and damages caused due to content omissions, inaccuracies or errors.
+
+Preface
+Intended Audience
+This document is intended for:
+⚫
+
+Network engineers
+
+⚫
+
+Technical support and servicing engineers
+
+⚫
+
+Network administrators
+
+Technical Support
+⚫
+
+The official website of Ruijie Reyee: https://reyee.ruijie.com
+
+⚫
+
+Technical Support Website: https://reyee.ruijie.com/en-global/support
+
+⚫
+
+Case Portal: https://www.ruijienetworks.com/support/caseportal
+
+⚫
+
+Community: https://community.ruijienetworks.com
+
+⚫
+
+Technical Support Email: service_rj@ruijienetworks.com
+
+⚫
+
+Online Robot/Live Chat: https://reyee.ruijie.com/en-global/rita
+
+Conventions
+1.
+
+Signs
+
+The signs used in this document are described as follows:
+Warning
+An alert that calls attention to important rules and information that if not understood or followed can result in
+data loss or equipment damage.
+
+Caution
+An alert that calls attention to essential information that if not understood or followed can result in function
+failure or performance degradation.
+
+Note
+An alert that contains additional or supplementary information that if not understood or followed will not lead to
+serious consequences.
+
+Specification
+An alert that contains a description of product or version support.
+
+2.
+
+Note
+
+This manual introduces the version information, revision history, features, resolved issues, open issues,
+supported platforms, software upgrading and related documentation.
+
+I
+
+Contents
+Preface ................................................................................................................................................... I
+1 Version Information ............................................................................................................................ 1
+RG-NBS3100, NIS3100 Series ................................................................................................. 1
+RG-NBS3100-EXTEND Series .................................................................................................. 1
+RG-NBS3200 Series .................................................................................................................. 2
+RG-NBS5000 Series .................................................................................................................. 3
+RG-NBS6000 Series .................................................................................................................. 4
+RG-NBS7000 Series .................................................................................................................. 5
+Revision History ......................................................................................................................... 5
+2 Features ............................................................................................................................................. 7
+New Features............................................................................................................................. 7
+3 Resolved Issues ................................................................................................................................. 8
+4 Open Issues ....................................................................................................................................... 9
+5 Supported Platforms ........................................................................................................................ 10
+5.1 Hardware Platform ................................................................................................................... 10
+5.2 Interoperability Information ...................................................................................................... 12
+6 Software Upgrading ......................................................................................................................... 13
+Upgrade File ............................................................................................................................ 13
+RG-NBS3100, NIS3100 Series.................................................................................... 13
+RG-NBS3100-EXTEND Series .................................................................................... 14
+RG-NBS3200 Series .................................................................................................... 15
+RG-NBS5000 Series .................................................................................................... 16
+RG-NBS6000 Series .................................................................................................... 17
+
+i
+
+RG-NBS7000 Series .................................................................................................... 18
+Requirements........................................................................................................................... 18
+Important Points to Remember................................................................................................ 19
+Upgrade Procedure ................................................................................................................. 19
+Upgrade Device ........................................................................................................... 19
+Check Version .............................................................................................................. 19
+7 Related Documentation.................................................................................................................... 21
+
+ii
+
+Release Notes
+
+Version Information
+
+1 Version Information
+RG-NBS3100, NIS3100 Series
+Version Number
+
+ReyeeOS 2.380.0.2310;SWITCH_3.0(1)B11P380,Release(12231011)
+
+Version Type
+
+Official release
+RG-NBS3100 and NIS3100 Series Switches:
+RG-NBS3100-8GT2SFP: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 1.6x
+RG-NBS3100-24GT4SFP-P-V2: 1.0x, 1.1x, 1.2x, 1.3x
+
+Applicable Products
+
+RG-NBS3100-24GT4SFP-V2: 1.0x, 1.1x, 1.2x
+RG-NBS3100-8GT2SFP-P-V2: 1.0x
+RG-NIS3100-8GT4SFP-HP: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x
+RG-NIS3100-8GT2SFP-HP: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x
+RG-NIS3100-4GT2SFP-HP: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x
+
+Applicable Clients
+
+International customers
+
+Release Type
+
+Official Release
+
+Release Date
+
+2025-11-12
+
+Based Version Number
+
+ReyeeOS 2.380.0.2125;SWITCH_3.0(1)B11P380,Release(12212510)
+
+Description
+
+Version iteration
+
+RG-NBS3100-EXTEND Series
+Version Number
+
+ReyeeOS 2.380.0.2310;SWITCH_3.0(1)B11P380,Release(12231011)
+
+Version Type
+
+Official release
+RG-NBS3100-EXTEND Series Switches:
+
+Applicable Products
+
+RG-NBS3100-48GT4SFP-P: 1.0x, 1.1x, 1.2x
+RG-NBS3100-48GT4SFP-P-V2: 1.0x, 1.1x
+
+Applicable Clients
+
+International customers
+
+Release Type
+
+Official Release
+
+Release Date
+
+2025-11-12
+
+Based Version Number
+
+ReyeeOS 2.380.0.2125;SWITCH_3.0(1)B11P380,Release(12212510)
+
+Description
+
+Version iteration
+
+1
+
+Release Notes
+
+Version Information
+
+RG-NBS3200 Series
+Version Number
+
+ReyeeOS 2.380.0.2310;SWITCH_3.0(1)B11P380,Release(12231011)
+
+Version Type
+
+Official release
+RG-NBS3200 Series Switches:
+RG-NBS3200-24GT4XS: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 1.6x, 1.7x, 2.0x, 2.1x,
+2.2x, 2.3x, 2.4x, 2.5x
+RG-NBS3200-48GT4XS: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 2.0x, 2.1x, 2.2x, 2.4x
+
+Applicable Products
+
+RG-NBS3200-24SFP/8GT4XS: 1.0x, 1.1x, 1.2x, 1.3x, 2.0x, 2.1x, 2.2x, 2.3x, 2.4x
+RG-NBS3200-24GT4XS-P: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 1.6x, 2.0x, 2.1x,
+2.2x, 2.3x
+RG-NBS3200-48GT4XS-P: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 1.6x, 2.0x, 2.1x, 2.2x
+RG-NBS3200-24GT4XS-P-V2: 1.0x, 1.1x
+RG-NBS3200-48GT4XS-P-V2: 1.0x, 1.1x
+
+Applicable Clients
+
+International customers
+
+Release Type
+
+Official Release
+
+Release Date
+
+2025-11-12
+
+Based Version Number
+
+ReyeeOS 2.380.0.2125;SWITCH_3.0(1)B11P380,Release(12212510)
+
+Description
+
+Version iteration
+
+2
+
+Release Notes
+
+Version Information
+
+RG-NBS5000 Series
+Version Number
+
+ReyeeOS 2.380.0.2310;SWITCH_3.0(1)B11P380,Release(12231011)
+
+Version Type
+
+Official release
+RG-NBS5000 Series Switches:
+RG-NBS5100-24GT4SFP: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 2.0x, 2.1x, 2.2x, 2.3x,
+2.4x, 2.5x, 2.6x
+RG-NBS5100-48GT4SFP: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 2.0x, 2.1x, 2.2x, 2.4x
+RG-NBS5100-24GT4SFP-P: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x
+
+Applicable Products
+
+RG-NBS5200-24GT4XS: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 1.6x, 2.0x, 2.1x, 2.2x,
+2.3x, 2.4x, 2.5x, 2.6x
+RG-NBS5200-48GT4XS: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 2.0x, 2.1x, 2.2x, 2.4x
+RG-NBS5200-24SFP/8GT4XS: 1.0x, 1.1x, 1.2x, 1.3x, 2.0x, 2.1x, 2.2x, 2.3x, 2.4x
+RG-NBS5200-24GT4XS-P: 1.0x, 1.1x, 1.2x, 1.3x
+RG-NBS5200-48GT4XS-UP: 1.0x, 1.1x, 1.2x
+RG-NBS5300-8MG2XS-UP: 1.0x, 1.1x
+RG-NBS5200-24GT4XS-P-V2: 1.0x, 1.1x
+
+Applicable Clients
+
+International customers
+
+Release Type
+
+Official Release
+
+Release Date
+
+2025-11-12
+
+Based Version Number
+
+ReyeeOS 2.380.0.2125;SWITCH_3.0(1)B11P380,Release(12212510)
+
+Description
+
+Version iteration
+
+3
+
+Release Notes
+
+Version Information
+
+RG-NBS6000 Series
+Version Number
+
+ReyeeOS 2.380.0.2310;SWITCH_3.0(1)B11P380,Release(12231011)
+
+Version Type
+
+Official release
+RG-NBS6000 series switches:
+Chassis:
+RG-NBS6002: 1.0x, 1.1x, 1.2x, 1.3x
+
+Applicable Products
+
+Line cards:
+M6000-16GT8SFP2XS: 1.0x
+M6000-16SFP8GT2XS: 1.0x
+M6000-24GT2XS: 1.0x
+M6000-24SFP2XS: 1.0x
+
+Applicable Clients
+
+International customers
+
+Release Type
+
+Official Release
+
+Release Date
+
+2025-11-12
+
+Based Version Number
+
+ReyeeOS 2.380.0.2125;SWITCH_3.0(1)B11P380,Release(12212510)
+
+Description
+
+Version iteration
+
+4
+
+Release Notes
+
+Version Information
+
+RG-NBS7000 Series
+Version Number
+
+ReyeeOS 2.380.0.2310;SWITCH_3.0(1)B11P380,Release(12231011)
+
+Version Type
+
+Official release
+RG-NBS7000 series switches:
+Chassis:
+RG-NBS7003: 1.0x, 1.1x
+RG-NBS7006: 1.0x, 1.1x
+Line cards:
+
+Applicable Products
+
+M7006-CM (compatible with the NBS7006 chassis only): 1.0x, 1.1x, 2.0x, 2.1x
+M7000-24GT2XS-EA: 1.0x, 2.0x, 2.1x
+M7000-24SFP2XS-EA: 1.0x, 2.0x, 2.1x
+M7000-24GT24SFP2XS-EA: 1.0x, 2.0x, 2.1x
+M7000-48GT2XS-EA: 1.0x, 2.0x, 2.1x
+M7000-48SFP2XS-EA: 1.0x, 2.0x, 2.1x
+M7000-8XS-EA: 1.0x, 2.0x, 2.1x
+M7000-16XS-EA: 1.0x, 1.1x, 2.0x, 2.1x
+
+Applicable Clients
+
+International customers
+
+Release Type
+
+Official Release
+
+Release Date
+
+2025-11-12
+
+Based Version Number
+
+ReyeeOS 2.380.0.2125;SWITCH_3.0(1)B11P380,Release(12212510)
+
+Description
+
+Version iteration
+
+Revision History
+Release Date
+
+Version Number
+
+Status
+
+2024-03-26
+
+ReyeeOS 2.280.0.1524;SWITCH_3.0(1)B11P280,Release(11152401)
+
+Available
+
+2024-06-28
+
+ReyeeOS 2.280.0.1709;SWITCH_3.0(1)B11P280,Release(11170901)
+
+Available
+
+2024-07-30
+
+ReyeeOS 2.300.0.1927;SWITCH_3.0(1)B11P300,Release(11192700)
+
+Available
+
+2024-11-13
+
+ReyeeOS 2.320.0.2222;SWITCH_3.0(1)B11P320,Release(11222200)
+ReyeeOS 2.320.0.2311;SWITCH_3.0(1)B11P320,Release(11231100)
+
+2024-12-02
+
+Available
+
+ReyeeOS 2.324.0.2328;SWITCH_3.0(1)B11P324,Release(11232803)
+ReyeeOS 2.324.0.2328;SWITCH_3.0(1)B11P324,Release(11232805)
+ReyeeOS 2.324.0.2328;SWITCH_3.0(1)B11P324,Release(11232806)
+
+5
+
+Available
+
+Release Notes
+
+Version Information
+
+Release Date
+
+Version Number
+
+Status
+
+2025-02-18
+
+ReyeeOS 2.324.0.1317;SWITCH_3.0(1)B11P324,Release(12131700)
+ReyeeOS 2.324.0.1317;SWITCH_3.0(1)B11P324,Release(12131709)
+
+Available
+
+ReyeeOS 2.324.0.1317;SWITCH_3.0(1)B11P324,Release(12131700)
+2025-03-28
+
+ReyeeOS 2.324.0.1521;SWITCH_3.0(1)B11P324,Release(12152100)
+ReyeeOS 2.324.0.1528;SWITCH_3.0(1)B11P324,Release(12152818)
+
+Available
+
+2025-06-03
+
+ReyeeOS 2.360.0.1730;SWITCH_3.0(1)B11P360,Release(12173022)
+
+Available
+
+2025-07-28
+
+ReyeeOS 2.360.0.1924;SWITCH_3.0(1)B11P360,Release(12192402)
+
+Available
+
+2025-09-10
+
+ReyeeOS 2.380.0.2029;SWITCH_3.0(1)B11P380,Release(12202922)
+ReyeeOS 2.380.0.2104;SWITCH_3.0(1)B11P380,Release(12210403)
+
+2025-10-13
+
+ReyeeOS 2.380.0.2125;SWITCH_3.0(1)B11P380,Release(12212510)
+
+2025-10-22
+
+ReyeeOS 2.380.0.2222;SWITCH_3.0(1)B11P380,Release(12222214)
+ReyeeOS 2.380.0.2222;SWITCH_3.0(1)B11P380,Release(12222215)
+
+6
+
+Available
+
+Available
+
+Available
+
+Release Notes
+
+Features
+
+2 Features
+New Features
+Feature
+
+Source
+
+Safety
+
+Compliance
+
+compliance
+
+certification
+
+Description
+Solve the RED security compliance issues
+
+7
+
+Release Notes
+
+Resolved Issues
+
+3 Resolved Issues
+Bug ID
+
+Description
+
+N/A
+
+N/A
+
+8
+
+Release Notes
+
+Open Issues
+
+4 Open Issues
+N/A
+
+9
+
+Release Notes
+
+Supported Platforms
+
+5 Supported Platforms
+Hardware Platform
+Hardware Type
+
+Model
+
+Hardware Version Number
+
+Switch
+
+RG-NBS3100-8GT2SFP
+
+1.0x, 1.1x, 1.2x，1.3x, 1.4x, 1.5x,
+1.6x
+
+Switch
+
+RG-NBS3100-24GT4SFP-P-V2
+
+1.0x, 1.1x, 1.2x, 1.3x
+
+Switch
+
+RG-NBS3100-24GT4SFP-V2
+
+1.0x, 1.1x, 1.2x
+
+Switch
+
+RG-NBS3100-8GT2SFP-P-V2
+
+1.0x
+
+Industrial Ethernet Switch
+
+RG-NIS3100-8GT4SFP-HP
+
+1.0x, 1.1x, 1.2x, 1.3x, 1.4x
+
+Industrial Ethernet Switch
+
+RG-NIS3100-8GT2SFP-HP
+
+1.0x, 1.1x, 1.2x, 1.3x, 1.4x
+
+Industrial Ethernet Switch
+
+RG-NIS3100-4GT2SFP-HP
+
+1.0x, 1.1x, 1.2x, 1.3x, 1.4x
+
+Switch
+
+RG-NBS3100-48GT4SFP-P
+
+1.0x, 1.1x, 1.2x
+
+Switch
+
+RG-NBS3100-48GT4SFP-P-V2:
+
+1.0x, 1.1x
+
+Switch
+
+1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x,
+RG-NBS3200-24GT4XS
+
+1.6x, 1.7x, 2.0x, 2.1x, 2.2x, 2.3x,
+2.4x, 2.5x
+
+Switch
+
+Switch
+
+Switch
+
+Switch
+
+RG-NBS3200-48GT4XS
+
+RG-NBS3200-24SFP/8GT4XS
+
+RG-NBS3200-24GT4XS-P
+
+RG-NBS3200-48GT4XS-P
+
+1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x,
+2.0x, 2.1x, 2.2x, 2.4x
+1.0x, 1.1x, 1.2x, 1.3x, 2.0x, 2.1x,
+2.2x, 2.3x, 2.4x
+1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x,
+1.6x, 2.0x, 2.1x, 2.2x, 2.3x
+1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x,
+1.6x, 2.0x, 2.1x, 2.2x
+
+Switch
+
+RG-NBS3200-24GT4XS-P-V2
+
+1.0x, 1.1x
+
+Switch
+
+RG-NBS3200-48GT4XS-P-V2
+
+1.0x, 1.1x
+
+Switch
+
+1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x,
+RG-NBS5100-24GT4SFP
+
+2.0x, 2.1x, 2.2x, 2.3x, 2.4x, 2.5x,
+2.6x
+
+10
+
+Release Notes
+
+Hardware Type
+Switch
+
+Switch
+
+Supported Platforms
+
+Model
+
+Hardware Version Number
+
+RG-NBS5100-48GT4SFP
+RG-NBS5100-24GT4SFP-P
+
+Switch
+
+1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x,
+2.0x, 2.1x, 2.2x, 2.4x
+1.0x, 1.1x, 1.2x, 1.3x, 1.4x
+1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x,
+
+RG-NBS5200-24GT4XS
+
+1.6x,2.0x, 2.1x, 2.2x, 2.3x, 2.4x,
+2.5x, 2.6x
+
+Switch
+
+Switch
+
+RG-NBS5200-48GT4XS
+
+RG-NBS5200-24SFP/8GT4XS
+
+1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x,
+2.0x, 2.1x, 2.2x, 2.4x
+1.0x, 1.1x, 1.2x, 1.3x, 2.0x, 2.1x,
+2.2x, 2.3x, 2.4x
+
+Switch
+
+RG-NBS5200-24GT4XS-P
+
+1.0x, 1.1x, 1.2x, 1.3x
+
+Switch
+
+RG-NBS5200-48GT4XS-UP
+
+1.0x, 1.1x, 1.2x
+
+Switch
+
+RG-NBS5300-8MG2XS-UP
+
+1.0x, 1.1x
+
+Switch
+
+RG-NBS5200-24GT4XS-P-V2
+
+1.0x, 1.1x
+
+Chassis
+
+RG-NBS6002
+
+1.0x, 1.1x, 1.2x, 1.3x
+
+Line card
+
+M6000-16GT8SFP2XS
+
+1.0x
+
+Line card
+
+M6000-16SFP8GT2XS
+
+1.0x
+
+Line card
+
+M6000-24GT2XS
+
+1.0x
+
+Line card
+
+M6000-24SFP2XS
+
+1.0x
+
+Chassis
+
+RG-NBS7003
+
+1.0x, 1.1x
+
+Chassis
+
+RG-NBS7006
+
+1.0x, 1.1x
+
+M7006-CM
+
+1.0x, 1.1x, 2.0x, 2.1x
+
+M7000-24GT2XS-EA
+
+1.0x, 2.0x, 2.1x
+
+M7000-24SFP2XS-EA
+
+1.0x, 2.0x, 2.1x
+
+M7000-24GT24SFP2XS-EA
+
+1.0x, 2.0x, 2.1x
+
+Line card (compatible with
+the NBS7006 chassis only)
+Line card (can be installed
+in the NBS7003 chassis as
+a supervisor module)
+Line card (can be installed
+in the NBS7003 chassis as
+a supervisor module)
+Line card (can be installed
+in the NBS7003 chassis as
+a supervisor module)
+
+11
+
+Release Notes
+
+Supported Platforms
+
+Hardware Type
+
+Model
+
+Hardware Version Number
+
+Line card (can be installed
+
+M7000-48GT2XS-EA
+
+in the NBS7003 chassis as
+
+1.0x, 2.0x, 2.1x
+
+a supervisor module)
+Line card (can be installed
+
+M7000-48SFP2XS-EA
+
+in the NBS7003 chassis as
+
+1.0x, 2.0x, 2.1x
+
+a supervisor module)
+Line card (can be installed
+
+M7000-8XS-EA
+
+in the NBS7003 chassis as
+
+1.0x, 2.0x, 2.1x
+
+a supervisor module)
+Line card (can be installed
+
+M7000-16XS-EA
+
+in the NBS7003 chassis as
+
+1.0x, 1.1x, 2.0x, 2.1x
+
+a supervisor module)
+
+Interoperability Information
+Product
+
+Description
+
+Chassis
+
+RG-PA150I-FS
+
+Power supply module of
+NBS6002
+
+RG-PA300I-F
+
+Power supply module of
+NBS7003
+
+RG-PA460I-F
+
+Power supply module of
+NBS7003
+
+DS460S-3-002
+
+Power supply module of
+NBS7003
+
+RG-PA300I-FS
+
+Power supply module of
+NBS7003
+
+RG-PA460I-FS
+
+Power supply module of
+NBS7003
+
+RG-PA600I-FS
+
+Power supply module of
+NBS7006
+
+Software Version
+Number
+
+RG-NBS6002
+
+N/A
+
+RG-NBS7003
+
+N/A
+
+RG-NBS7003
+
+N/A
+
+RG-NBS7003
+
+N/A
+
+RG-NBS7003
+
+N/A
+
+RG-NBS7003
+
+N/A
+
+RG-NBS7006
+
+N/A
+
+M7003-FAN
+
+Fan module of NBS7003
+
+RG-NBS7003
+
+N/A
+
+M7006-FAN
+
+Fan module of NBS7006
+
+RG-NBS7006
+
+N/A
+
+12
+
+Release Notes
+
+Software Upgrading
+
+6 Software Upgrading
+Upgrade File
+RG-NBS3100, NIS3100 Series
+MACC package:
+SWITCH_3.0(1)B11P380_NBS3100_12231011_with_boot_encrypto_v2.tar.gz (Uploaded to
+
+File Title
+
+Ruijie Cloud by our technical support team, available for users to download)
+eWeb package:
+SWITCH_3.0(1)B11P380_NBS3100_12231011_with_boot_encrypto_v2.tar.gz (Uploaded to
+the official website by our technical support team, available for users to download)
+
+Description
+
+File Size
+
+Upgrade file
+MACC package: 15,962,639 bytes
+eWeb package: 15,962,639 bytes
+RG-NBS3100 and NIS3100 Series Switches:
+RG-NBS3100-8GT2SFP: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 1.6x
+
+Applicable
+Products
+
+RG-NBS3100-24GT4SFP-P-V2: 1.0x, 1.1x, 1.2x, 1.3x
+RG-NBS3100-24GT4SFP-V2: 1.0x, 1.1x, 1.2x
+RG-NBS3100-8GT2SFP-P-V2: 1.0x
+RG-NIS3100-8GT4SFP-HP: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x
+RG-NIS3100-8GT2SFP-HP: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x
+RG-NIS3100-4GT2SFP-HP: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x
+
+MD5
+
+MACC package: 709C0CE7C233B11BB891D886729C6A4A
+
+Checksum
+
+eWeb package: 709C0CE7C233B11BB891D886729C6A4A
+
+Software
+Version
+
+ReyeeOS 2.380.0.2310;SWITCH_3.0(1)B11P380,Release(12231011)
+
+13
+
+Release Notes
+
+Software Upgrading
+
+RG-NBS3100-EXTEND Series
+MACC package:
+SWITCH_3.0(1)B11P380_NBS3100-EXTEND_12231011_with_boot_encrypto_v2.tar.gz
+(Uploaded to Ruijie Cloud by our technical support team, available for users to download)
+File Title
+
+eWeb package:
+SWITCH_3.0(1)B11P380_NBS3100-EXTEND_12231011_with_boot_encrypto_v2.tar.gz
+(Uploaded to the official website by our technical support team, available for users to
+download)
+
+Description
+
+File Size
+
+Upgrade file
+MACC package: 17,984,976 bytes
+eWeb package: 17,984,976 bytes
+RG-NBS3100-EXTEND Series Switches:
+
+Applicable
+Products
+
+RG-NBS3100-48GT4SFP-P: 1.0x, 1.1x, 1.2x
+RG-NBS3100-48GT4SFP-P-V2: 1.0x, 1.1x
+
+MD5
+
+MACC package: A2C8FEF6B1202A2142E09FC75EA68D5E
+
+Checksum
+
+eWeb package: A2C8FEF6B1202A2142E09FC75EA68D5E
+
+Software
+
+Version
+
+ReyeeOS 2.380.0.2310;SWITCH_3.0(1)B11P380,Release(12231011)
+
+14
+
+Release Notes
+
+Software Upgrading
+
+RG-NBS3200 Series
+MACC package:
+SWITCH_3.0(1)B11P380_NBS3200_12231011_with_boot_encrypto_v2.tar.gz (Uploaded to
+File Title
+
+Ruijie Cloud by our technical support team, available for users to download)
+eWeb package:
+SWITCH_3.0(1)B11P380_NBS3200_12231011_with_boot_encrypto_v2.tar.gz (Uploaded to
+the official website by our technical support team, available for users to download)
+
+Description
+
+File Size
+
+Upgrade file
+MACC package: 17,985,243 bytes
+eWeb package: 17,985,243 bytes
+RG-NBS3200 Series Switches:
+RG-NBS3200-24GT4XS: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 1.6x, 1.7x, 2.0x, 2.1x, 2.2x, 2.3x,
+2.4x, 2.5x
+RG-NBS3200-48GT4XS: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 2.0x, 2.1x, 2.2x, 2.4x
+
+Applicable
+Products
+
+RG-NBS3200-24SFP/8GT4XS: 1.0x, 1.1x, 1.2x, 1.3x, 2.0x, 2.1x, 2.2x, 2.3x, 2.4x
+RG-NBS3200-24GT4XS-P: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 1.6x, 2.0x, 2.1x, 2.2x, 2.3x
+RG-NBS3200-48GT4XS-P: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 1.6x, 2.0x, 2.1x, 2.2x
+RG-NBS3200-24GT4XS-P-V2: 1.0x, 1.1x
+RG-NBS3200-48GT4XS-P-V2: 1.0x, 1.1x
+
+MD5
+
+MACC package: 9446C2D177BDFBAF2F991F3E0BA14099
+
+Checksum
+
+eWeb package: 9446C2D177BDFBAF2F991F3E0BA14099
+
+Software
+Version
+
+ReyeeOS 2.380.0.2310;SWITCH_3.0(1)B11P380,Release(12231011)
+
+15
+
+Release Notes
+
+Software Upgrading
+
+RG-NBS5000 Series
+MACC package:
+SWITCH_3.0(1)B11P380_NBS5000_12231011_with_boot_encrypto_v2.tar.gz (Uploaded to
+File Title
+
+Ruijie Cloud by our technical support team, available for users to download)
+eWeb package:
+SWITCH_3.0(1)B11P380_NBS5000_12231011_with_boot_encrypto_v2.tar.gz (Uploaded to
+the official website by our technical support team, available for users to download)
+
+Description
+
+File Size
+
+Upgrade file
+MACC package: 20,788,889 bytes
+eWeb package: 20,788,889 bytes
+RG-NBS5000 Series Switches:
+RG-NBS5100-24GT4SFP: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 2.0x, 2.1x, 2.2x, 2.3x, 2.4x, 2.5x,
+2.6x
+RG-NBS5100-48GT4SFP: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 2.0x, 2.1x, 2.2x, 2.4x
+RG-NBS5100-24GT4SFP-P: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x
+RG-NBS5200-24GT4XS: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 1.6x,2.0x, 2.1x, 2.2x, 2.3x, 2.4x,
+
+Applicable
+Products
+
+2.5x, 2.6x
+RG-NBS5200-48GT4XS: 1.0x, 1.1x, 1.2x, 1.3x, 1.4x, 1.5x, 2.0x, 2.1x, 2.2x, 2.4x
+RG-NBS5200-24SFP/8GT4XS: 1.0x, 1.1x, 1.2x, 1.3x, 2.0x, 2.1x, 2.2x, 2.3x, 2.4x
+RG-NBS5200-24GT4XS-P: 1.0x, 1.1x, 1.2x, 1.3x
+RG-NBS5200-48GT4XS-UP: 1.0x, 1.1x, 1.2x
+RG-NBS5300-8MG2XS-UP: 1.0x, 1.1x
+RG-NBS5200-24GT4XS-P-V2: 1.0x, 1.1x
+
+MD5
+
+MACC package: 88938A10447F22F7C2D52DFBD50460F1
+
+Checksum
+
+eWeb package: 88938A10447F22F7C2D52DFBD50460F1
+
+Software
+Version
+
+ReyeeOS 2.380.0.2310;SWITCH_3.0(1)B11P380,Release(12231011)
+
+16
+
+Release Notes
+
+Software Upgrading
+
+RG-NBS6000 Series
+MACC package:
+SWITCH_3.0(1)B11P380_NBS6000_12231011_with_boot_encrypto_v2.tar.gz (Uploaded to
+File Title
+
+Ruijie Cloud by our technical support team, available for users to download)
+eWeb package:
+SWITCH_3.0(1)B11P380_NBS6000_12231011_with_boot_encrypto_v2.tar.gz (Uploaded to
+the official website by our technical support team, available for users to download)
+
+Description
+
+File Size
+
+Upgrade file
+MACC package: 20,276,158 bytes
+eWeb package: 20,276,158 bytes
+RG-NBS6000 series switches:
+Chassis:
+RG-NBS6002: 1.0x, 1.1x, 1.2x, 1.3x
+
+Applicable
+Products
+
+Line cards:
+M6000-16GT8SFP2XS: 1.0x
+M6000-16SFP8GT2XS: 1.0x
+M6000-24GT2XS: 1.0x
+M6000-24SFP2XS: 1.0x
+
+MD5
+
+MACC package: 9859DC03E7A190D9B147632E78C99D6A
+
+Checksum
+
+eWeb package: 9859DC03E7A190D9B147632E78C99D6A
+
+Software
+Version
+
+ReyeeOS 2.380.0.2310;SWITCH_3.0(1)B11P380,Release(12231011)
+
+17
+
+Release Notes
+
+Software Upgrading
+
+RG-NBS7000 Series
+MACC package: SWITCH_3.0(1)B11P380_NBS7000_12231011_with_boot_encrypto_v2.tar.gz
+(Uploaded to Ruijie Cloud by our technical support team, available for users to download)
+File Title
+
+eWeb package: SWITCH_3.0(1)B11P380_NBS7000_12231011_with_boot_encrypto_v2.tar.gz
+(Uploaded to the official website by our technical support team, available for users to
+download)
+
+Description
+
+File Size
+
+Upgrade file
+MACC package: 20,286,763 bytes
+eWeb package: 20,286,763 bytes
+RG-NBS7000 series switches:
+Chassis:
+RG-NBS7003: 1.0x, 1.1x
+RG-NBS7006: 1.0x, 1.1x
+Line cards:
+
+Applicable
+
+M7006-CM (compatible with the NBS7006 chassis only): 1.0x, 1.1x, 2.0x, 2.1x
+
+Products
+
+M7000-24GT2XS-EA: 1.0x, 2.0x, 2.1x
+M7000-24SFP2XS-EA: 1.0x, 2.0x, 2.1x
+M7000-24GT24SFP2XS-EA: 1.0x, 2.0x, 2.1x
+M7000-48GT2XS-EA: 1.0x, 2.0x, 2.1x
+M7000-48SFP2XS-EA: 1.0x, 2.0x, 2.1x
+M7000-8XS-EA: 1.0x, 2.0x, 2.1x
+M7000-16XS-EA: 1.0x, 1.1x, 2.0x, 2.1x
+
+MD5
+
+MACC package: 0F8DEA05645F23E32E207ED1B72FB7EE
+
+Checksum
+
+eWeb package: 0F8DEA05645F23E32E207ED1B72FB7EE
+
+Software
+Version
+
+ReyeeOS 2.380.0.2310;SWITCH_3.0(1)B11P380,Release(12231011)
+
+Requirements
+⚫
+
+The latest version ReyeeOS 2.380 adopts a more secure encryption technology. If a device is running an
+earlier version, upgrading the device directly to the latest version may occasionally result in an upgrade
+failure. You are advised to upgrade the device according to the rules below:
+
+⚫
+
+If the device is running ReyeeOS 2.324 or an earlier version, you are advised to upgrade the device to
+ReyeeOS 2.324 first, and then to the latest version.
+
+⚫
+
+If the device is running ReyeeOS 2.324 or a later version, you can upgrade the device directly to the latest
+version.
+
+18
+
+Release Notes
+
+Software Upgrading
+
+Important Points to Remember
+⚫
+
+Upgrade can be performed in the field only after successful experimental verification.
+
+⚫
+
+Please perform a database backup before upgrading the device.
+
+⚫
+
+Please do not power off the device, reset the system or remove any modules if a failure prompt appears.
+
+⚫
+
+After the upgrade is successful, log in to the web UI and choose One Device > Device Overview > Basic
+Info to verify the version information, including the software version number, device SN, and model. For
+details, see 6.4
+
+Upgrade Procedure.
+
+Upgrade Procedure
+⚫
+
+Connect the device to a PC and configure the PC with an IP address in subnet 10.44.77.10/255.255.255.0.
+
+⚫
+
+Power on the device. Once the system LED is solid on, open a browser, enter 10.44.77.200 into the address
+bar, and press Enter.
+
+⚫
+
+Log into the web UI and complete the configuration.
+
+⚫
+
+Choose System > Upgrade > Local Upgrade. Click Browse, select an upgrade file (e.g.,
+SWITCH_3.0(1)B11P380_NBS7000_12231011_with_boot_encrypto_v2.tar.gz) and click Upload. After the
+upgrade is successful, verify the version information.
+
+Upgrade Device
+Choose One Device > System > Upgrade > Local Upgrade.
+
+Check Version
+
+19
+
+Release Notes
+
+Software Upgrading
+
+Note
+If you forget your password, press and hold the Reset button on the device panel for more than 5 seconds.
+This will reset the username and password and reboot the device. After the reboot, the message "There is a
+backup file on the device. Do you want to reset the device using the backup file? (Note: The device will reboot
+after being restored.)" will be displayed:
+⚫
+
+Delete Backup: The username and password and the backup file will be restored to factory defaults.
+
+⚫
+
+Reset Backup: The username and password will be restored to factory defaults, and the configuration will
+be restored to the last backup before rebooting.
+
+20
+
+Release Notes
+
+Related Documentation
+
+2 Related Documentation
+Document Title
+
+Description
+
+Ruijie Reyee RG-NBS3100-24GT4SFP, NBS3100-24GT4SFP-IP,
+NBS3100-8GT2SFP, NBS3100-8GT2SFP-P Series Switches
+Insstallation Guide
+Ruijie Reyee RG-NBS3100-48GT4SFP-P Switch Installation Guide
+
+Ruijie Reyee RG-NBS3100-48GT4SFP-P-V2 Switch Installation Guide
+Ruijie Reyee RG-NBS3100-24GT4SFP-P-V2 Switch Installation Guiide
+Ruijie Reyee RG-NBS3100-24GT4SFP-V2 Switch Installation Guide
+Ruijie Reyee RG-NBS3100-8GT2SFP-P-V2 Switch Installation Guide
+Ruijie Reyee RG-NIS3100 Series Switches Installation Guide
+Ruijie Reyee RG-NBS3200-24GT4XS, NBS3200-24SFP8GT4XS,
+NBS3200-24GT4XS-P, NBS3200-48GT4XS, NBS3200-48GT4XS-P
+Series Switches Installation Guide
+Ruijie Reyee RG-NBS3200-24GT4XS-P-V2, NBS3200-48GT4XS-P-V2
+Switches Installation Guide
+
+Provides guidance, including
+installation steps, environmental
+requirements, and installation
+
+Ruijie Reyee RG-NBS5100-24GT4SFP-P Switch Installation Guide
+
+precautions.
+
+Ruijie Reyee RG-NBS5100-24GT4SFP, NBS5100-48GT4SFP Series
+Switches Installation Guide
+Ruijie Reyee RG-NBS5200-24GT4XS, NBS5200-24SFP8GT4XS,
+NBS5200-48GT4XS Series Switches Installation Guide
+Ruijie Reyee RG-NBS5200-24GT4XS-P Switch Installation Guide
+Ruijie Reyee RG-NBS5200-48GT4XS-UP Switch Installation Guide
+
+Ruijie Reyee RG-NBS5300-8MG2XS-UP Switch Installation Guide
+Ruijie Reyee RG-NBS5200-24GT4XS-P-V2 Switch Installation Guide
+Ruijie Reyee RG-NBS6002 Switch Installation Guide
+Ruijie Reyee RG-NBS7006 Switch Installation Guide
+Ruijie Reyee RG-NBS7003 Switch Installation Guide
+Ruijie Reyee RG-NBS, NIS3100 Series Switches ReyeeOS
+
+Provides guidance on web-based
+
+2.380[360][340] Configuration Guide
+
+configuration.
+
+21
+
+Release Notes
+
+Related Documentation
+
+Note
+The documentation is subject to change without prior notification. Please access Ruijie Networks at
+https://www.ruijienetworks.com/products/reyee for the latest documentation.
+
+22
+
+

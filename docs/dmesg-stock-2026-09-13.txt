@@ -1,0 +1,352 @@
+===== device-tree? =====
+ls: /proc/device-tree: No such file or directory
+===== /sys/firmware =====
+drwxr-xr-x    2 root     root             0 Sep 13 13:46 .
+drwxr-xr-x   11 root     root             0 Sep 13 13:20 ..
+===== DMESG =====
+[    0.000000] Linux version 3.3.8 (ngcf@openwrt-88) (gcc version 4.6.3 20120201 (prerelease) (Linaro GCC 4.6-2012.02) ) #1 Tue Jun 23 10:25:40 CST 2026
+[    0.000000] 
+[    0.000000] Execute init_l2_cache()
+[    0.000000] CPU revision is: 0001a120 (MIPS interAptiv (multi))
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 0f800000 @ 00000000 (usable)
+[    0.000000]  memory: 30000000 @ 90000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone PFN ranges:
+[    0.000000]   Normal   0x00000000 -> 0x0000f800
+[    0.000000]   HighMem  0x0000f800 -> 0x000c0000
+[    0.000000] Movable zone start PFN for each node
+[    0.000000] Early memory PFN ranges
+[    0.000000]     0: 0x00000000 -> 0x0000f800
+[    0.000000]     0: 0x00090000 -> 0x000c0000
+[    0.000000] On node 0 totalpages: 260096
+[    0.000000] free_area_init_node: node 0, pgdat 80403560, node_mem_map 81000000
+[    0.000000]   Normal zone: 496 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 62992 pages, LIFO batch:15
+[    0.000000]   HighMem zone: 5648 pages used for memmap
+[    0.000000]   HighMem zone: 190960 pages, LIFO batch:31
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0 
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 253952
+[    0.000000] Kernel command line: ker_name=vmlinux.gz boot_ver=1.0.2.995246c boot_build_time=1970/01/01-00:00:00 product_id=60050030 machtype=NBS3200-48GT4XS hardware_version=1.20 rtk_dma_size=8M ubi.mtd=6 root=/dev/ubiblock0_0 rootfstype=squashfs,jffs2 r rootwait console=ttyMTD10 console=ttyS0,9600 mtdparts=rtk_spinand:2048k@2048K(u-boot),1024k@4096K(u-boot-env),2048k@5120k(product_info),1024k@7168k(kdump),2048k@8192k(factory_test0),2048k@10240k(kernel),249856k@12288k(ubi),251904k@10240k(firmware),2048k@0(u-boot-slave) quiet env_size=0x20000  rootfstype=squashfs,yaffs,jffs2 noinitrd
+[    0.000000] PID hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.000000] Dentry cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Inode-cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.000000] MIPS secondary cache 256kB, 8-way, linesize 32 bytes.
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] Memory: 1010892k/253952k available (3378k kernel code, 29492k reserved, 733k data, 264k init, 786432k highmem)
+[    0.000000] SLUB: Genslabs=9, HWalign=64, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:128
+[    0.000000] console [ttyS0] enabled
+[    0.000000] Calibrating delay loop... 663.55 BogoMIPS (lpj=3317760)
+[    0.050000] pid_max: default: 32768 minimum: 301
+[    0.050000] Mount-cache hash table entries: 512
+[    0.050000] NET: Registered protocol family 16
+[    0.050000] MIPS: machine is NBS3200-48GT4XS
+[    0.050000] gpiochip_add: registered GPIOs 0 to 31 on device: rtk_gpio_931x
+[    0.050000] rtk_gpio_931x rtk_gpio_931x.0: probed
+[    0.050000] bio: create slab <bio-0> at 0
+[    0.050000] i2c-gpio i2c-gpio.0: using pins 15 (SDA) and 7 (SCL)
+[    0.050000] i2c-gpio i2c-gpio.1: using pins 16 (SDA) and 13 (SCL)
+[    0.050000] i2c-gpio i2c-gpio.2: using pins 17 (SDA) and 14 (SCL)
+[    0.060000] i2c-gpio i2c-gpio.3: using pins 19 (SDA) and 18 (SCL)
+[    0.060000] i2c-gpio i2c-gpio.4: using pins 21 (SDA) and 20 (SCL)
+[    0.060000] i2c-gpio i2c-gpio.5: using pins 23 (SDA) and 22 (SCL)
+[    0.060000] NET: Registered protocol family 2
+[    0.060000] IP route cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.060000] TCP established hash table entries: 32768 (order: 6, 262144 bytes)
+[    0.060000] TCP bind hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.060000] TCP: Hash tables configured (established 32768 bind 32768)
+[    0.060000] TCP reno registered
+[    0.060000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.060000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.060000] NET: Registered protocol family 1
+[    0.060000] highmem bounce pool size: 64 pages
+[    0.070000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.070000] JFFS2 version 2.2 (NAND) (SUMMARY) (LZMA) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.070000] msgmni has been set to 438
+[    0.070000] io scheduler noop registered
+[    0.070000] io scheduler deadline registered (default)
+[    0.070000] Serial: 8250/16550 driver, 1 ports, IRQ sharing enabled
+[    0.070000] serial8250: ttyS0 at MMIO 0x0 (irq = 47) is a 16550A
+[    0.070000] at24 2-0050: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] at24 2-0051: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] at24 3-0050: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] at24 3-0051: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] at24 4-0050: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] at24 4-0051: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] at24 5-0050: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] at24 5-0051: 256 byte 24c02 EEPROM, writable, 1 bytes/write
+[    0.070000] RTK_SPI_FLASH_MIO driver is bypassed
+[    0.070000] RTK_NORSFG3 driver is used
+[    0.070000] =================================================================
+[    0.070000] init_luna_nor_spi_map: flash map at 0xb4000000
+[    0.070000] SPI NOR driver probe...
+[    0.070000] FFFFFF/MMIO16-1/ModeC 
+[    0.080000] MTD Table FIll null
+[    0.080000] RTK_SPI_NAND driver is used
+[    0.080000] [rtk_spi_nand_detect] Start to probe SPI NAND Flash ......
+[    0.080000] [rtk_spi_nand_detect] Probe SPI NAND Flash Successed.
+[    0.090000] [rtk_spi_nand_detect] 2nd SPI NAND Flash is NULL !!!
+[    0.090000] NAND device: Manufacturer ID: 0x98, Chip ID: 0xcb (Toshiba )
+[    0.090000] Scanning device for bad blocks
+[    0.090000] Bad eraseblock 3 at 0x000000060000
+[    0.810000] Bad eraseblock 1536 at 0x00000c000000
+[    0.810000] Bad eraseblock 1537 at 0x00000c020000
+[    1.050000] 9 cmdlinepart partitions found on MTD device rtk_spinand
+[    1.050000] RTK: using dynamic nand partition
+[    1.050000] Creating 9 MTD partitions on "rtk_spinand":
+[    1.050000] 0x000000200000-0x000000400000 : "u-boot"
+[    1.050000] 0x000000400000-0x000000500000 : "u-boot-env"
+[    1.050000] 0x000000500000-0x000000700000 : "product_info"
+[    1.050000] 0x000000700000-0x000000800000 : "kdump"
+[    1.050000] 0x000000800000-0x000000a00000 : "factory_test0"
+[    1.050000] 0x000000a00000-0x000000c00000 : "kernel"
+[    1.050000] 0x000000c00000-0x000010000000 : "ubi"
+[    1.060000] 0x000000a00000-0x000010000000 : "firmware"
+[    2.710000] 0x000000000000-0x000000200000 : "u-boot-slave"
+[    2.710000] UBI: attaching mtd6 to ubi0
+[    2.710000] UBI: physical eraseblock size:   131072 bytes (128 KiB)
+[    2.710000] UBI: logical eraseblock size:    126976 bytes
+[    2.710000] UBI: smallest flash I/O unit:    2048
+[    2.710000] UBI: VID header offset:          2048 (aligned 2048)
+[    2.710000] UBI: data offset:                4096
+[    3.670000] UBI: max. sequence number:       250
+[    3.680000] UBI: attached mtd6 to ubi0
+[    3.680000] UBI: MTD device name:            "ubi"
+[    3.680000] UBI: MTD device size:            244 MiB
+[    3.680000] UBI: number of good PEBs:        1950
+[    3.680000] UBI: number of bad PEBs:         2
+[    3.680000] UBI: number of corrupted PEBs:   0
+[    3.680000] UBI: max. allowed volumes:       128
+[    3.680000] UBI: wear-leveling threshold:    4096
+[    3.680000] UBI: number of internal volumes: 1
+[    3.680000] UBI: number of user volumes:     2
+[    3.680000] UBI: available PEBs:             0
+[    3.680000] UBI: total number of reserved PEBs: 1950
+[    3.680000] UBI: number of PEBs reserved for bad PEB handling: 19
+[    3.680000] UBI: max/mean erase counter: 2/1
+[    3.680000] UBI: image sequence number:  1159083147
+[    3.680000] get env_size=0x20000 from cmdline
+[    3.680000] final used env_size: 0x20000
+[    3.700000] u-boot-env crc check OK
+[    3.700000] get env_size=0x20000 from cmdline
+[    3.700000] final used env_size: 0x20000
+[    3.710000] u-boot-env crc check OK
+[    3.710000] Reading from volume 'rootfs' to 0xc009f000, size 0xdaf000 ...
+[    5.270000] ***OK***
+[    5.440000] Hash check: rootfs_crc32 real crc32 is [effe1de2], recorded real_crc is [effe1de2]
+[    5.440000] get env_size=0x20000 from cmdline
+[    5.440000] final used env_size: 0x20000
+[    5.450000] u-boot-env crc check OK
+[    5.490000] UBI: background thread "ubi_bgt0d" started, PID 239
+[    5.490000] UBI: ubiblock0_0 created from ubi0:0(rootfs)
+[    5.490000] ubiblock: device ubiblock0_0 (rootfs) set to be root filesystem
+[    5.490000] rtc-pcf8563 0-0051: chip found, driver version 0.4.3
+[    5.490000] rtc-pcf8563 0-0051: rtc core: registered rtc-pcf8563 as rtc0
+[    5.490000] i2c /dev entries driver
+[    5.500000] lm75 1-004a: hwmon0: sensor 'lm75'
+[    5.520000] Registered led device: green-system
+[    5.520000] nf_conntrack version 0.5.0 (15795 buckets, 63180 max)
+[    5.520000] IPv4 over IPv4 tunneling driver
+[    5.530000] GRE over IPv4 demultiplexor driver
+[    5.530000] GRE over IPv4 tunneling driver
+[    5.530000] TCP cubic registered
+[    5.530000] Initializing XFRM netlink socket
+[    5.530000] NET: Registered protocol family 10
+[    5.530000] IPv6 over IPv4 tunneling driver
+[    5.530000] NET: Registered protocol family 17
+[    5.530000] NET: Registered protocol family 15
+[    5.530000] Bridge firewalling registered
+[    5.530000] NF register ebt rj to local module sucess!
+[    5.530000] 8021q: 802.1Q VLAN Support v1.8
+[    5.530000] rg_tipc: Activated (version 2.0.0)
+[    5.530000] NET: Registered protocol family 40
+[    5.530000] rg_tipc: Started in single node mode
+[    5.530000] rtc-pcf8563 0-0051: setting system clock to 2026-09-13 11:20:53 UTC (1789298453)
+[    5.530000] VFS: Mounted root (squashfs filesystem) readonly on device 254:0.
+[    5.540000] Freeing unused kernel memory: 264k freed
+[    7.710000] UBIFS: recovery needed
+[    7.840000] UBIFS: recovery completed
+[    7.840000] UBIFS: mounted UBI device 0, volume 1, name "rootfs_data"
+[    7.840000] UBIFS: file system size:   228937728 bytes (223572 KiB, 218 MiB, 1803 LEBs)
+[    7.840000] UBIFS: journal size:       11427840 bytes (11160 KiB, 10 MiB, 90 LEBs)
+[    7.840000] UBIFS: media format:       w4/r0 (latest is w4/r0)
+[    7.840000] UBIFS: default compressor: lzo
+[    7.840000] UBIFS: reserved for root:  4952683 bytes (4836 KiB)
+[    7.890000] 
+[    7.890000] rg_sys_info_sz:15
+[    7.890000] 0,creat name:manufacturer
+[    7.890000] 1,creat name:oui
+[    7.890000] 2,creat name:product_class
+[    7.890000] 3,creat name:model
+[    7.890000] 4,creat name:sys_mac
+[    7.890000] 5,creat name:wan_ip
+[    7.890000] 6,creat name:serial_num
+[    7.890000] 7,creat name:hardware_version
+[    7.890000] 8,creat name:software_version
+[    7.890000] 9,creat name:product_id
+[    7.890000] 10,creat name:net_access_license
+[    7.890000] 11,creat name:model_full_name
+[    7.890000] 12,creat name:devkey
+[    7.890000] 13,creat name:devkey_hash
+[    7.890000] 14,creat name:psti
+[    8.010000] RTCORE LKM Insert...
+[    8.010000] 
+[    8.010000] allocate mem to rtcore_devices[0].rt_data=0x8e811000
+[    8.010000] RTCORE Driver Module Initialize
+[    8.010000]   IOAL init
+[    8.010000]   Log init
+[    8.010000]   content = 60050030   ProductID=0x201402f0
+[    8.010000] Probe name=NBS5720_48GT4XS_S
+[    8.010000]   Hardware-profile probe
+[    8.010000]    rtcore_init hwp_probe ok 
+[    8.010000]   Hardware-profile init
+[    8.020000]    rtcore_init hwp_init ok 
+[    8.020000]    rtcore_init ioal_init_unitID_change ok 
+[    8.020000]    rtcore_init hwp_chipInfo_update ok 
+[    8.020000]   GPIO probe (unit 0): (found)
+[    8.020000]   GPIO Init
+[    8.020000]   SPI init (unit 0) 
+[    8.020000]   Intr Probe (unit 0)
+[    8.020000]   TC probe (unit 0): (found)
+[    8.020000]   TC init (unit 0)
+[    8.020000]     TC util init (unit 0)
+[    8.020000]     TC util init (isr)
+[    8.020000]   Watchdog probe (unit 0): (found)
+[    8.020000]   Watchdog init (unit 0)
+[    8.020000]   I2C probe (unit 0)
+[    8.020000]   NIC probe (unit 0)
+[    8.020000]   IOAL init
+[    8.020000]   L2Ntfy probe (unit 0): (found)
+[    9.670000] RTK Driver Module Initialize
+[    9.670000] [4][init] rtk_init Start!!
+[    9.670000] 
+[    9.670000] [4][init] dal_mgmt_init Completed!!
+[    9.670000] 
+[    9.670000]   MAC probe (unit 0)
+[    9.670000]     Chip 9311 (found)
+[    9.670000]   MAC init (unit 0)
+[    9.730000]   SMI protocol probe (unit 0)
+[    9.730000]   PHY probe (unit 0)
+[    9.750000] [4][hal] _phy_identify_9310_serdes(unit 0, port 48) function!!
+[    9.750000] [4][hal] _phy_identify_9310_serdes(unit 0, port 50) function!!
+[    9.750000] [4][hal] _phy_identify_9310_serdes(unit 0, port 52) function!!
+[    9.750000] [4][hal] _phy_identify_9310_serdes(unit 0, port 53) function!!
+[    9.750000]   Chip Construct (unit 0)
+[    9.750000]     Chip Construct
+[    9.750000]     Turn Off Serdes
+[    9.750000]     Disable PHY Polling
+[    9.750000]     PHY Reset
+[   10.250000]     PHY Construct
+[   12.170000]     Serdes Construct
+[   13.280000] sched: RT throttling activated
+[   18.660000]     MAC-Polling-PHY Config
+[   18.660000]     Enable PHY Polling
+[   18.660000]   PHY init (unit 0)
+[   21.330000] [4][init] hal_init Completed!!
+[   21.330000] 
+[   21.330000]   Mgmt_dev init (unit 0) 
+[   21.330000] [4][init] dal_mgmt_mapper_init Completed!!
+[   23.620000] [4][init] RT_MAPPER(unit)->_init Completed!!
+[   23.620000] [4][init] dal_linkMon_devInit Completed!!
+[   23.620000] [4][init] dal_mgmt_initDevice Completed!!
+[   23.620000] 
+[   23.620000] [4][init] dal_waMon_enable Success!!
+[   23.620000] [4][init] dal_mgmt_misc_init Completed!!
+[   23.620000] 
+[   23.620000] Sys_mac Init  02:00:00:00:00:00
+[   23.940000] RTDRV Driver Module Initialize
+[   24.920000] Sysmac is[02:00:00:00:00:00]
+[   24.920000] Sys_mac Init  02:00:00:00:00:00
+[   25.250000] UBIFS: un-mount UBI device 0, volume 1
+[   25.380000] UBIFS: mounted UBI device 0, volume 1, name "rootfs_data"
+[   25.380000] UBIFS: file system size:   228937728 bytes (223572 KiB, 218 MiB, 1803 LEBs)
+[   25.380000] UBIFS: journal size:       11427840 bytes (11160 KiB, 10 MiB, 90 LEBs)
+[   25.380000] UBIFS: media format:       w4/r0 (latest is w4/r0)
+[   25.380000] UBIFS: default compressor: lzo
+[   25.380000] UBIFS: reserved for root:  4952683 bytes (4836 KiB)
+[   28.260000] init std_syslog_kern.ko
+[   28.810000] Init Board Configuration Module....OK
+[   28.860000] Init krn2usr Module....OK
+[   28.870000] Init KSI Core Driver Module....OK
+[   29.450000] Init SKI Core Driver Module.... dal_mango_trunk_init had already been initialized!
+[   29.480000] [rsd_fiber_adapt_init:1157]g_familyId: 8, g_boardId: 51, localLportStart-End:(0-67)
+[   29.490000] [rsd_fiber_adapt_init:1253]lport_sfp_start:48 lport_sfp_end:51 
+[   29.670000] OK
+[   29.670000] Init Board Module....OK
+[   29.710000] Init VLAN Aware Module....OK
+[   29.770000] Init Switch STP Module....OK
+[   29.820000] Init Switch LACP Module....OK
+[   29.960000] Init Switch Multicast Module....OK
+[   31.470000] Init Switch IPSG Module....OK
+[   31.540000] Init Switch DHCP Module....OK
+[   31.550000] Init Switch Voice VLAN Module....OK
+[   31.570000] Init Switch LLDP Module....OK
+[   31.580000] Init Switch MAC VLAN Module....OK
+[   31.630000] Init Switch RLDP Module....OK
+[   31.640000] Init Switch RDLA Module....OK
+[   31.680000] Init Switch AUTHMGR Module....OK
+[   31.700000] Init Switch ERPS Module....OK
+[   31.710000] Init Switch PVSTP Module....OK
+[   31.740000] Button Hotplug driver version 0.4.1
+[   31.790000] tun: Universal TUN/TAP device driver, 1.6
+[   31.790000] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[   31.880000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   32.200000] xt_time: kernel timezone is -0000
+[   32.490000] nf_conntrack_rtsp v0.6.21 loading
+[   32.500000] nf_nat_rtsp v0.6.21 loading
+[   32.510000] Netfilter messages via NETLINK v0.30.
+[   32.540000] Ebtables v2.0 registered
+[   32.700000] ip_set: protocol 6
+[   32.890000] u32 classifier
+[   32.890000]     Performance counters on
+[   32.890000]     input device check on
+[   32.890000]     Actions configured
+[   35.580000] mtdoops: Attached to MTD device 3
+[   38.240000] <kernel>dont remove
+[   38.590000] %System-2: Device Ready!
+[   39.280000] [TEST] Recv ksid l3intf state check cmd
+[   41.980000] device eth0 entered promiscuous mode
+[   41.980000] br-manager: port 1(eth0) entered forwarding state
+[   41.980000] br-manager: port 1(eth0) entered forwarding state
+[   42.070000] device eth0.1 entered promiscuous mode
+[   43.080000] br-wan: port 1(eth0.1) entered forwarding state
+[   43.080000] br-wan: port 1(eth0.1) entered forwarding state
+[   43.980000] br-manager: port 1(eth0) entered forwarding state
+[   45.080000] br-wan: port 1(eth0.1) entered forwarding state
+[   48.630000] Started in network mode
+[   48.630000] Own node identity 9c2ba6cb80fa, cluster identity 1127
+[   48.630000] Enabled bearer <rgeth:br-manager>, priority 10
+[   48.700000] Enabling of bearer <rgeth:br-manager> rejected, already enabled
+[   49.670000] 32-bit node address hash set to 1cd1a6cb
+[   50.000000] rsd_sys_br_wan_addr_mode_set: mode=2
+[   53.840000] %Port-2: Gi1 link up
+[   53.860000] [TEST] L3INTF 0x04000000 change to UP.
+[   53.900000] br-wan: port 1(eth0.1) entered disabled state
+[   53.900000] device eth0.1 left promiscuous mode
+[   53.900000] br-wan: port 1(eth0.1) entered disabled state
+[   53.900000] ADDRCONF(NETDEV_UP): eth0.1: link is not ready
+[   55.640000] Enabling of bearer <rgeth:br-manager> rejected, already enabled
+[   56.190000] device eth0.1 entered promiscuous mode
+[   57.200000] br-wan: port 1(eth0.1) entered forwarding state
+[   57.200000] br-wan: port 1(eth0.1) entered forwarding state
+[   59.200000] br-wan: port 1(eth0.1) entered forwarding state
+[   89.010000] [DHCP]br-wan server (192.168.64.1, 02:00:00:00:00:00), vlan 1, port 0
+[  777.570000] %Port-2: Gi1 link down
+[  777.590000] [TEST] L3INTF 0x04000000 change to DOWN.
+[  778.680000] br-wan: port 1(eth0.1) entered disabled state
+[  778.690000] device eth0.1 left promiscuous mode
+[  778.690000] br-wan: port 1(eth0.1) entered disabled state
+[  778.690000] ADDRCONF(NETDEV_UP): eth0.1: link is not ready
+[  784.790000] %Port-2: Gi43 link up
+[  784.820000] [TEST] L3INTF 0x04000000 change to UP.
+[  784.930000] device eth0.1 entered promiscuous mode
+[  785.940000] br-wan: port 1(eth0.1) entered forwarding state
+[  785.940000] br-wan: port 1(eth0.1) entered forwarding state
+[  787.940000] br-wan: port 1(eth0.1) entered forwarding state
+[  792.920000] [DHCP]br-wan server (<lan-ip>, 02:00:00:00:00:00), vlan 1, port 42

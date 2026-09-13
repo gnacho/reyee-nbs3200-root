@@ -1,0 +1,20 @@
+Dear customers:
+Please read the following statement before download and upgrade the software.
+
+1.Preface
+Important and please read carefully:
+This is the software usage agreement signed between you and Ruijienetworks.
+if you have already installed、copied、downloaded or in any other ways to use the software,
+this agreement is deemed to be accepted. if you don't accept all or  part of  the term of this agreement , you will not have permission to use this software .Please stop installing、copying、downloading or in any other ways using this software immediately, remove any component of the software you have installed or reserved.
+
+2.Upgrading Software
+1)Please read the release notes carefully, understand the function changes and the use of notes before upgrading the software.
+2)In case of risk caused by improper operation,it is recommended to get in touch with Ruijie Post Sales to implement the upgrading.
+3)It is recommended that upgrade in the non-peak periods in order not to interrupt production network business.
+4)Please follow the upgrade instructions strictly during upgrading and using.
+User should be responsible for all the problems caused by improper operations. 
+5)Ruijie networks is not responsible for any software issue caused by accident, abuse, misuse, or unauthorized modification of software.
+
+3.Technical Support
+Welcome to get in touch with Ruijie Technical Support.
+if you have any enquiry, problems during software installationand using,Ruijienetworks will provide technical support at the first time.

@@ -79,6 +79,12 @@ positive: [`docs/uart-console-hunt.md`](docs/uart-console-hunt.md).
 | [`docs/uart-console-hunt.md`](docs/uart-console-hunt.md) | The serial console hunt: pads, J7, FT232, bauds, what did NOT work |
 | [`docs/openwrt-port.md`](docs/openwrt-port.md) | OpenWrt port state: DTS, build environment, the DTB patch trick, failed boot |
 | [`docs/boot-and-recovery.md`](docs/boot-and-recovery.md) | U-Boot boot routes, why `run linux` rejects a custom image, TFTP and `rtk network on`, recovery |
+| [`port/`](port/) | The DTS v0 (ours) + the built initramfs that was tried + the upstream LGS352C reference files |
+| [`docs/plan-serial-console-2026-09-13.md`](docs/plan-serial-console-2026-09-13.md) | Original console-hunt plan (Spanish) with the forum draft and the recipes |
+| [`docs/session-recovery-2026-09-13.txt`](docs/session-recovery-2026-09-13.txt) | Raw evidence of the recovery session (TFTP/HTTP log) |
+| [`docs/uboot-env-and-ubi-layout-2026-09-13.txt`](docs/uboot-env-and-ubi-layout-2026-09-13.txt) | u-boot environment and UBI layout analysis |
+| [`docs/release-notes-2.380-official.pdf`](docs/release-notes-2.380-official.pdf) | Vendor release notes for ReyeeOS 2.380 (official PDF) |
+| [`docs/disclaimer.txt`](docs/disclaimer.txt) | Legal disclaimer (responsible use) |
 | [`docs/hardware.md`](docs/hardware.md) | SoC, RAM, NAND, MTD map, GPIOs, I2C buses, SFP+, LEDs, fans/MCU |
 | [`docs/firmware.md`](docs/firmware.md) | Encryption schemes, keys, recovery API, hashes and download links |
 | [`docs/postmortem-first-live-boot.md`](docs/postmortem-first-live-boot.md) | Honest post-mortem of the day the unit got stranded |
