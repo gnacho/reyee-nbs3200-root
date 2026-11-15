@@ -1,0 +1,129 @@
+// SPDX-License-Identifier: (GPL-2.0-or-later or MIT)
+/* Common bits for Ruijie Reyee NBS3200-48GT4XS (RTL9311, SPI NAND only) */
+
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/input/input.h>
+#include <dt-bindings/leds/common.h>
+
+/ {
+	aliases {
+		label-mac-device = &ethernet0;
+		led-boot = &led_power;
+		led-failsafe = &led_power;
+		led-running = &led_power;
+		led-upgrade = &led_power;
+	};
+
+	keys {
+		compatible = "gpio-keys-polled";
+		poll-interval = <100>;
+
+		reset {
+			label = "reset";
+			gpios = <&gpio0 2 GPIO_ACTIVE_LOW>;
+			linux,code = <KEY_RESTART>;
+		};
+	};
+
+	leds {
+		compatible = "gpio-leds";
+		pinctrl-names = "default";
+		pinctrl-0 = <&pinmux_disable_sys_led>;
+
+		led_power: led-0 {
+			label = "green:power";
+			color = <LED_COLOR_ID_GREEN>;
+			function = LED_FUNCTION_POWER;
+			gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
+			linux,default-trigger = "heartbeat";
+		};
+	};
+
+	/* SFP cages: i2c/GPIO wiring unknown yet, populate during bring-up */
+	sfp0: sfp-p49 {
+		compatible = "sff,sfp";
+	};
+	sfp1: sfp-p50 {
+		compatible = "sff,sfp";
+	};
+	sfp2: sfp-p51 {
+		compatible = "sff,sfp";
+	};
+	sfp3: sfp-p52 {
+		compatible = "sff,sfp";
+	};
+};
+
+&ecc0 {
+	status = "okay";
+};
+
+&ethernet0 {
+	nvmem-cells = <&macaddr_ubootenv_ethaddr 0>;
+	nvmem-cell-names = "mac-address";
+};
+
+&snand {
+	status = "okay";
+	flash@0 {
+		compatible = "spi-nand";
+		reg = <0>;
+
+		nand-ecc-engine = <&ecc0>;
+		nand-ecc-strength = <6>;
+		nand-ecc-step-size = <512>;
+		nand-ecc-algo = "bch";
+		nand-ecc-placement = "oob";
+
+		partitions {
+			compatible = "fixed-partitions";
+			#address-cells = <1>;
+			#size-cells = <1>;
+
+			partition@0 {
+				label = "u-boot-slave";
+				reg = <0x0 0x200000>;
+				read-only;
+			};
+			partition@200000 {
+				label = "u-boot";
+				reg = <0x200000 0x200000>;
+				read-only;
+			};
+			partition@400000 {
+				label = "u-boot-env";
+				reg = <0x400000 0x100000>;
+
+				nvmem-layout {
+					compatible = "u-boot,env";
+
+					macaddr_ubootenv_ethaddr: ethaddr {
+						#nvmem-cell-cells = <1>;
+					};
+				};
+			};
+			partition@500000 {
+				label = "product_info";
+				reg = <0x500000 0x200000>;
+				read-only;
+			};
+			partition@700000 {
+				label = "kdump";
+				reg = <0x700000 0x100000>;
+				read-only;
+			};
+			partition@800000 {
+				label = "factory_test0";
+				reg = <0x800000 0x200000>;
+			};
+			partition@a00000 {
+				label = "kernel";
+				reg = <0xa00000 0x200000>;
+			};
+			partition@c00000 {
+				label = "ubi";
+				reg = <0xc00000 0xf400000>;
+			};
+		};
+	};
+};
